@@ -34,9 +34,9 @@ nav ul::after{content: ''; clear: both; width: 100%; height: 0; visibility: hidd
 .logo.point{opacity: .85;}
 .profolio-web{margin-top: 4%;}
 .profolio-web .wrap{display: flex; flex-wrap: wrap; justify-content: space-between;}
-.profolio-web .wrap .pw-col{width: 23%; height: 258px; box-shadow: 0px 0px 2px 0px #cac2b5; margin: 1%;}
+.profolio-web .wrap .pw-col{width: 23%; /* height: 258px; */ box-shadow: 0px 0px 2px 0px #cac2b5; margin: 1%;}
 .pw-col a{display: block;}
-.pw-col a .web-pic{overflow: hidden; background-color: #000;}
+.pw-col a .web-pic{overflow: hidden; background-color: #000; height: 220px;}
 .pw-col a img{width: 100%; display: block; transition: .3s;}
 .pw-col a:hover img{transform: scale(1.1); opacity: .5;}
 .pw-col a p{background: #fff; font-size: 15px; text-align: center; color: #666; padding: 3% 0;}
@@ -44,10 +44,12 @@ nav ul::after{content: ''; clear: both; width: 100%; height: 0; visibility: hidd
 .loading .ld-top{background: #444; position: absolute; left: 0; top: 0%; width: 100vw; height: 50vh;}
 .loading .ld-bottom{background: #444; position: absolute; left: 0; bottom: 0%; width: 100vw; height: 50vh;}
 .loading .ld-line{position: absolute; width: 100vw; height: 2px; background: #fff; top: 50%; left: -100%; transform: translateY(-50%);}
-.loading .loading-word{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #fff; font-size: 20px; animation: loadingFlash .2s infinite linear alternate;}
+.loading .loading-word{position: absolute; z-index: 20; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #fff; font-size: 20px; animation: loadingFlash .2s infinite linear alternate;}
+.loading-word .logo{opacity: 1;}
 .loading.done .ld-line{animation: loadingLine .8s cubic-bezier(0.645, 0.045, 0.355, 1);}
 .loading.done .ld-top{animation: loadingTop .6s .8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;}
 .loading.done .ld-bottom{animation: loadingBottom .6s .8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;}
+footer{background: #222; color: #ddd; font-size: 14px; padding: 1.5% 0; text-align: center;}
 
 @keyframes loadingLine {
     from {left: -100%;}
@@ -71,16 +73,19 @@ nav ul::after{content: ''; clear: both; width: 100%; height: 0; visibility: hidd
 @media screen and (max-width: 1024px) {
     .wrap{width: 100%;}
     nav ul{width: 49%;}
+    .pw-col a .web-pic{height: 194px;}
 }
 
 @media screen and (max-width: 768px) {
-    .profolio-web .wrap .pw-col{width: 45%;}
+    .profolio-web .wrap .pw-col{width: 46%; margin: 2%;}
     .pw-col a p{font-size: 14px; padding: 5% 0;}
     .mp-front{width: 10%;}
     .mp-back{width: 25%;}
     .logo{margin-top: 0;}
     nav ul{width: 65%;}
     header{padding-top: 270px;}
+    .pw-col a .web-pic{height: 259px;}
+    footer{padding: 2.5% 0;}
 }
 
 @media screen and (max-width: 480px) {
@@ -90,22 +95,28 @@ nav ul::after{content: ''; clear: both; width: 100%; height: 0; visibility: hidd
     nav ul{width: 100%;}
     nav ul li{margin: 0 2%;}
     .logo{margin-bottom: 2.5%;}
+    .pw-col a .web-pic{height: 139px;}
+    footer{padding: 3.5% 0; font-size: 13px;}
 }
 
 @media screen and (max-width: 375px) {
     nav ul li{margin: 0 1.8%;}
     nav ul li a{font-size: 15px;}
     header{padding-top: 235px;}
+    .pw-col a .web-pic{height: 126px;}
 }
 
 @media screen and (max-width: 360px) {
     nav ul li{margin: 0 2%}
     nav ul li a{font-size: 14px;}
     header{padding-top: 230px;}
+    .pw-col a .web-pic{height: 121px;}
+    .pw-col a p{font-size: 13px;}
 }
 
 @media screen and (max-width: 320px) {
     nav ul li{margin: 0 1.7%}
     nav ul li a{font-size: 13px;}
     header{padding-top: 205px;}
+    .pw-col a .web-pic{height: 108px;}
 }

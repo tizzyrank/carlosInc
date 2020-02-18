@@ -72,7 +72,7 @@ $(function () {
             {
                 imgUrl: 'img/web_01.jpg',
                 webUrl: 'test_url',
-                name: 'World I Buy 國際購物商城',
+                name: 'World I Buy 購物商城',
                 category: 'site-page'
             },
             {
