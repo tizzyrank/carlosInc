@@ -3,14 +3,14 @@ $(function () {
     function openAnimation() {
         let $loadingScene = $('.loading');
         let $loadingWord = $('.loading-word');
-        $(window).on('load', function () {
+        /* $(window).on('load', function () { */
             $loadingScene.addClass('done');
             $loadingWord.fadeOut(200);
             setTimeout(function () {
                 $loadingScene.remove();
             }, 1800);
             $('.mp-front, .mp-back, .logo').addClass('point');
-        });
+        /* }); */
     };
     openAnimation();
 
@@ -232,7 +232,7 @@ $(function () {
         webData.forEach(function (item) {
             webContent +=
                 `<figure class="pw-col ${item.category}">
-                <a href="${item.webUrl}">
+                <a href="${item.webUrl}" target="_blank">
                     <div class="web-pic">
                         <img src=${item.imgUrl}>
                     </div>
