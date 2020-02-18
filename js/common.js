@@ -9,7 +9,7 @@ $(function () {
             setTimeout(function () {
                 $loadingScene.remove();
             }, 1800);
-            $('.mp-front, .mp-back').addClass('point');
+            $('.mp-front, .mp-back, .logo').addClass('point');
         });
     };
     openAnimation();
@@ -22,7 +22,7 @@ $(function () {
                 color: '#3c3c3c'
             },
             games: {
-                color: '#4a7366'
+                color: '#446a5e'
             },
             event: {
                 color: '#3e5766'
@@ -35,7 +35,8 @@ $(function () {
             }
         };
 
-        $navItem.on('mouseover click', function () {
+        $navItem.on('mouseover click', function (e) {
+            e.preventDefault();
             let $navName = $(this).text();
             switch ($navName) {
                 case 'ALL':
