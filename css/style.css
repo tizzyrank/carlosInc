@@ -1,0 +1,72 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/*resets*/
+html { font-size: 12px; }
+h1, h2, h3, h4, h5, h6, p, a, button, table, div, ul, li, textarea, input, footer { font-family: 'Open Sans', '微軟正黑體', Arial, Helvetica, sans-serif, 'STHeiti Light', '儷黑 Pro', 'LiHei Pro', 'Microsoft Yahei', 'Microsoft JhengHei', '新細明體'; }
+a { text-decoration: none; outline: none; /* for Firefox Google Chrome  */  behavior:expression(this.onFocus=this.blur()); /* for IE */}
+input[type=submit], input[type=reset], input[type=button], input[type=text], input[type=password], textarea, select{-webkit-appearance:none;}
+iframe[name=google_conversion_frame]{ display: none;}
+:focus {outline: none;}
+/*end resets*/
+
+/*style*/
+body{background: #e9e5de;}
+header{background: #3c3c3c; padding: 280px 0 30px; height: 20%; position: relative; transition: .8s;}
+.wrap{width: 1280px; margin: 0 auto;}
+nav ul{width: 39%; margin: 0 auto;}
+nav ul li{float: left; display: block; margin: 0 3.5%;}
+nav ul li a{color: #fff; font-size: 16px; font-family: 'Rubik', sans-serif; position: relative; opacity: .7; padding: 0 3%; box-sizing: border-box; display: block; white-space: nowrap;}
+nav ul li a.active:after{content: ''; border-bottom: 1px solid #fff; opacity: .7; position: absolute; left: 0; bottom: -10px; width: 100%;}
+nav ul::after{content: ''; clear: both; width: 100%; height: 0; visibility: hidden; display: block;}
+.mp-front{left: 50%; top: 5%; transform: translateX(-50%) scale(1.5); position: absolute; z-index: 5; transition: .5s 1.8s; opacity: 0; transform-origin: center;}
+.mp-back{left: 50%; top: -10%; transform: translateX(-50%); position: absolute; z-index: 2; transition: .5s 1.4s; opacity: 0;}
+.mp-front.point{left: 50%; top: 5%; transform: translateX(-50%) scale(1); position: absolute; z-index: 5; opacity: 1;}
+.mp-back.point{left: 50%; top: 16%; transform: translateX(-50%); position: absolute; z-index: 2; opacity: 1;}
+.profolio-web{margin-top: 4%;}
+.profolio-web .wrap{display: flex; flex-wrap: wrap; justify-content: space-between;}
+.profolio-web .wrap .pw-col{width: 23%; height: 258px; box-shadow: 0px 0px 2px 0px #cac2b5; margin: 1%;}
+.pw-col a{display: block;}
+.pw-col a .web-pic{overflow: hidden; background-color: #000;}
+.pw-col a img{width: 100%; display: block; transition: .3s;}
+.pw-col a:hover img{transform: scale(1.1); opacity: .5;}
+.pw-col a p{background: #fff; font-size: 15px; text-align: center; color: #666; padding: 3% 0;}
+.loading{position: fixed; width: 100vw; height: 100vh; left: 0; top: 0; z-index: 10;}
+.loading .ld-top{background: #444; position: absolute; left: 0; top: 0%; width: 100vw; height: 50vh;}
+.loading .ld-bottom{background: #444; position: absolute; left: 0; bottom: 0%; width: 100vw; height: 50vh;}
+.loading .ld-line{position: absolute; width: 100vw; height: 2px; background: #fff; top: 50%; left: -100%; transform: translateY(-50%);}
+.loading .loading-word{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #fff; font-size: 20px; animation: loadingFlash .2s infinite linear alternate;}
+.loading.done .ld-line{animation: loadingLine .8s cubic-bezier(0.645, 0.045, 0.355, 1);}
+.loading.done .ld-top{animation: loadingTop .6s .8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;}
+.loading.done .ld-bottom{animation: loadingBottom .6s .8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;}
+
+@keyframes loadingLine {
+    from {left: -100%;}
+    to {left: 100%;}
+}
+@keyframes loadingTop {
+    from {top: 0%;}
+    to {top: -50%;}
+}
+@keyframes loadingBottom {
+    from {bottom: 0%;}
+    to {bottom: -50%;}
+}
+@keyframes loadingFlash {
+    from {opacity: 1;}
+    to {opacity: .3;}
+}
+
+
+/*mobile*/
+@media screen and (max-width: 680px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
