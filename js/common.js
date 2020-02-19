@@ -19,7 +19,7 @@ $(function () {
         let $navItem = $('nav ul li a');
         let navColor = {
             all: {
-                color: '#3c3c3c'
+                color: '#383838'
             },
             games: {
                 color: '#446a5e'
@@ -70,21 +70,9 @@ $(function () {
     function webProtfoli() {
         let webData = [
             {
-                imgUrl: 'img/web_01.jpg',
+                imgUrl: 'img/web_010.jpg',
                 webUrl: 'test_url',
-                name: 'World I Buy 購物商城',
-                category: 'site-page'
-            },
-            {
-                imgUrl: 'img/web_016.jpg',
-                webUrl: 'test_url',
-                name: 'CHIC CHIC GIRL',
-                category: 'site-page'
-            },
-            {
-                imgUrl: 'img/web_017.jpg',
-                webUrl: 'test_url',
-                name: 'FARLALA',
+                name: '綠舞觀光飯店',
                 category: 'site-page'
             },
             {
@@ -94,16 +82,46 @@ $(function () {
                 category: 'landing-page'
             },
             {
+                imgUrl: 'img/web_027.jpg',
+                webUrl: 'test_url',
+                name: '星際異攻隊2 前導頁',
+                category: 'games'
+            },
+            {
+                imgUrl: 'img/web_01.jpg',
+                webUrl: 'test_url',
+                name: 'World I Buy 購物商城',
+                category: 'site-page'
+            },
+            {
+                imgUrl: 'img/web_016.jpg',
+                webUrl: 'test_url',
+                name: 'CHIC GIRL 女鞋',
+                category: 'site-page'
+            },
+            {
+                imgUrl: 'img/web_017.jpg',
+                webUrl: 'test_url',
+                name: 'FARLALA 衣著',
+                category: 'site-page'
+            },
+            {
                 imgUrl: 'img/web_021.jpg',
                 webUrl: 'test_url',
-                name: 'PB plus',
+                name: 'PB plus 運動加',
                 category: 'landing-page'
             },
             {
-                imgUrl: 'img/web_010.jpg',
+                imgUrl: 'img/web_032.jpg',
                 webUrl: 'test_url',
-                name: '綠舞觀光飯店',
-                category: 'site-page'
+                name: 'MI6 指紋互動',
+                category: 'games'
+            },
+            {
+                imgUrl: 'img/web_028.jpg',
+                webUrl: 'test_url',
+                name: 'Tiffany 鑽戒盒',
+                category: 'games'
             },
             {
                 imgUrl: 'img/web_025.jpg',
@@ -118,10 +136,22 @@ $(function () {
                 category: 'landing-page'
             },
             {
+                imgUrl: 'img/web_035.jpg',
+                webUrl: 'test_url',
+                name: '刮刮卡互動',
+                category: 'games'
+            },
+            {
                 imgUrl: 'img/web_019.jpg',
                 webUrl: 'test_url',
                 name: '撩媽攻略',
                 category: 'landing-page'
+            },
+            {
+                imgUrl: 'img/web_029.jpg',
+                webUrl: 'test_url',
+                name: 'LoganGo 轉盤',
+                category: 'games'
             },
             {
                 imgUrl: 'img/web_026.jpg',
@@ -136,21 +166,33 @@ $(function () {
                 category: 'event'
             },
             {
+                imgUrl: 'img/web_031.jpg',
+                webUrl: 'test_url',
+                name: '大黃蜂 大家來找碴',
+                category: 'games'
+            },
+            {
                 imgUrl: 'img/web_024.jpg',
                 webUrl: 'test_url',
                 name: '蘋果日報APP宣傳',
                 category: 'landing-page'
             },
             {
+                imgUrl: 'img/web_030.jpg',
+                webUrl: 'test_url',
+                name: '神鬼奇航問答',
+                category: 'games'
+            },
+            {
                 imgUrl: 'img/web_018.jpg',
                 webUrl: 'test_url',
-                name: 'GMI Technology',
+                name: 'GMI 電子',
                 category: 'site-page'
             },
             {
                 imgUrl: 'img/web_02.jpg',
                 webUrl: 'test_url',
-                name: '女裝洋裝活動頁面',
+                name: '女裝洋裝活動頁',
                 category: 'event'
             },
             {
@@ -172,6 +214,12 @@ $(function () {
                 category: 'site-page'
             },
             {
+                imgUrl: 'img/web_033.jpg',
+                webUrl: 'test_url',
+                name: '油汙清潔蓋板',
+                category: 'games'
+            },
+            {
                 imgUrl: 'img/web_06.jpg',
                 webUrl: 'test_url',
                 name: '中國信託 旅遊網',
@@ -190,6 +238,12 @@ $(function () {
                 category: 'event'
             },
             {
+                imgUrl: 'img/web_034.jpg',
+                webUrl: 'test_url',
+                name: '元氣餅乾互動',
+                category: 'games'
+            },
+            {
                 imgUrl: 'img/web_09.jpg',
                 webUrl: 'test_url',
                 name: '決勝海灘 心機穿搭',
@@ -198,19 +252,19 @@ $(function () {
             {
                 imgUrl: 'img/web_011.jpg',
                 webUrl: 'test_url',
-                name: 'BIKE LOYALTY',
+                name: 'BIKE LOYALTY 街車',
                 category: 'site-page'
             },
             {
                 imgUrl: 'img/web_012.jpg',
                 webUrl: 'test_url',
-                name: 'Double Six 66 Cafe',
+                name: 'Double Six 咖啡',
                 category: 'site-page'
             },
             {
                 imgUrl: 'img/web_013.jpg',
                 webUrl: 'test_url',
-                name: 'Blake x White 黑白派對',
+                name: 'Black x White 黑白派對',
                 category: 'event'
             },
             {
