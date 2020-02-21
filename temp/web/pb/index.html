@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link href="https://www.pbplus.me/_ui/responsive/common/images/favicon.ico" rel="shortcut icon">
+		<title>pb+官方網站 | 主頁</title>
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet" type="text/css" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/parallax.min.js"></script>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(window).on('load resize', function(){
+					if($(window).width() < 1200){
+						$('.news ul > li').add($('.service .sv-content > div'))
+						.removeAttr('data-wow-offset').attr('data-wow-duration','0.01s')
+						.css('visibility','visible');
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- header --> 
+		<div class="header">
+			<div class="nav">
+				<div class="container">
+					<a class="logo" href="index.html">
+						<img src="img/logo.png" alt="Pb+">
+					</a>
+					<ul>
+						<li>
+							<a href="https://api.pbplus.me/page/auth?client_id=110e8400e29b11d4a716446655440000">註冊</a>
+						</li>
+						<li>
+							<a href="https://api.pbplus.me/page/auth?client_id=110e8400e29b11d4a716446655440000">登入</a>
+						</li>
+						<li>
+							<a href="https://api.pbplus.me/page/auth?client_id=110e8400e29b11d4a716446655440000">幫助</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main-bn" data-parallax="scroll" data-image-src="img/main_bn01.jpg"></div>
+		</div><!-- End header --> 
+
+		<!-- news section -->
+		<div class="news">
+			<div class="container">
+				<h2>最新推薦</h2>
+				<ul>
+					<li class="wow fadeInLeft" data-wow-offset="150">
+						<a href="http://wbc2017.pbplus.me/">
+							<img src="img/news_pic01.jpg">
+							<div class="mask">
+								<div>
+									<p>2017</p>
+									<p>World</p>
+									<p>Baseball</p>
+									<p>Classic</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="wow fadeInDown" data-wow-offset="150">
+						<a href="http://www.taiwanopen.com.tw/">
+							<img src="img/news_pic08.jpg">
+							<div class="mask">
+								<div>
+									<p>2017</p>
+									<p>WTA</p>
+									<p>Taiwan</p>
+									<p>Open</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="wow fadeInUp" data-wow-offset="150">
+						<a href="http://www.wanjinshi-marathon.com.tw/">
+							<img src="img/news_pic02.jpg">
+							<div class="mask">
+								<div>
+									<p>2017</p>
+									<p>Wan</p>
+									<p>Jin Shi</p>
+									<p>Marathon</p>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="wow fadeInRight" data-wow-offset="150">
+						<a href="javascript:;">
+							<img src="img/news_pic04.jpg">
+							<div class="mask">
+								<div>
+									<p>2017</p>
+									<p>pb+</p>
+									<p>DRONE</p>
+									<p>RACING</p>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div><!-- End news section -->
+
+		<!-- service section -->
+		<div class="service">
+			<div class="container">
+				<h2>服務項目</h2>
+				<div class="sv-content">
+					<div class="sv-item sv-spj wow fadeInLeft" data-wow-offset="150">
+						<a href="http://pbplus.tixcraft.com/activity">
+							<img src="img/service_pic01.jpg">
+							<p>售票加</p>
+						</a>
+					</div>
+					<div class="sv-item sv-bmj wow fadeInDown" data-wow-offset="150">
+						<a href="https://event.pbplus.me/">
+							<img src="img/service_pic02.jpg">
+							<p>報名加</p>
+						</a>
+					</div>
+					<div class="sv-item sv-hhj wow fadeInRight" data-wow-offset="150">
+						<a href="http://shop.pbplus.me/">
+							<img src="img/service_pic03.jpg">
+							<p>好物加</p>
+						</a>
+					</div>
+					<div class="sv-item sv-umj wow fadeInLeft" data-wow-offset="150">
+						<a href="http://dream.pbplus.me/">
+							<img src="img/service_pic04.jpg">
+							<p>圓夢加</p>
+						</a>
+					</div>
+					<div class="sv-item sv-udj wow fadeInUp" data-wow-offset="150">
+						<a href="http://media.pbplus.me/">
+							<img src="img/service_pic05.jpg">
+							<p>運動加</p>
+						</a>
+					</div>
+					<div class="sv-item sv-hgj wow fadeInRight" data-wow-offset="150">
+						<a href="http://stadium.pbplus.me/">
+							<img src="img/service_pic06.jpg">
+							<p>場館加</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div><!-- End service section -->
+
+		<!-- footer -->
+		<div class="footer">
+			<div class="container">
+				<div class="ft-left">
+					<a href="javascript:;">關於 pb+</a>
+				</div>
+				<div class="ft-right">
+					<a href="https://www.pbplus.me/baohan/zh_TW/privacy">隱私權政策</a>
+					<a href="https://www.pbplus.me/baohan/zh_TW/privacy/service">服務條款</a>
+					<a href="mailto:support@pcgbros.com">聯絡我們</a>
+					<a class="fb-fans" href="https://www.facebook.com/pbplus.me/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				</div>
+				<div class="scroll-top">
+					<i class="fa fa-caret-up" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div><!-- End footer -->
+	</body>
+</html>

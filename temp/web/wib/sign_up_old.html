@@ -1,0 +1,424 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://www.worldibuy.com/icon.ico" rel="SHORTCUT ICON">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=edge"/>
+<meta name="copyright" content="Copyright (c) by world i buy 都買都賣">
+<meta name="keywords" content="都買都賣,wib,world i buy,代你buy遍千里之外,代購,購物,航運,shopping,品牌館">
+<meta name="description" content="worldibuy 都買都賣-代你buy遍千里之外">
+<title>WORLDiBUY 國際購物商城 - 帶你BUY遍千里之外</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/buy_step.css" rel="stylesheet" type="text/css" />
+<link href="css/fancybox.css" rel="stylesheet" type="text/css" />
+<link href="css/chosen.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery.tooltipster.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/chosen.jquery.min.js"></script>
+<script>
+	$(function(){
+		/*tooltips*/
+		$('.tooltip').tooltipster();
+	});
+</script>
+</head>
+
+<body>
+<!--功能選單bar-->
+<div class="fn-bar">
+	<div class="wrapper">
+        <div class="fn-left">
+            <span class="language lan-tw">
+                WORLD<b>i</b>BUY 國際購物商城
+            </span>
+            <span class="login-area">
+                <a class="login fancybox" href="#login">登入</a>|
+                <a class="signUp fancybox" href="#sign-up">註冊</a>
+            </span>
+        </div>
+    	<div class="fn-right">
+        	<ul>
+            	<li class="fn-member">
+                    <a href="members.html">會員中心</a>
+                </li>
+                <li class="fn-fav">
+                    <a href="fav_goods.html">收藏(&nbsp;<b>99</b>&nbsp;)</a>
+                </li>
+                <li class="fn-cart">
+                    <a href="my_cart.html">購物車(&nbsp;<b>99</b>&nbsp;)</a>
+                    <div class="cart-list">
+                    <ul>
+                        <li>
+                            <div>都買都買小舖</div>
+                            <span>(8)</span>
+                            <a href="javascript:;">結帳</a>
+                        </li>
+                        <li>
+                            <div>Monster 魔聲音樂</div>
+                            <span>(3)</span>
+                            <a href="javascript:;">結帳</a>
+                        </li>
+                        <li>
+                            <div>NY Madison Stock</div>
+                            <span>(6)</span>
+                            <a href="javascript:;">結帳</a>
+                        </li>
+                        <li>
+                            <div>膠思想音樂發想</div>
+                            <span>(12)</span>
+                            <a href="javascript:;">結帳</a>
+                        </li>
+                        <li>
+                            <div>搖滾叢林</div>
+                            <span>(2)</span>
+                            <a href="javascript:;">結帳</a>
+                        </li>
+                    </ul>
+                    <a class="btn-allcart" href="javascript:;">檢視所有購物車</a>
+                    </div>
+                </li>
+            </ul>            
+        </div>
+    </div>
+</div><!--End功能選單bar-->
+<!--header-->
+<div class="header">
+	<div class="wrapper">
+    	<h1><a class="logo" href="index.html" title="WorldiBuy 都買都賣">WORLD i BUY 都買都賣</a></h1>
+        <div class="search-bar">
+        	<a class="search-btn" href="javascript:;" title="搜尋">搜尋</a>
+        	<input class="search" type="text" placeholder="找找商品 / 商店">
+        </div>
+        <div class="country-chosen">
+            <div class="plane-icon"></div>
+            <select data-placeholder="">
+                <option></option>
+                <optgroup label="美洲">
+                    <option>美國 - United States</option>
+                    <option>加拿大 - Canada</option>
+                    <option>阿根廷 - Argentina</option>
+                    <option>巴西 - Brazil</option>
+                </optgroup>
+                <optgroup label="歐洲">
+                    <option>英國 - United Kingdom</option>
+                    <option>法國 - France</option>
+                    <option>德國 - Germany</option>
+                    <option>西班牙 - Spain</option>
+                    <option>義大利 - Italy</option>
+                    <option>葡萄牙 - Portugal</option>
+                </optgroup>
+                <optgroup label="亞洲">
+                    <option>日本 - Japan</option>
+                    <option>韓國 - Korea</option>
+                    <option>泰國 - Thailand</option>
+                    <option>印度 - India</option>
+                </optgroup>
+                <optgroup label="大洋洲">
+                    <option>澳洲 - Australia</option>
+                    <option>紐西蘭 - New Zealand</option>
+                </optgroup>
+            </select>        
+        </div>
+    </div>
+</div><!--End header-->
+<div class="wrapper">
+    <!--註冊流程-->
+    <div class="signUp_content">
+        <h2>>> 註冊會員</h2>
+        <form>
+            <div class="signUp-info">
+            	<div class="id-connect">
+                	<a class="connect-fb tooltip" href="javascript:;" title="串連 facebook 帳號">facebook</a>
+                	<a class="connect-gg tooltip" href="javascript:;" title="串連 google 帳號">google</a>
+                </div>
+            	<div class="title-pay">設定您的帳號資訊</div>
+                <table cellpadding="0" cellspacing="0">
+                	<tr>
+                    	<th><i>*</i>帳號</th>
+                        <td>
+                            <input type="text" placeholder="請輸入有效之電子郵件">
+                            <span class="notice-correct">此帳號尚無人使用</span>
+                            <span class="notice-false">密碼格式不符</span>
+                        </td>
+                    </tr>
+                	<tr>
+                    	<th><i>*</i>密碼</th>
+                        <td><input type="password" placeholder="請輸入您欲設定的密碼">（請輸入 8 至 24 字元，接受所有字元，須區分大小寫）</td>
+                    </tr>
+                	<tr>
+                    	<th><i>*</i>確認密碼</th>
+                        <td><input type="password" placeholder="請再輸入一次您設定的密碼"></td>
+                    </tr>
+                	<tr>
+                    	<th><i>*</i>姓</th>
+                        <td><input type="text" class="realName"></td>
+                    </tr>
+                	<tr>
+                    	<th><i>*</i>名</th>
+                        <td><input type="text" class="realName"></td>
+                    </tr>
+                	<tr>
+                    	<th><i>*</i>身份證字號</th>
+                        <td><input type="text"></td>
+                    </tr>
+                	<tr>
+                    	<th><i>*</i>暱稱</th>
+                        <td><input type="text" placeholder="輸入 2 至 10 字元，接受中英文，可混用"></td>
+                    </tr>     
+                    <tr>
+                    	<th>生日</th>
+                        <td>
+                        	<select>
+                            	<option>請選擇</option>
+                            	<option> 2000 </option>
+                            	<option> 1999 </option>
+                            	<option> 1998 </option>
+                            	<option> 1997 </option>
+                            	<option> 1996 </option>
+                            	<option> 1995 </option>
+                            	<option> 1994 </option>
+                            	<option> 1993 </option>
+                            	<option> 1992 </option>
+                            	<option> 1990 </option>
+                            	<option> 1989 </option>
+                            	<option> 1988 </option>
+                            	<option> 1987 </option>
+                            	<option> 1986 </option>
+                            	<option> 1985 </option>
+                            	<option> 1984 </option>
+                            	<option> 1983 </option>
+                            	<option> 1982 </option>
+                            	<option> 1981 </option>
+                            	<option> 1980 </option>
+                            	<option> 1979 </option>
+                            	<option> 1978 </option>
+                            	<option> 1977 </option>
+                            	<option> 1976 </option>
+                            	<option> 1975 </option>
+                            	<option> 1974 </option>
+                            	<option> 1973 </option>
+                            	<option> 1972 </option>
+                            	<option> 1971 </option>
+                            	<option> 1970 </option>
+                            </select>
+                            <span class="born-date">年</span>
+                        	<select>
+                            	<option>請選擇</option>
+                            	<option> 01 </option>
+                            	<option> 02 </option>
+                            	<option> 03 </option>
+                            	<option> 04 </option>
+                            	<option> 05 </option>
+                            	<option> 06 </option>
+                            	<option> 07 </option>
+                            	<option> 08 </option>
+                            	<option> 09 </option>
+                            	<option> 10 </option>
+                            	<option> 11 </option>
+                            	<option> 12 </option>
+                            </select>
+                            <span class="born-date">月</span>
+                        </td>
+                    </tr>   
+                	<tr>
+                    	<th>性別</th>
+                        <td>
+                            <input name="gender" type="radio" checked><span class="gender">女 Female</span>
+                            <input type="radio" name="gender"><span class="gender">男 Male</span>
+                      </td>
+                    </tr>                                
+                	<tr>
+                    	<th rowspan="2">聯絡電話</th>
+                        <td><input type="text" class="areaCode" placeholder="區碼"><input type="text" class="localCall" placeholder="請輸入市內電話">（聯絡電話擇一填寫即可）</td>
+                    </tr>
+                	<tr>
+                        <td><input type="text" placeholder="請輸入行動電話"></td>
+                    </tr>
+                	<tr>
+                    	<th>電子郵件</th>
+                        <td><input type="text" placeholder="請輸入正確電子郵件"></td>
+                    </tr>
+                    <tr>
+                    	<th>收件地址</th>
+                        <td>
+                        	<select>
+                            	<option>台北市</option>
+                            	<option>新北市</option>
+                            	<option>基隆市</option>
+                            	<option>桃園市</option>
+                            	<option>新竹市</option>
+                            	<option>苗栗縣</option>
+                            	<option>雲林縣</option>
+                            	<option>宜蘭縣</option>
+                            	<option>花蓮縣</option>
+                            	<option>台東縣</option>
+                            	<option>台中市</option>
+                            	<option>台南市</option>
+                            	<option>南投縣</option>
+                            	<option>彰化縣</option>
+                            	<option>嘉義市</option>
+                            	<option>屏東縣</option>
+                            	<option>高雄市</option>
+                            	<option>澎湖縣</option>
+                            	<option>金門縣</option>
+                            	<option>連江縣</option>
+                            </select>
+                        	<select>
+                            	<option>中正區</option>
+                            	<option>大同區</option>
+                            	<option>中山區</option>
+                            	<option>萬華區</option>
+                            	<option>信義區</option>
+                            	<option>松山區</option>
+                            	<option>大安區</option>
+                            	<option>南港區</option>
+                            	<option>北投區</option>
+                            	<option>內湖區</option>
+                            	<option>士林區</option>
+                            	<option>文山區</option>
+                            </select>
+                            <input type="text" class="postalCode" placeholder="郵遞區號">
+                            <input type="text" class="address" placeholder="您欲收件的地址">
+                        </td>
+                    </tr>
+                	<tr>
+                    	<th><i>*</i>驗證碼</th>
+                        <td>
+                        	<img src="img/temp/verify_code.jpg">
+                            <input type="text" class="verify-code" placeholder="驗證碼不分大小寫">
+                            <a class="blue-link" href="javascript:;">重新產生驗證碼</a>
+                        </td>
+                    </tr>                         
+                </table>
+                <div class="service-clause">
+                	<input type="checkbox">我同意接受 WORLDiBUY 都買都賣全球購物商城<a class="blue-link" href="javascript:;">服務條款</a>和<a class="blue-link" href="javascript:;">隱私權保護政策</a>、<a class="blue-link" href="javascript:;">著作權保護政策</a>。 
+                </div>
+                <div class="btn-area">
+                	<a class="btn-next-step fancybox" href="#success-msg-signUp">確認送出</a>
+                </div>
+                <div id="success-msg-signUp">
+                    <div class="login-title"><span></span>成功送出資料！</div>  
+                    <p>我們已經向您的電子郵件<b>annabell@scaredme.com</b>發送了一封會員認證信，請點擊信件中的連結，進行會員認證。</p>      	
+                </div>
+            </div>
+        </form>
+    </div><!--註冊流程 End-->
+    <!--login popup-->
+    <div id="login">
+    	<div class="login-title">登入 WiB 都買都賣</div>
+        <form>
+        	<input class="w-normal" type="text" placeholder="請輸入電子郵件">
+        	<input class="w-normal" type="password" placeholder="請輸入密碼">
+            <input class="btn-login" type="button" value="登入">
+        </form>
+        <div class="login-others">或使用以下方式登入</div>
+        <div class="btn-area">
+        	<a class="btn-social-fb fancybox" href="#connect-fb">facebook</a>
+        	<a class="btn-social-gg fancybox" href="#connect-gg">google</a>
+        </div>
+        <div class="notice">
+        	<a class="fancybox" href="#forgot-pw">忘記密碼</a>
+        	<a href="javascript:;">註冊新帳號</a>
+        </div>
+    </div>
+    <div id="forgot-pw">
+    	<div class="login-title">忘記密碼</div>    
+        <p>如果您忘記您的密碼，請輸入註冊時所使用的電子郵件進行查詢</p>	
+        <form>
+        	<input class="w-normal" type="text" placeholder="請輸入您註冊時的電子郵件">
+            <a class="btn-login fancybox" href="#success-msg">查詢密碼</a>
+        </form>
+    </div>
+    <div id="success-msg">
+    	<div class="login-title"><span></span>密碼重設提醒！</div>  
+        <p>我們已經向您的電子郵件<b>annabell@scaredme.com</b>發送了一封密碼重設信，請點擊信件中的連結重新設定密碼。</p>      	
+    </div>
+    <div id="connect-fb" class="connect-account">
+    	<div class="login-title">WiB 都買都賣串連 Facebook / Google 帳號說明</div>
+        <ol>
+        	<li>當您同意使用 Facebook / Google 帳號登入本網站時，您的密碼是由 Facebook / Google 網站所處理， WiB 都買都賣並不會接觸到您的密碼，而且小心頂新不老實賺黑心錢。</li>
+        	<li>每一個 Facebook / Google 帳號只能綁定一個 WiB 都買都賣會員帳號進行登入。</li>
+        	<li>就 WiB 都買都賣而言，經由登入 Facebook / Google 帳號及密碼而登入本網站，該登入的帳號即代表會員本人，使用者於使用本網站服務之任何行為，均視為會員本人之行為，並需遵循 WiB 都買都賣會員條款之各項約定。</li>
+        	<li>您必須妥善設定、維護及保管您的 Facebook / Google 帳號及密碼，包含但不限使用本網站服務結束時應適時登出本網站並同時登出 Facebook / Google 帳號。</li>
+        	<li>如果您洩漏自己的個人資料、密碼或付款資料，並使得第三人有使用的機會時，您必須就第三人的行為負全部責任</li>
+        	<li>WiB 都買都賣並可隨時暫停或終止提供本項使用 Facebook / Google 帳號登入網站之服務。</li>
+        </ol>      
+        <div class="btn-area">
+        	<a class="btn-login fancybox" href="#login-fb">同意</a>
+        </div>
+    </div>
+    <div id="login-fb" class="connect-login">
+    	<div class="login-title">串連 WiB 都買都賣帳號</div> 
+        <div class="logo-type">
+        	<div class="shape-fb"></div>
+        	<div class="shape-arrow"></div>
+        	<div class="shape-wib"></div>
+        </div>
+        <form>
+        	<input class="w-normal" type="text" placeholder="請輸入 WiB 都買都賣電子郵件">
+        	<input class="w-normal" type="password" placeholder="請輸入 WiB 都買都賣密碼">
+            <input class="btn-login" type="button" value="同意">
+        </form>  
+        <div class="connect-notice">只需設定一次，日後即可用 Facebook / Google 快速登入 WiB 都買都賣<br>每一個 Facebook / Google 帳號只能綁定一個 WiB 都買都賣會員帳號</div>     
+    </div>
+    <div id="connect-gg" class="connect-account">
+    	<div class="login-title">WiB 都買都賣串連 Facebook / Google 帳號說明</div>
+        <ol>
+        	<li>當您同意使用 Facebook / Google 帳號登入本網站時，您的密碼是由 Facebook / Google 網站所處理， WiB 都買都賣並不會接觸到您的密碼，而且小心頂新不老實賺黑心錢。</li>
+        	<li>每一個 Facebook / Google 帳號只能綁定一個 WiB 都買都賣會員帳號進行登入。</li>
+        	<li>就 WiB 都買都賣而言，經由登入 Facebook / Google 帳號及密碼而登入本網站，該登入的帳號即代表會員本人，使用者於使用本網站服務之任何行為，均視為會員本人之行為，並需遵循 WiB 都買都賣會員條款之各項約定。</li>
+        	<li>您必須妥善設定、維護及保管您的 Facebook / Google 帳號及密碼，包含但不限使用本網站服務結束時應適時登出本網站並同時登出 Facebook / Google 帳號。</li>
+        	<li>如果您洩漏自己的個人資料、密碼或付款資料，並使得第三人有使用的機會時，您必須就第三人的行為負全部責任</li>
+        	<li>WiB 都買都賣並可隨時暫停或終止提供本項使用 Facebook / Google 帳號登入網站之服務。</li>
+        </ol>      
+        <div class="btn-area">
+        	<a class="btn-login fancybox" href="#login-gg">同意</a>
+        </div>
+    </div>
+    <div id="login-gg" class="connect-login">
+    	<div class="login-title">串連 WiB 都買都賣帳號</div> 
+        <div class="logo-type">
+        	<div class="shape-gg"></div>
+        	<div class="shape-arrow"></div>
+        	<div class="shape-wib"></div>
+        </div>
+        <form>
+        	<input class="w-normal" type="text" placeholder="請輸入 WiB 都買都賣電子郵件">
+        	<input class="w-normal" type="password" placeholder="請輸入 WiB 都買都賣密碼">
+            <input class="btn-login" type="button" value="同意">
+        </form>  
+        <div class="connect-notice">只需設定一次，日後即可用 Facebook / Google 快速登入 WiB 都買都賣<br>每一個 Facebook / Google 帳號只能綁定一個 WiB 都買都賣會員帳號</div>     
+    </div>
+    <!--login popup End-->
+</div>
+<!--footer-->
+<div class="footer">
+	<div class="wrapper">
+    	<div class="ft-left">
+            <ul>
+                <li><a href="ft_guide.html">新手上路</a></li>
+                <li><a href="ft_problem.html">常見問題</a></li>
+                <li><a href="ft_contact.html">連絡我們</a></li>
+                <li><a href="ft_terms.html">服務條款</a></li>
+                <li><a href="ft_privacy.html">隱私權聲明</a></li>
+                <li><a href="ft_copyright.html">著作權聲明</a></li>
+                <li><a href="ft_wanted.html">人才招募</a></li>
+            </ul>
+            <span>Copyright &copy; <a href="index.html">WORLDiBUY</a>.com All Rights Reserved.</span>
+        </div>
+        <div class="ft-right">
+        	<ul>
+            	<li class="aboutUs"><a href="other_about.html">認識WiB</a></li>
+            	<li class="buyReason"><a href="other_buy.html">勸BUY理由</a></li>
+                <li class="sellerCollect"><a href="other_steps.html">賣家大募集</a></li>
+                <li class="wibBlogger"><a href="http://www.worldibuy.com/wiblogger.html" target="_blank">WiBlogger</a></li>
+            	<li class="fbFans"><a href="javascript:;">粉絲專頁</a></li>
+            </ul>
+        </div>
+    </div>
+</div><!--footer End-->
+</body>
+</html>

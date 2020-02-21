@@ -1,0 +1,69 @@
+/* Slidebars 0.9.4 - http://plugins.adchsm.me/slidebars/ Written by Adam Smith - http://www.adchsm.me/ Released under MIT License - http://plugins.adchsm.me/slidebars/license.txt */
+
+#sb-site{ width:100%; position:relative; z-index:1; background-color:#f4f4f4; overflow:hidden; padding: 0; min-height: 100vh !important;}
+#sb-site:after{ display: none; content: ''; width: 100vw; height: 100vh; background: rgba(0,0,0,.75); position: absolute; left: 0px; top: 0px; z-index: 99; pointer-events:none;}
+.sb-active #sb-site:after{ display: block;}
+.sb-active #sb-site{ position: fixed;}
+.sb-slidebar{ height:100%; height: 100vh; overflow-y:auto; position:fixed; top:0; z-index:0; visibility:hidden; background-color:#fff; padding: 0; color: #df174d;}
+.sb-slidebar li{ border-bottom:1px #eaeaea solid;}
+.sb-slidebar li:first-child{ border-bottom:none;}
+.sb-slidebar li a{ color:#df174d; display:inline-block; padding:1.5rem 1.25rem; font-size: 1.33rem; font-weight: bold;}
+.sb-slidebar li a:active{ color:#a57e50; background-color:#f3e6d6;}
+.sb-slidebar ul li span{ vertical-align: -0.25rem; margin-right: 0.833rem; width: 2.5rem; height: 1.66rem; display: inline-block; background-image: url(../img/menu_icon.png); background-size: 25rem auto;}
+.sb-slidebar a.menu-member span{ background-position: -15.42rem 0;}
+.sb-slidebar a.menu-cate span{ background-position: 0px 0px;}
+.sb-slidebar a.menu-soon span{ background-position: -3rem 0px;}
+.sb-slidebar a.menu-live span{ background-position: -6.66rem 0px;}
+.sb-slidebar a.menu-tobuy span{ background-position: -10.2rem 0px;}
+.sb-slidebar a.menu-buy span{ background-position: -21.916rem 0px;}
+.sb-slidebar a.menu-line span{ background-position: -18.833rem 0px; height: 1.8rem;}
+.sb-slidebar .menu-pcver span{ width: 2.2rem; height: 1.8rem; background-position: -12.916rem 0;}
+.sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-open-right, .sb-close{ cursor: pointer;}
+.sb-slidebar .menu-login{ background: #ed0447; text-align: center;}
+.sb-slidebar .menu-login a{ color: #fff;}
+.sb-slidebar .menu-pcver{ position: absolute; bottom: 0px; background: #ddd; width: 100%; text-align: center; border-top: 1px #ccc solid;}
+.sb-slidebar .menu-pcver a{ color: #666;}
+.sb-slidebar .menu-login-member{ background: #ed0447; padding: 0.833rem; overflow: hidden;}
+.sb-slidebar .menu-login-member a{ color: #fff; font-size: 1.166rem; display: block; float: right; margin-top: 1.3rem; padding: 0;}
+.member-head{ color: #fff; float: left;}
+.member-head b{ font-size: 1.25rem; vertical-align: 1.16rem; margin-left: 0.5rem; width: 8.75rem; height: 1.5rem; overflow: hidden; white-space: nowrap; display: block; float: left; margin-top: 1.25rem; text-overflow: ellipsis;}
+.member-head img{ width: 40px; height: 40px; border-radius: 50%; float: left;}
+
+.sb-left{left:0}
+.sb-right{right:0}
+html.sb-static .sb-slidebar,.sb-slidebar.sb-static{ position:absolute;}
+.sb-slidebar.sb-active{ visibility:visible; min-height: 28.3rem;}
+.sb-slidebar.sb-style-overlay{z-index:9999}
+.sb-slidebar{width:30%}
+.sb-width-thin{width:15%}
+.sb-width-wide{width:45%}
+@media(max-width: 320px){
+.sb-slidebar .menu-pcver{border-top:none; position: initial;}
+}
+@media(max-width:480px){
+.sb-slidebar{width:65%}
+.sb-width-thin{width:55%}
+.sb-width-wide{width:85%}
+}
+@media(min-width:481px){
+.sb-slidebar{width:55%}
+.sb-width-thin{width:40%}
+.sb-width-wide{width:70%}
+}
+@media(min-width:768px){
+.sb-slidebar{width:40%}
+.sb-width-thin{width:25%}
+.sb-width-wide{width:55%}
+}
+@media(min-width:992px){
+.sb-slidebar{width:30%}
+.sb-width-thin{width:15%}
+.sb-width-wide{width:45%}
+}
+@media(min-width:1200px){
+.sb-slidebar{width:20%}
+.sb-width-thin{width:5%}
+.sb-width-wide{width:35%}
+}
+.sb-slide,#sb-site,.sb-slidebar{-webkit-transition:-webkit-transform 400ms ease;-moz-transition:-moz-transform 400ms ease;-o-transition:-o-transform 400ms ease;transition:transform 400ms ease;-webkit-transition-property:-webkit-transform,left,right;-webkit-backface-visibility:hidden}
+.sb-hide{display:none}

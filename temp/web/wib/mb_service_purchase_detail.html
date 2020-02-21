@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://www.worldibuy.com/icon.ico" rel="SHORTCUT ICON">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=edge"/>
+<meta name="copyright" content="Copyright (c) by world i buy 都買都賣">
+<meta name="keywords" content="都買都賣,wib,world i buy,代你buy遍千里之外,代購,購物,航運,shopping,品牌館">
+<meta name="description" content="worldibuy 都買都賣-代你buy遍千里之外">
+<title>WORLDiBUY 都買都賣 | 會員中心</title>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/members.css" rel="stylesheet" type="text/css" />
+<link href="css/buy_step.css" rel="stylesheet" type="text/css" />
+<link href="css/market.css" rel="stylesheet" type="text/css" />
+<link href="css/fancybox.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery.jcarousel.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/chosen.jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.btn-add-items').on('click',function(){
+            var $tobuyClone = $('.pay-info').eq(1).clone();
+            $tobuyClone.find('.tp-item').children('table').find('.normal-value').text('');
+            $tobuyClone.find('img').remove();
+            $tobuyClone.find('.tp-item').show();
+            $('.btn-area').before($tobuyClone);
+        });
+        $('body').on('click','.tp-title',function(){
+            $(this).next('.tp-item').slideUp();
+            $(this).find('i').removeClass('rotate');
+            if($(this).next('.tp-item').is(':hidden'))
+            {
+                $(this).next('.tp-item').slideDown();
+                $(this).find('i').addClass('rotate');
+            }
+        });
+
+        $(document).on('click', 'button.bf-edit', function(event){
+            var $tpItem = $(this).parent('.btn-function').siblings('.tp-item');
+            $tpItem.find('.normal-value').hide();
+            $tpItem.find('.edit-value').show();
+            $(this).toggleClass('active');
+            if(!$(this).hasClass('active')){
+                $tpItem.find('.normal-value').show();
+                $tpItem.find('.edit-value').hide();
+            };
+        });
+
+
+        $(document).on('click','.bf-delete', function(){
+            var delOrder = confirm("確定要刪除嗎？");
+            if (delOrder == true) {
+                $(this).parent('.btn-function').siblings('.tp-title').remove();
+                $(this).parent('.btn-function').siblings('.tp-item').remove();
+                $(this).parent('.btn-function').remove();
+            } 
+        });
+    });
+</script>
+</head>
+
+<body>
+    <!--header-->
+    <div class="fn-bar mb-header">
+    	<div class="wrapper">
+        	<div class="fn-left">
+            	<a class="logo-s" href="index.html" title="WorldiBuy 都買都賣">WorldiBuy</a>
+            </div>
+        	<div class="fn-right">
+            	<ul>
+                	<li class="fn-member">
+                        <a href="members.html">會員中心</a>
+                    </li>
+                    <li class="fn-fav">
+                        <a href="fav_goods.html">收藏(&nbsp;<b>99</b>&nbsp;)</a>
+                    </li>
+                    <li class="fn-cart">
+                        <a href="my_cart.html">購物車(&nbsp;<b>99</b>&nbsp;)</a>
+                        <div class="cart-list">
+                        <ul>
+                            <li>
+                                <div>都買都買小舖</div>
+                                <span>(8)</span>
+                                <a href="javascript:;">結帳</a>
+                            </li>
+                            <li>
+                                <div>Monster 魔聲音樂</div>
+                                <span>(3)</span>
+                                <a href="javascript:;">結帳</a>
+                            </li>
+                            <li>
+                                <div>NY Madison Stock</div>
+                                <span>(6)</span>
+                                <a href="javascript:;">結帳</a>
+                            </li>
+                            <li>
+                                <div>膠思想音樂發想</div>
+                                <span>(12)</span>
+                                <a href="javascript:;">結帳</a>
+                            </li>
+                            <li>
+                                <div>搖滾叢林</div>
+                                <span>(2)</span>
+                                <a href="javascript:;">結帳</a>
+                            </li>
+                        </ul>
+                        <a class="btn-allcart" href="javascript:;">檢視所有購物車</a>
+                        </div>
+                    </li>
+                </ul>            
+            </div>
+        </div>
+    </div><!--End header-->
+    <!--container-->
+    <div class="mb-container">
+        <!--會員主選單-->
+        <div class="main-panel bd-r">
+        	<div class="userPic">
+            	<div class="editPic">
+                	<a class="edit-btn" href="javascript:;"></a>
+                    <div class="mask-bg"></div>
+                </div>
+            	<div class="picNm">
+                	<img src="img/temp/member_pic.jpg">
+                </div>
+            	<div class="picBg bd-r">
+                	<img src="img/temp/member_pic.jpg">
+                </div>
+            </div>
+            <div class="userInfo">
+            	<div class="up-section">
+                	<h3>MGK 街頭達人</h3>
+                    <a class="btn-gray" href="javascript:;">登出</a>
+                </div>
+                <div class="down-section">
+                    <div class="user-level">
+                        <div class="dollar-sign"></div>
+                        <p>你目前累積有<a class="blue-link fancybox" href="#level-pts">2380</a>分</p>
+                        <p>屬於<a class="blue-link fancybox" href="#level-rank">高級買友</a>！</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="notification">3</span>
+                            <a class="active" href="mb_orders.html">我的訂單</a>  
+                            <ul>
+                                <li>
+                                    <a href="mb_orders.html">一般訂單</a>
+                                </li>
+                                <li>
+                                    <a href="mb_service_purchase.html">代購訂單</a>
+                                </li>
+                            </ul>                   
+                        </li>
+                        <li>
+                        <span class="notification">27</span>                    
+                        <a href="mb_fav_goods.html">我的收藏</a>
+                            <ul>
+                                <li>
+                                    <span class="notification sub-nf">9</span>
+                                    <a href="mb_fav_store.html">追蹤店家</a>
+                                </li>
+                                <li>
+                                    <span class="notification sub-nf">18</span>
+                                    <a href="mb_fav_goods.html">收藏商品</a>
+                                </li>
+                            </ul>                    
+                        </li>
+                        <li>
+                            <a href="mb_service_qa.html">客服紀錄</a>
+                            <ul>
+                                <li>
+                                    <a href="mb_service_qa.html">商品問答</a>
+                                </li>
+                                <li>
+                                    <a href="mb_service_record.html">訂單客服</a>
+                                </li>
+                            </ul>                                           
+                        </li>
+                        <li>
+                            <a href="mb_other_coupon.html">我的帳戶</a>
+                            <ul>
+                                <li>
+                                    <a href="mb_other_coupon.html">我的好康</a>
+                                </li>                        
+                                <li>
+                                    <a href="mb_other_setting.html">個人設定</a>
+                                </li>
+                            </ul>                                                                    
+                        </li>
+                        <li>
+                            <a href="mb_bulletin.html">WiB 公告</a>
+                        </li>                    
+                    </ul>
+                </div>
+            </div>
+        </div><!--End 會員主選單-->
+        <!--麵包屑-->    
+        <div class="breadcrumbs">
+        	<ul>
+                <li><a href="javascript:;">首頁</a></li>
+                <li><a href="javascript:;">會員中心</a></li>
+                <li><a href="javascript:;">我的訂單</a></li>
+                <li><a href="javascript:;">代購訂單</a></li>
+            </ul>
+        </div><!--End 麵包屑-->
+        <!--會員主內容-->     
+    	<div class="mb-content bd-r">
+        	<div class="mb-title-area">
+                <h2>我的代購單</h2>
+                <a class="btn-ask fancybox" href="#ask-content"><span></span>詢問賣家</a>
+            </div>
+            <div class="pay-info pcs-form">
+                <div class="title-pay">代購資訊</div>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th>代購單號</th>
+                        <td>00123456789</td>
+                    </tr>
+                    <tr>
+                        <th>代購店家</th>
+                        <td><a class="blue-link" href="javascript:;">購物逛的異想世界</a></td>
+                    </tr>
+                    <tr>
+                        <th>配送方式</th>
+                        <td>宅配</td>
+                    </tr>
+                </table>
+            </div> 
+            <div class="pay-info pcs-form">
+                <div class="btn-function">
+                    <button class="bf-edit">修改</button>
+                    <button class="bf-delete">刪除</button>
+                </div>
+                <div class="title-pay tp-title">代購商品
+                    <i></i>
+                </div>
+                <div class="tp-item">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th>商品名稱</th>
+                            <td><span class="normal-value">Dyson DC39 Animal 手持真空吸塵器</span><input class="edit-value" type="text" value="Dyson DC39 Animal 手持真空吸塵器"></td>
+                        </tr>
+                        <tr>
+                            <th>參考網址</th>
+                            <td><span class="normal-value"><a class="blue-link" href="javascript:;">https://www.xxxxx.com/1122334455</a></span><input class="edit-value" type="text" value="https://www.xxxxx.com/1122334455"></td>
+                        </tr>
+                        <tr>
+                            <th>購買數量</th>
+                            <td><span class="normal-value">1</span><input class="edit-value" type="text" value="1"></td>
+                        </tr>
+                        <tr>
+                            <th>規格說明</th>
+                            <td><span class="normal-value">商品品牌：DYSON  型號：DC39 Animal</span><input class="edit-value" type="text" value="商品品牌：DYSON  型號：DC39 Animal"></td>
+                        </tr>
+                        <tr>
+                            <th>商品報價</th>
+                            <td>等待賣家報價</td>
+                        </tr>
+                        <tr>
+                            <th>參考圖片</th>
+                            <td><img class="purchase-img" src="img/temp/product01.jpg"><span class="pf-upload edit-value"><button class="btn-gray">上傳圖片，僅限一張圖片</button><input type="file" class="pf-upload-btn"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div> 
+            <div class="pay-info pcs-form">
+                <div class="btn-function">
+                    <button class="bf-edit">修改</button>
+                    <button class="bf-delete">刪除</button>
+                </div>
+                <div class="title-pay tp-title">代購商品
+                    <i></i>
+                </div>
+                <div class="tp-item" >
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th>商品名稱</th>
+                            <td><span class="normal-value">Single Day 夜光門擋 DOOR STOP</span><input class="edit-value" type="text" value="Single Day 夜光門擋 DOOR STOP"></td>
+                        </tr>
+                        <tr>
+                            <th>參考網址</th>
+                            <td><span class="normal-value"><a class="blue-link" href="javascript:;">https://www.xxxxx.com/1122334455</a></span><input class="edit-value" type="text" value="https://www.xxxxx.com/1122334455"></td>
+                        </tr>
+                        <tr>
+                            <th>購買數量</th>
+                            <td><span class="normal-value">3</span><input class="edit-value" type="text" value="3"></td>
+                        </tr>
+                        <tr>
+                            <th>規格說明</th>
+                            <td><span class="normal-value"></span><input class="edit-value" type="text" value=""></td>
+                        </tr>
+                        <tr>
+                            <th>商品報價</th>
+                            <td>NT $780</td>
+                        </tr>
+                        <tr>
+                            <th>參考圖片</th>
+                            <td><img class="purchase-img" src="img/temp/product02.jpg"><span class="pf-upload edit-value"><button class="btn-gray">上傳圖片，僅限一張圖片</button><input type="file" class="pf-upload-btn"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>   
+            <div class="btn-area">
+                <a class="btn-tobuy" href="javascript:;">共2件商品 1件等待報價中</a>
+                <button class="btn-add-items"><span></span>再增加一組商品</button>
+            </div>     
+        </div><!--End 會員主內容-->      
+    </div>
+    <!--End container-->
+    <!--footer-->
+    <div class="footer">
+    	<div class="wrapper">
+        	<div class="ft-left">
+                <ul>
+                    <li><a href="ft_guide.html">新手上路</a></li>
+                    <li><a href="ft_problem.html">常見問題</a></li>
+                    <li><a href="ft_contact.html">連絡我們</a></li>
+                    <li><a href="ft_terms.html">服務條款</a></li>
+                    <li><a href="ft_privacy.html">隱私權聲明</a></li>
+                    <li><a href="ft_copyright.html">著作權聲明</a></li>
+                    <li><a href="ft_wanted.html">人才招募</a></li>
+                </ul>
+                <span>Copyright &copy; <a href="index.html">WORLDiBUY</a>.com All Rights Reserved.</span>
+            </div>
+            <div class="ft-right">
+            	<ul>
+                	<li class="aboutUs"><a href="other_about.html">認識WiB</a></li>
+                	<li class="buyReason"><a href="other_buy.html">勸BUY理由</a></li>
+                    <li class="sellerCollect"><a href="other_steps.html">賣家大募集</a></li>
+                    <li class="wibBlogger"><a href="http://www.worldibuy.com/wiblogger.html" target="_blank">WiBlogger</a></li>
+                	<li class="fbFans"><a href="javascript:;">粉絲專頁</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!--footer End-->
+    <!--詢問賣家-->
+    <div id="ask-content" class="popup-section">
+        <div class="live-msg" style="right: 0px;">
+            <section>
+                <div class="title-name"><a class="blue-link" href="javascript:;">購物逛的異想世界</a></div>
+                <div class="bubbles-right"><img src="img/temp/member_pic.jpg">冬季超不暖冷死人電暖爐的到貨時間？有辦法再調25台嗎？<span>12/16 15:33</span></div>
+                <div class="bubbles-left"><img src="img/temp/test02.jpg">貨倉目前還有5台現貨，您需要的話再馬上幫您叫貨，大約3~5個工作天，有需要的話請下訂，感謝您的詢問<span>12/16 20:41</span></div>
+                <div class="bubbles-right"><img src="img/temp/member_pic.jpg">有機會追加到40台嗎？急需要，而且要2個<span>12/17 08:33</span>工作天內</div>
+                <div class="bubbles-left"><img src="img/temp/test02.jpg">我盡量幫您調看看，2個工作天內我盡量，看能不能湊到40台<span>12/17 11:09</span></div>        
+                <div class="bubbles-right"><img src="img/temp/member_pic.jpg">那先不用好了，謝謝<span>12/17 23:51</span></div>
+                <div class="bubbles-left"><img src="img/temp/test02.jpg">增肖仔，你問爽我回答心酸的喔，不買就不買在那邊浪費我時間<span>12/18 00:41</span></div>        
+            </section>
+            <div class="text-msg">
+                <button class="btn-gray">附加檔案</button>
+                <input type="file">     
+                <textarea></textarea>  
+                <button class="btn-gray">傳送</button> 
+            </div>
+        </div>
+    </div><!--End 詢問賣家-->
+</body>
+</html>

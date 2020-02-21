@@ -1,0 +1,13 @@
+/*css tag modify*/
+.news-content > ol{list-style: decimal inside;}
+.news-content > ol > li{font-size: 14px; color: #444; line-height: 22px; margin-bottom: 25px; width: inherit;}
+.news-content table{margin-bottom: 40px;}
+.news-content table tr td{border:1px solid #cdcdcd; text-align: center; vertical-align: middle;}
+.news-content table tr td p{text-align: center; margin-bottom: 0; padding:12px 0;}
+.ab-terms p{line-height: 26px; margin-bottom: 15px;}
+.ab-terms p span{color: #999 !important; font-size: 15px !important;}
+.ab-terms h1 span, .ab-terms h2 span, .ab-terms h3 span, .ab-terms h4 span, .ab-terms h5 span, .ab-terms h6 span{color: #444; font-size: 17px;}
+.ab-terms h1, .ab-terms h2, .ab-terms h3, .ab-terms h4, .ab-terms h5, .ab-terms h6{line-height: 30px; margin: 35px 0 10px;}
+.ab-terms ol{list-style: decimal inside;}
+.ab-col .ab-terms ol li{color: #999; margin-bottom: 15px;}
+.ab-terms ol li span{color: #999 !important; font-size: 15px !important;}

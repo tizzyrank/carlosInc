@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="copyright" content="Copyright (c) 綠舞觀光飯店">
+		<title>綠舞觀光飯店 | Dancewoods Hotels and Resorts</title>
+		<link href="img/fav.ico" rel="SHORTCUT ICON">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/animsition.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/flexslider.css" rel="stylesheet" type="text/css" />
+		<link href="css/animate.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/jquery.animsition.min.js"></script>
+		<script src="js/jquery.flexslider-min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.page-loading').hide();
+				$('.animsition').animsition({
+					inClass     :  'fade-in',
+					outClass    :  'fade-out',
+					inDuration  :  1500,
+					outDuration :  800,
+					loading     :  true
+				});
+
+				$('.intro-slider').flexslider({
+					animation: "fade",
+					controlNav: true,
+					directionNav: false,
+					animationLoop: true,
+					slideshowSpeed: 4500,
+					animationSpeed: 1200
+				});
+
+				new WOW().init();
+
+				var enterUrl = ['news.html','hotel.html','garden.html','restaurant.html','banquet.html','about.html'],
+				imgNow = $('.flex-active-slide img').attr('data-url');	
+				$('.flex-control-nav').click(function(){
+					imgNow = $('.flex-active-slide img').attr('data-url');
+					if(imgNow=='bn01'){
+						$('.intro-show a').attr('href',enterUrl[0]);
+					}else if(imgNow=='bn02'){
+						$('.intro-show a').attr('href',enterUrl[1]);
+					}else if(imgNow=='bn03'){
+						$('.intro-show a').attr('href',enterUrl[2]);
+					}else if(imgNow=='bn04'){
+						$('.intro-show a').attr('href',enterUrl[3]);
+					}else if(imgNow=='bn05'){
+						$('.intro-show a').attr('href',enterUrl[4]);
+					}else if(imgNow=='bn06'){
+						$('.intro-show a').attr('href',enterUrl[5]);
+					};
+				});		
+				if(imgNow=='bn01'){
+					$('.intro-show a').attr('href',enterUrl[0]);
+				};
+			});
+		</script>
+	</head>
+	<body>
+		<div class="page-loading">
+			<img src="img/logo.png">
+		</div>
+		<div class="animsition page-intro">
+			<!--intro nav-->
+			<div class="intro-nav">
+				<ul class="container wow fadeInDown">
+					<li><a class="animsition-link" href="news.html"><span data-hover="最新消息">最新消息</span></a></li>
+					<li><a class="animsition-link" href="hotel.html"><span data-hover="飯店介紹">飯店介紹</span></a></li>
+					<li><a class="animsition-link" href="garden.html"><span data-hover="庭園資訊">庭園資訊</span></a></li>
+					<li><a class="animsition-link" href="restaurant.html"><span data-hover="佳餚美饌">佳餚美饌</span></a></li>
+					<li><a class="animsition-link" href="banquet.html"><span data-hover="婚宴會館">婚宴會館</span></a></li>
+					<li><a class="animsition-link" href="about.html"><span data-hover="關於我們">關於我們</span></a></li>
+				</ul>
+			</div>
+			<!--End intro nav-->
+
+			<!--intro slider-->
+			<div class="intro-slider flexslider">
+				<ul class="slides">
+					<li>
+						<img src="img/temp/index_bg01.jpg" data-url="bn01">
+					</li>
+					<li>
+						<img src="img/temp/index_bg02.jpg" data-url="bn02">
+					</li>
+					<li>
+						<img src="img/temp/index_bg03.jpg" data-url="bn03">
+					</li>
+					<li>
+						<img src="img/temp/index_bg04.jpg" data-url="bn04">
+					</li>
+					<li>
+						<img src="img/temp/index_bg05.jpg" data-url="bn05">
+					</li>
+					<li>
+						<img src="img/temp/index_bg06.jpg" data-url="bn05">
+					</li>
+				</ul>
+			</div><!--end intro slider-->
+
+			<!--logo & btn-->
+			<div class="intro-show">
+				<img class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay=".6s" src="img/logo_dark.png" alt="綠舞觀光飯店">
+				<a class="wow fadeInRight animsition-link" data-wow-duration="2s" data-wow-delay="1.2s" href="#">進入</a>
+			</div>
+			<!--End logo & btn-->
+		</div>
+	</body>
+</html>

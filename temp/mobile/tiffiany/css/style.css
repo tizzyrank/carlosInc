@@ -1,0 +1,75 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/*resets*/
+html { font-size: 12px; }
+h1, h2, h3, h4, h5, h6, p, a, button, table, div, ul, li, textarea, input { font-family: 'Open Sans', '微軟正黑體', Arial, Helvetica, sans-serif, 'STHeiti Light', '儷黑 Pro', 'LiHei Pro', 'Microsoft Yahei', 'Microsoft JhengHei', '新細明體'; }
+a { text-decoration: none; outline: none; /* for Firefox Google Chrome  */  behavior:expression(this.onFocus=this.blur()); /* for IE */}
+input[type=submit], input[type=reset], input[type=button], input[type=text], input[type=password], textarea, select{-webkit-appearance:none;}
+iframe[name=google_conversion_frame]{ display: none;}
+:focus {outline: none;}
+/*end resets*/
+
+/*styles*/
+body{background: rgba(132,203,198,0.6);}
+.container{ width: 200px; height: 150px; position: absolute; -webkit-perspective: 500px; perspective: 500px; top:50%; left: 50%; margin: -100px 0 0 -100px;}
+.cube{width: 100%; height: 100%; position: absolute; -webkit-transform-style: preserve-3d; transform-style: preserve-3d;}
+.cube div{width: 196px; height: 196px; display: block; position: absolute; font-size: 24px; color: #111; text-align: center; line-height: 196px; font-family: 'Merriweather', serif; border-radius: 10px;}
+.cube .cb-front{transform: rotateX(0deg) translateZ(98px); background:url(../img/t-front.png); background-size: 100% auto;}
+.cube .cb-back{transform: rotateX(180deg) translateZ(98px); background:url(../img/t-back.png); background-size: 100% auto;}
+.cube .cb-right{transform: rotateY(90deg) translateZ(98px); background:url(../img/t-side.png); background-size: 100% auto;}
+.cube .cb-left{transform: rotateY(-90deg) translateZ(98px); background:url(../img/t-side.png); background-size: 100% auto;}
+.cube .cb-top{transform: rotateX(90deg) translateZ(98px); background:url(../img/t-top.png); background-size: 100% auto;}
+.cube .cb-bottom{transform: rotateX(-90deg) translateZ(98px); background:url(../img/t-bottom.png); background-size: 100% auto;} 
+.cube .open{-webkit-transition: all ease .8s; transition: all ease .8s; opacity: 0;}
+/* .cube .cb-front.open{transform: rotateX(-90deg) translateY(-98px); transform-origin: 100% 100%;}
+.cube .cb-back.open{transform: rotateX(270deg) translateY(298px); transform-origin: 100% 100%;}
+.cube .cb-right.open{transform: rotateX(-90deg) rotateY(0deg) rotateZ(90deg) translateZ(100px) translateY(-198px);}
+.cube .cb-left.open{transform: rotateX(-90deg) rotateY(0deg) rotateZ(-90deg) translateZ(100px) translateY(-198px);}
+.cube .cb-top.open{transform: rotateX(90deg) translateZ(280px);} */
+.cube .cb-top.open{transform: rotateX(170deg) rotateY(0deg) translateY(150px) translateZ(150px);}
+.logo{position: absolute; left: 0; bottom: 12%; text-align: center; width: 100%;}
+.logo > img{width: 30%; height: auto;}
+div[class^='line-']{position: absolute; background: #fff; z-index: 10;}
+.line-top{top: 0; width: 100%; height: 10px;}
+.line-bottom{bottom: 0; width: 100%; height: 10px;}
+.line-right{right: 0; height: 100%; width: 10px;}
+.line-left{left: 0; height: 100%; width: 10px;}
+.degree360{position: absolute; left: 70%; top: 60%; text-align: center; width: 4%; opacity: 0.8;}
+.degree360 > img {width: 100%;}
+.ring{position: absolute; left: 0; top: 32%; z-index: -1; text-align: center; width: 100%; margin-top: -100px; opacity: 0; -webkit-transition: all ease .4s; transition: all ease .4s;}
+.ring > img{width: 22%;}
+.ring.motion{opacity: 1;}
+.open-zone{width: 260px; height: 260px; position: absolute; cursor: pointer; pointer-events:fill; z-index: 99; left: 50%; top: 50%; margin: -130px 0 0 -130px;}
+.tlogo {width: 70px; margin: 0; padding-bottom: 10px; margin: 8px 0 0 0; vertical-align: middle;}
+.openCB {width: 75%; margin: 0; padding-bottom: 10px; margin: 34px 0 0 0; vertical-align: middle;}
+.info-degree {margin: 0; margin: 20px 0 0 10px; text-align: center; vertical-align: middle;}
+.btn{color: #111; display: none; font-size: 22px; position: absolute; opacity: 0; left: 50%; width: 30%; margin-left: -15%; text-align: center; padding: 1.2% 0; bottom: 30%; background: rgba(255,255,255,.55); border:1px solid #6dcfc6; border-radius: 5px;}
+
+/*mobile*/
+@media screen and (max-width: 480px) {
+	.container{margin: -100px 0 0 -75px; width: 150px; height: 150px;}
+	.cube div{width: 145px; height: 145px; font-size: 16px; line-height: 145px;}
+	.logo{bottom: 8%; left:0;}
+	.logo img{width: 65%;}
+	.openCB {width: 75%; margin: 0; padding-bottom: 10px; margin: 84px 0 0 0; vertical-align: middle;}
+	.degree360{left: 82%; top: 73%; text-align: center; width: 8%; opacity: 0.8;}
+	.degree360 > img{width: 100%;}
+	.ring{ position: absolute; right: 0; top: 100px;}
+	.ring > img{/*background: url(../img/m_bg.jpg) repeat; */width: 100%; right: 0; }
+	.cube .cb-front{transform: rotateX(0deg) translateZ(72px);}
+	.cube .cb-back{transform: rotateX(180deg) translateZ(72px);}
+	.cube .cb-right{transform: rotateY(90deg) translateZ(72px);}
+	.cube .cb-left{transform: rotateY(-90deg) translateZ(72px);}
+	.cube .cb-top{transform: rotateX(90deg) translateZ(72px);}
+	.cube .cb-bottom{transform: rotateX(-90deg) translateZ(72px);}
+	.cube .cb-top.open{transform: rotateX(170deg) rotateY(0deg) translateY(100px) translateZ(100px);}
+	.open-zone{width: 200px; height: 200px; margin: -125px 0 0 -100px;}
+	.btn{ width: 46%; margin-left: -23%; padding: 2% 0;}
+	.notice{width: 70%; position: absolute; left: 50%; bottom: 20%; transform: translateX(-50%); color: #111; font-size: 16px; text-align: center;}
+	.notice > span{display: block;}
+}

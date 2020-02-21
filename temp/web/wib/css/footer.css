@@ -1,0 +1,73 @@
+/*footer*/
+.ft-heading{}
+.ft-heading h2{ color:#202020; font-size:28px; font-weight:bold;}
+.ft-heading .ft-sub-title{ font-size: 16px; margin: 15px 0; color: #444;}
+.ft-sub-title:before{ content: ''; background: url(../img/steps/rarrow.png) no-repeat; width: 16px; height: 12px; display: inline-block; margin-right: 8px;}
+.ft-contact:before{ background-position: 0px 0px;}
+.ft-problem:before{ background-position: -35px 0px;}
+.ft-guide:before{ background-position: -51px 0px;}
+.ft-privacy:before{ background-position: -68px 0px;}
+.ft-wanted:before{ background-position: -85px 0px;}
+.ft-ul{ border-bottom: 1px solid #ddd; background: #fff; margin-top: 50px;}
+.ft-ul li{ border-top: 1px solid #ddd; border-right: 1px solid #ddd; font-size: 16px; line-height: 46px; padding-left: 30px; color:#444; position: relative;}
+.ft-ul li a{ color: #e60044; margin: 0 3px;}
+.ft-ul li:before{ content: ''; position:absolute; left: 0px; display: inline-block; width: 10px; height: 46px; -webkit-transition:all 0.4s ease; -moz-transition:all 0.4s ease; transition:all 0.4s ease;}
+.ft-ul li:after{ content: ''; position: absolute; right: 20px; top: 13px; display: inline-block; width: 11px; height: 18px; background:url(../img/steps/side_arrow.png) 0px bottom;}
+.ft-ul li:hover:after{ background-position: 0px top;}
+.ft-ul li a:hover{ color: #FF3C75; text-decoration: underline;}
+.ul-contact li:before{ background: #ccdef5;}
+.ul-contact li:hover:before{ background:#2d85fa;}
+.ul-problem li:before{ background: #ffe5e9;}
+.ul-problem li:hover:before{ background:#ff617b;}
+.ul-guide li:before{ background: #daeac8;}
+.ul-guide li:hover:before{ background:#75be27;}
+
+.section-privacy{ border: 1px solid #ddd; background: #fff; margin-top: 50px; height: 350px; font-size: 13px; color: #666; padding: 30px; overflow-x: hidden; }
+.section-privacy h3{ font-size: 18px; margin-bottom: 20px; color: #333;}
+.section-privacy h4{ font-size: 15px; margin: 25px 0 7px; color: #333;}
+.section-privacy p{ line-height: 20px;}
+.section-privacy > ul > li{ list-style-type: cjk-ideographic; list-style-position: outside; line-height: 20px; margin: 0 0 10px 25px;}
+.section-privacy ul ul { margin: 5px 0;}
+.section-privacy ul ul li{ list-style: none;}
+
+.section-wanted{ margin-top: 50px; border: 1px solid #ddd; padding: 20px 25px; background: #fff; overflow: hidden;;}
+.section-wanted p{ font-size: 13px; color: #444; line-height: 22px; margin-bottom: 15px;}
+.section-wanted b{ color: #e70044;}
+.ft-job-list{ margin-top: 25px;}
+.ft-jobs{ float: left; width: 255px; overflow: hidden;}
+.ft-jobs h3{ font-size: 22px;}
+.ft-jobs h3:before{ content:""; display: inline-block; width: 5px; height:34px; background: #ff8510; vertical-align: -7px; margin-right: 10px;}
+.ft-jobs a{ margin-top: 10px; display: inline-block; font-size: 13px;}
+.ft-work-pic{ float: left; margin-left: 5px;}
+.ft-work-pic li{ display: inline-block; margin-left: 6px;}
+
+/*popup*/
+.ft-popup{ display: none;}
+.ft-cooperate{ height: 600px;}
+.ft-popup p{ font-size: 15px; margin-bottom: 20px; font-weight: bold; text-align: center; color: #ec2854;}
+.ft-popup i{ border-top: 1px solid #ddd; margin: 15px 30px 0; display: block; font-size: 14px; padding-top: 20px; height: 20px; text-align: center;}
+.ft-table{ margin: 10px 50px 30px 30px;}
+.ft-table td{ font-size: 15px; color: #555; padding: 10px 10px 10px 30px;}
+.ft-table label{ display: block; margin-bottom: 8px; color: #226677; font-size: 16px; font-weight: bold;}
+.ft-table input[type=text], .ft-table td textarea{ border: 1px solid #cdcdcd; border-radius: 3px; height: 23px; width: 245px; padding-left: 5px; color: #444;}
+.ft-table td input[type=text]:focus, .ft-table td textarea:focus{ background: #fff5bf;}
+.ft-table b{ color: red;}
+.ft-popup .ft-table + i{ margin: -10px 30px -15px; padding-top: 0;}
+.ft-popup .btn-area{ margin: -10px 0 30px;}
+.ft-popup .btn-area .btn-login{ padding: 0 50px; font-size: 26px; height: 50px;}
+.ft-table select{ border: 1px solid #cdcdcd; border-radius: 3px; height: 27px; width: 252px; padding-left: 5px; color: #444;}
+.ft-table input[type=file]{ width: 250px;}
+.ft-popup sub{ font-size: 13px;}
+.ft-service i{ height: inherit; padding-top: 0;}
+.ft-problem-popup article{ font-size: 14px; color: #444; padding: 5px 30px 10px; line-height: 24px; text-align: center;}
+.ft-problem-popup p{ margin-bottom: 5px;}
+.ft-problem-popup ul{ margin: 0 30px 20px;}
+.ft-problem-popup ul li{ font-size: 14px; color: #444; line-height: 24px; width: 420px; list-style-type: decimal; padding-left: 5px; margin: 0 0 5px 20px;}
+.ft-problem-popup .popup-title{ margin-bottom: 15px;}
+.ft-process{ position: relative; background: url(../img/footer_process.png) no-repeat; width: 768px; height: 236px; margin: 10px 30px 50px; font-size: 14px;}
+.ft-process .doc-download{ position: absolute; left: 396px; top: 201px;}
+.guide-popup img{ display: block; margin: 0; padding: 0;}
+.guide-popup .login-title{ margin-bottom: 0;}
+#ft-guide-notice01 p, #ft-guide-notice02 p{ width: 400px; padding: 30px 50px 20px; text-align: left; color: #444; line-height: 24px;}
+#ft-guide-notice01 p a, #ft-guide-notice02 p a{ color: #e60044;}
+.doc-download a{ display: block; margin: 8px 0;}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="copyright" content="Copyright (c) 綠舞觀光飯店">
+		<title>綠舞觀光飯店 | Dancewoods Hotels and Resorts</title>
+		<link href="img/fav.ico" rel="SHORTCUT ICON">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/animsition.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/flexslider.css" rel="stylesheet" type="text/css" />
+		<link href="css/animate.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/jquery.animsition.min.js"></script>
+		<script src="js/jquery.flexslider-min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.page-loading').hide();
+				$('.animsition').animsition({
+					inClass     :  'fade-in',
+					outClass    :  'fade-out',
+					inDuration  :  1500,
+					outDuration :  800,
+					loading     :  true
+				});
+
+				$('#intro-slider').flexslider({
+					animation: "fade",
+					controlNav: false,
+					directionNav: false,
+					animationLoop: true,
+					slideshowSpeed: 4500,
+					animationSpeed: 1200
+				});
+
+				new WOW().init();
+
+				var $iconFb = $('.intro-fadein .intro-fb');
+				$iconFb.hover(function() {
+					$(this).css({
+						'animation-name': 'tada',
+						'animation-iteration-count': 'infinite',
+						'animation-delay': '0s',
+						'animation-duration': '1s'
+					});
+				}, function() {
+					$(this).css({
+						'animation-name': 'none'
+					});
+				});
+			});
+		</script>
+	</head>
+	<body id="intro">
+		<div class="page-loading">
+			<img src="img/logo.png">
+		</div>
+		<div class="animsition page-intro">
+			<!--intro slider-->
+			<div id="intro-slider" class="flexslider">
+				<div class="intro-mask"></div>
+				<ul class="slides">
+					<li>
+						<img src="img/temp/new_intro01.jpg">
+					</li>
+					<li>
+						<img src="img/temp/new_intro02.jpg">
+					</li>
+					<li>
+						<img src="img/temp/new_intro03.jpg">
+					</li>
+				</ul>
+				<!--logo & btn-->
+				<div class="intro-fadein">
+					<img class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay=".6s" src="img/intro_logo.png" alt="綠舞觀光飯店">
+					<a class="wow fadeInRight animsition-link intro-fb" data-wow-duration="2s" data-wow-delay="1s" href="https://www.facebook.com/dwsresort/">
+						<img src="img/intro_fb.png">
+					</a>
+				</div>
+				<!--End logo & btn-->
+			</div><!--end intro slider-->
+
+			<!--intro content-->
+			<div class="intro-content">
+				<div class="intro-grid wow fadeIn" data-wow-delay="1.6s">
+					<h2>飯店</h2>
+					<a class="animsition-link" href="hotel.html" title="飯店">
+						<img src="img/temp/intro_grid01.jpg">
+					</a>
+				</div>
+				<div class="intro-grid wow fadeIn" data-wow-delay="2s">
+					<h2>園區</h2>
+					<a class="animsition-link" href="garden.html" title="園區">
+						<img src="img/temp/intro_grid02.jpg">
+					</a>
+				</div>
+				<div class="intro-grid wow fadeIn" data-wow-delay="2.4s">
+					<h2>婚宴</h2>
+					<a class="animsition-link" href="wedding.html" title="婚宴">
+						<img src="img/temp/intro_grid03.jpg">
+					</a>
+				</div>
+				<div class="intro-grid wow fadeIn" data-wow-delay="2.8s">
+					<h2>籌備中</h2>
+					<a class="animsition-link" href="restaurant.html" title="籌備中">
+						<img src="img/temp/intro_grid04.jpg">
+					</a>
+				</div>
+				<div class="intro-grid wow fadeIn" data-wow-delay="3.2s">
+					<h2>籌備中</h2>
+					<a class="animsition-link" href="about.html" title="籌備中">
+						<img src="img/temp/intro_grid05.jpg">
+					</a>
+				</div>
+			</div>
+			<!--End intro content-->
+		</div>
+	</body>
+</html>

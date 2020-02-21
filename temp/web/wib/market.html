@@ -1,0 +1,1142 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="http://www.worldibuy.com/icon.ico" rel="SHORTCUT ICON">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=edge"/>
+        <meta name="copyright" content="Copyright (c) by world i buy 都買都賣">
+        <meta name="keywords" content="都買都賣,wib,world i buy,代你buy遍千里之外,代購,購物,航運,shopping,品牌館">
+        <meta name="description" content="worldibuy 都買都賣-代你buy遍千里之外">
+        <title>WORLDiBUY 國際購物商城 - 帶你BUY遍千里之外</title>
+        <link href="css/common.css" rel="stylesheet" type="text/css" />
+        <link href="css/market.css" rel="stylesheet" type="text/css" />
+        <link href="css/fancybox.css" rel="stylesheet" type="text/css" />
+        <link href="css/chosen.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/jquery.flexslider.js"></script>
+        <script src="js/jquery.fancybox.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/jquery.tooltipster.min.js"></script>
+        <script src="js/chosen.jquery.min.js"></script>
+        <script>
+        	$(function(){
+        			
+        		/*商品展示區*/
+        		$('.goodsSlider').flexslider({
+        			animation: "fade",
+        			controlNav: "thumbnails",
+        			animationSpeed: 400,
+        			slideshow: false
+        		});		
+        		
+        		/*評論區按鈕*/
+        		$('.btn-hot').click(function(){
+        			$(this).toggleClass('active');
+        		});
+        				
+        		/*tooltips*/
+        		$('.tooltip').tooltipster();
+        		
+        		/*聯絡店家*/
+        		$('.contact-store').click(function(){
+        			$(this).animate({'right':'-50px'},10);
+        			$('.live-msg').delay(300).animate({'right':'0px'},400);
+        			$('.msg-close').delay(300).animate({'right':'428px'},400);
+        		})
+        		$('.msg-close').click(function(){
+        			$(this).animate({'right':'-50px'},400);
+        			$('.live-msg').animate({'right':'-440px'},400);			
+        			$('.contact-store').animate({'right':'15px'},400);			
+        		})
+
+                /*商品tab滑動*/
+                $('.tab-intro a').click(function(){
+                    var topGoods = $('.goods-intro').offset().top-40,
+                        topQa = $('.goods-qa').offset().top-40,
+                        topComment = $('.goods-comment').offset().top-40;  
+                    if($(this).parent('li').index() == 0){                  
+                        $('html, body').animate({scrollTop:topGoods},1200);
+                    }else if($(this).parent('li').index() == 1){
+                        $('html, body').animate({scrollTop:topQa},1200);
+                    }else if($(this).parent('li').index() == 2){
+                        $('html, body').animate({scrollTop:topComment},1200);
+                    }
+                })
+
+                /*關閉提醒對話 代購單btn*/
+                $('.bt-close').click(function(){
+                    $(this).add('.bubble-text').remove();
+                });
+                $('.pf-upload-btn').change(function(){
+                    $(this).siblings('.pf-upload-name').val($(this).val());
+                });
+        	});
+        </script>
+    </head>
+    <body>
+        <!--功能選單bar-->
+        <div class="fn-bar">
+        	<div class="wrapper">
+                <div class="fn-left">
+                    <span class="language lan-tw">
+                        WORLD<b>i</b>BUY 國際購物商城
+                    </span>
+                    <span class="login-area">
+                        <a class="login fancybox" href="#login">登入</a>|
+                        <a class="signUp fancybox" href="#sign-up">註冊</a>
+                    </span>
+                </div>
+            	<div class="fn-right">
+                	<ul>
+                    	<li class="fn-member">
+                            <a href="members.html">會員中心</a>
+                        </li>
+                        <li class="fn-fav">
+                            <a href="fav_goods.html">收藏(&nbsp;<b>99</b>&nbsp;)</a>
+                        </li>
+                        <li class="fn-cart">
+                            <a href="my_cart.html">購物車(&nbsp;<b>99</b>&nbsp;)</a>
+                            <div class="cart-list">
+                            <ul>
+                                <li>
+                                    <div>都買都買小舖</div>
+                                    <span>(8)</span>
+                                    <a href="javascript:;">結帳</a>
+                                </li>
+                                <li>
+                                    <div>Monster 魔聲音樂</div>
+                                    <span>(3)</span>
+                                    <a href="javascript:;">結帳</a>
+                                </li>
+                                <li>
+                                    <div>NY Madison Stock</div>
+                                    <span>(6)</span>
+                                    <a href="javascript:;">結帳</a>
+                                </li>
+                                <li>
+                                    <div>膠思想音樂發想</div>
+                                    <span>(12)</span>
+                                    <a href="javascript:;">結帳</a>
+                                </li>
+                                <li>
+                                    <div>搖滾叢林</div>
+                                    <span>(2)</span>
+                                    <a href="javascript:;">結帳</a>
+                                </li>
+                            </ul>
+                            <a class="btn-allcart" href="javascript:;">檢視所有購物車</a>
+                            </div>
+                        </li>
+                    </ul>            
+                </div>
+            </div>
+        </div><!--End功能選單bar-->
+        <!--header-->
+        <div class="header">
+        	<div class="wrapper">
+            	<h1><a class="logo" href="index.html" title="WorldiBuy 都買都賣">WORLD i BUY 都買都賣</a></h1>
+                <div class="search-bar search-market">
+                	<a class="search-btn" href="javascript:;" title="搜尋">搜尋</a>
+                <form action="" method="post">
+                    <div class="search-select">
+                        <cite>全站</cite>
+                        <ul>
+                        	<li><a href="javascript:;" selectid="1">全站</a></li>
+                        	<li><a href="javascript:;" selectid="2">店內</a></li>
+                        </ul>
+                    </div>
+                    <input name="" type="hidden" value="" id="inputselect-search"/>
+                </form>            
+                	<input class="search" type="text" placeholder="找找商品 / 商店">
+                </div>
+                <div class="country-chosen">
+                    <div class="plane-icon"></div>
+                    <select data-placeholder="">
+                        <option></option>
+                        <optgroup label="美洲">
+                            <option>美國 - United States</option>
+                            <option>加拿大 - Canada</option>
+                            <option>阿根廷 - Argentina</option>
+                            <option>巴西 - Brazil</option>
+                        </optgroup>
+                        <optgroup label="歐洲">
+                            <option>英國 - United Kingdom</option>
+                            <option>法國 - France</option>
+                            <option>德國 - Germany</option>
+                            <option>西班牙 - Spain</option>
+                            <option>義大利 - Italy</option>
+                            <option>葡萄牙 - Portugal</option>
+                        </optgroup>
+                        <optgroup label="亞洲">
+                            <option>日本 - Japan</option>
+                            <option>韓國 - Korea</option>
+                            <option>泰國 - Thailand</option>
+                            <option>印度 - India</option>
+                        </optgroup>
+                        <optgroup label="大洋洲">
+                            <option>澳洲 - Australia</option>
+                            <option>紐西蘭 - New Zealand</option>
+                        </optgroup>
+                    </select>        
+                </div>
+            </div>
+        </div><!--End header-->
+        <!--nav-->
+        <div class="nav-frame">
+            <div class="nav">
+                <ul class="nav-general">
+                    <li>
+                        <a href="javascript:;">彩妝保養</a>
+                        <div class="sub-nav cosmetic">
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">彩妝臉部</a></li>
+                                <li><a href="javascript:;">粉底隔離</a></li>
+                                <li><a href="javascript:;">睫毛膏</a></li>
+                                <li><a href="javascript:;">眼影眼線</a></li>
+                                <li><a href="javascript:;">眉彩</a></li>
+                                <li><a href="javascript:;">唇膏唇蜜</a></li>
+                                <li><a href="javascript:;">遮瑕</a></li>
+                                <li><a href="javascript:;">腮紅</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">彩妝身體</a></li>
+                                <li><a href="javascript:;">彩妝用品</a></li>
+                                <li><a href="javascript:;">頭髮</a></li>
+                                <li><a href="javascript:;">造型品線</a></li>                    
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">保養臉部</a></li>
+                                <li><a href="javascript:;">美顏小物</a></li>
+                                <li><a href="javascript:;">化妝水</a></li>
+                                <li><a href="javascript:;">乳液/霜</a></li>
+                                <li><a href="javascript:;">精華液</a></li>
+                                <li><a href="javascript:;">面膜</a></li>
+                                <li><a href="javascript:;">眼部保養</a></li>
+                                <li><a href="javascript:;">卸妝清潔</a></li>
+                                <li><a href="javascript:;">去角質</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">保養身體</a></li>
+                                <li><a href="javascript:;">美顏小物</a></li>
+                                <li><a href="javascript:;">乳液/霜</a></li>
+                                <li><a href="javascript:;">手足保養</a></li>
+                                <li><a href="javascript:;">清潔沐浴</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">保養身體</a></li>
+                                <li><a href="javascript:;">美髮小物</a></li>
+                                <li><a href="javascript:;">保養</a></li>
+                                <li><a href="javascript:;">清潔</a></li>
+                            </ul>
+                            <ul class="nav-promo">
+                                <li class="nav-promo-title">WiB 經典牛皮肩背包</li>
+                                <li class="nav-promo-des">人氣百萬出貨熱賣款</li>
+                                <li class="nav-promo-pic"><a href="javascript:;"><img src="img/temp/nav_promo01.jpg"></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">服飾包鞋</a>
+                        <div class="sub-nav clothes">
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">服飾女裝</a></li>
+                                <li><a href="javascript:;">上衣</a></li>
+                                <li><a href="javascript:;">外套/罩衫</a></li>
+                                <li><a href="javascript:;">洋裝</a></li>
+                                <li><a href="javascript:;">褲子/裙子</a></li>
+                                <li><a href="javascript:;">套裝</a></li>
+                                <li><a href="javascript:;">泳衣</a></li>
+                                <li><a href="javascript:;">內睡衣</a></li>
+                                <li><a href="javascript:;">配件</a></li>
+                                <li><a href="javascript:;">飾品</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">服飾男裝</a></li>
+                                <li><a href="javascript:;">上衣</a></li>
+                                <li><a href="javascript:;">外套</a></li>
+                                <li><a href="javascript:;">褲子</a></li>
+                                <li><a href="javascript:;">西裝</a></li>
+                                <li><a href="javascript:;">泳褲</a></li>
+                                <li><a href="javascript:;">內睡衣</a></li>
+                                <li><a href="javascript:;">配件</a></li>
+                                <li><a href="javascript:;">飾品</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">包鞋女包</a></li>
+                                <li><a href="javascript:;">流行包</a></li>
+                                <li><a href="javascript:;">品牌包</a></li>
+                                <li><a href="javascript:;">精品包</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">包鞋女鞋</a></li>
+                                <li><a href="javascript:;">平底</a></li>
+                                <li><a href="javascript:;">運動鞋</a></li>
+                                <li><a href="javascript:;">涼鞋</a></li>
+                                <li><a href="javascript:;">跟鞋</a></li>
+                                <li><a href="javascript:;">靴子</a></li>
+                                <li><a href="javascript:;">雨鞋</a></li>
+                                <li><a href="javascript:;">拖鞋</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">包鞋男包</a></li>
+                                <li><a href="javascript:;">肩/斜背包</a></li>
+                                <li><a href="javascript:;">後背包</a></li>
+                                <li><a href="javascript:;">皮夾</a></li>
+                                <li><a href="javascript:;">電腦/公事包</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">包鞋男鞋</a></li>
+                                <li><a href="javascript:;">皮鞋</a></li>
+                                <li><a href="javascript:;">休閒鞋</a></li>
+                                <li><a href="javascript:;">運動鞋</a></li>
+                                <li><a href="javascript:;">涼/拖鞋</a></li>
+                            </ul>
+                            <ul class="nav-promo">
+                                <li class="nav-promo-title">WiB 經典牛皮肩背包</li>
+                                <li class="nav-promo-des">人氣百萬出貨熱賣款</li>
+                                <li class="nav-promo-pic"><a href="javascript:;"><img src="img/temp/nav_promo01.jpg"></a></li>
+                            </ul>
+                        </div>            
+                    </li>
+                    <li>
+                        <a href="javascript:;">嬰童婦幼</a>
+                        <div class="sub-nav parents">
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">服飾包鞋媽媽</a></li>
+                                <li><a href="javascript:;">媽媽</a></li>
+                                <li><a href="javascript:;">孕婦衣著</a></li>
+                                <li><a href="javascript:;">媽媽包</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">服飾包鞋寶寶</a></li>
+                                <li><a href="javascript:;">寶寶裝</a></li>
+                                <li><a href="javascript:;">睡衣內著</a></li>
+                                <li><a href="javascript:;">配件</a></li>                    
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">服飾包鞋童裝</a></li>
+                                <li><a href="javascript:;">上衣</a></li>
+                                <li><a href="javascript:;">褲/裙子</a></li>
+                                <li><a href="javascript:;">連身</a></li>
+                                <li><a href="javascript:;">配件</a></li>
+                                <li><a href="javascript:;">泳衣</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">用品媽媽用品</a></li>
+                                <li><a href="javascript:;">寶寶玩具</a></li>
+                                <li><a href="javascript:;">幼童玩具</a></li>
+                                <li><a href="javascript:;">童書美勞</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">用品外出用品</a></li>
+                                <li><a href="javascript:;">揹巾/抱嬰袋</a></li>
+                                <li><a href="javascript:;">手推車</a></li>
+                                <li><a href="javascript:;">汽車安全座椅</a></li>
+                                <li><a href="javascript:;">其他外出用品</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">用品哺育用品</a></li>
+                                <li><a href="javascript:;">吸乳器/母乳袋</a></li>
+                                <li><a href="javascript:;">餐具</a></li>
+                                <li><a href="javascript:;">調理用品</a></li>
+                                <li><a href="javascript:;">其他哺育用品</a></li>
+                            </ul>
+                            <ul class="nav-promo">
+                                <li class="nav-promo-title">WiB 經典牛皮肩背包</li>
+                                <li class="nav-promo-des">人氣百萬出貨熱賣款</li>
+                                <li class="nav-promo-pic"><a href="javascript:;"><img src="img/temp/nav_promo01.jpg"></a></li>
+                            </ul>
+                        </div>                        
+                    </li>
+                    <li>
+                        <a href="javascript:;">居家生活</a>
+                        <div class="sub-nav homelife">
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">彩妝臉部</a></li>
+                                <li><a href="javascript:;">粉底隔離</a></li>
+                                <li><a href="javascript:;">睫毛膏</a></li>
+                                <li><a href="javascript:;">眼影眼線</a></li>
+                                <li><a href="javascript:;">眉彩</a></li>
+                                <li><a href="javascript:;">唇膏唇蜜</a></li>
+                                <li><a href="javascript:;">遮瑕</a></li>
+                                <li><a href="javascript:;">腮紅</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">彩妝身體</a></li>
+                                <li><a href="javascript:;">彩妝用品</a></li>
+                                <li><a href="javascript:;">頭髮</a></li>
+                                <li><a href="javascript:;">造型品線</a></li>                    
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">保養臉部</a></li>
+                                <li><a href="javascript:;">美顏小物</a></li>
+                                <li><a href="javascript:;">化妝水</a></li>
+                                <li><a href="javascript:;">乳液/霜</a></li>
+                                <li><a href="javascript:;">精華液</a></li>
+                                <li><a href="javascript:;">面膜</a></li>
+                                <li><a href="javascript:;">眼部保養</a></li>
+                                <li><a href="javascript:;">卸妝清潔</a></li>
+                                <li><a href="javascript:;">去角質</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">保養身體</a></li>
+                                <li><a href="javascript:;">美顏小物</a></li>
+                                <li><a href="javascript:;">乳液/霜</a></li>
+                                <li><a href="javascript:;">手足保養</a></li>
+                                <li><a href="javascript:;">清潔沐浴</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">保養身體</a></li>
+                                <li><a href="javascript:;">美髮小物</a></li>
+                                <li><a href="javascript:;">保養</a></li>
+                                <li><a href="javascript:;">清潔</a></li>
+                            </ul>
+                            <ul class="nav-promo">
+                                <li class="nav-promo-title">WiB 經典牛皮肩背包</li>
+                                <li class="nav-promo-des">人氣百萬出貨熱賣款</li>
+                                <li class="nav-promo-pic"><a href="javascript:;"><img src="img/temp/nav_promo01.jpg"></a></li>
+                            </ul>
+                        </div>                                    
+                    </li>
+                    <li>
+                        <a href="javascript:;">動漫文玩</a>
+                        <div class="sub-nav comic">
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">服飾女裝</a></li>
+                                <li><a href="javascript:;">上衣</a></li>
+                                <li><a href="javascript:;">外套/罩衫</a></li>
+                                <li><a href="javascript:;">洋裝</a></li>
+                                <li><a href="javascript:;">褲子/裙子</a></li>
+                                <li><a href="javascript:;">套裝</a></li>
+                                <li><a href="javascript:;">泳衣</a></li>
+                                <li><a href="javascript:;">內睡衣</a></li>
+                                <li><a href="javascript:;">配件</a></li>
+                                <li><a href="javascript:;">飾品</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">服飾男裝</a></li>
+                                <li><a href="javascript:;">上衣</a></li>
+                                <li><a href="javascript:;">外套</a></li>
+                                <li><a href="javascript:;">褲子</a></li>
+                                <li><a href="javascript:;">西裝</a></li>
+                                <li><a href="javascript:;">泳褲</a></li>
+                                <li><a href="javascript:;">內睡衣</a></li>
+                                <li><a href="javascript:;">配件</a></li>
+                                <li><a href="javascript:;">飾品</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">包鞋女包</a></li>
+                                <li><a href="javascript:;">流行包</a></li>
+                                <li><a href="javascript:;">品牌包</a></li>
+                                <li><a href="javascript:;">精品包</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">包鞋女鞋</a></li>
+                                <li><a href="javascript:;">平底</a></li>
+                                <li><a href="javascript:;">運動鞋</a></li>
+                                <li><a href="javascript:;">涼鞋</a></li>
+                                <li><a href="javascript:;">跟鞋</a></li>
+                                <li><a href="javascript:;">靴子</a></li>
+                                <li><a href="javascript:;">雨鞋</a></li>
+                                <li><a href="javascript:;">拖鞋</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">包鞋男包</a></li>
+                                <li><a href="javascript:;">肩/斜背包</a></li>
+                                <li><a href="javascript:;">後背包</a></li>
+                                <li><a href="javascript:;">皮夾</a></li>
+                                <li><a href="javascript:;">電腦/公事包</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">包鞋男鞋</a></li>
+                                <li><a href="javascript:;">皮鞋</a></li>
+                                <li><a href="javascript:;">休閒鞋</a></li>
+                                <li><a href="javascript:;">運動鞋</a></li>
+                                <li><a href="javascript:;">涼/拖鞋</a></li>
+                            </ul>
+                            <ul class="nav-promo">
+                                <li class="nav-promo-title">WiB 經典牛皮肩背包</li>
+                                <li class="nav-promo-des">人氣百萬出貨熱賣款</li>
+                                <li class="nav-promo-pic"><a href="javascript:;"><img src="img/temp/nav_promo01.jpg"></a></li>
+                            </ul>
+                        </div>                        
+                    </li>
+                    <li>
+                        <a href="javascript:;">運動休閒</a>
+                        <div class="sub-nav sport">
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">彩妝臉部</a></li>
+                                <li><a href="javascript:;">粉底隔離</a></li>
+                                <li><a href="javascript:;">睫毛膏</a></li>
+                                <li><a href="javascript:;">眼影眼線</a></li>
+                                <li><a href="javascript:;">眉彩</a></li>
+                                <li><a href="javascript:;">唇膏唇蜜</a></li>
+                                <li><a href="javascript:;">遮瑕</a></li>
+                                <li><a href="javascript:;">腮紅</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">彩妝身體</a></li>
+                                <li><a href="javascript:;">彩妝用品</a></li>
+                                <li><a href="javascript:;">頭髮</a></li>
+                                <li><a href="javascript:;">造型品線</a></li>                    
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">保養臉部</a></li>
+                                <li><a href="javascript:;">美顏小物</a></li>
+                                <li><a href="javascript:;">化妝水</a></li>
+                                <li><a href="javascript:;">乳液/霜</a></li>
+                                <li><a href="javascript:;">精華液</a></li>
+                                <li><a href="javascript:;">面膜</a></li>
+                                <li><a href="javascript:;">眼部保養</a></li>
+                                <li><a href="javascript:;">卸妝清潔</a></li>
+                                <li><a href="javascript:;">去角質</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">保養身體</a></li>
+                                <li><a href="javascript:;">美顏小物</a></li>
+                                <li><a href="javascript:;">乳液/霜</a></li>
+                                <li><a href="javascript:;">手足保養</a></li>
+                                <li><a href="javascript:;">清潔沐浴</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">保養身體</a></li>
+                                <li><a href="javascript:;">美髮小物</a></li>
+                                <li><a href="javascript:;">保養</a></li>
+                                <li><a href="javascript:;">清潔</a></li>
+                            </ul>
+                            <ul class="nav-promo">
+                                <li class="nav-promo-title">WiB 經典牛皮肩背包</li>
+                                <li class="nav-promo-des">人氣百萬出貨熱賣款</li>
+                                <li class="nav-promo-pic"><a href="javascript:;"><img src="img/temp/nav_promo01.jpg"></a></li>
+                            </ul>
+                        </div>            
+                    </li>
+                    <li>
+                        <a href="javascript:;">3C 家電</a>
+                        <div class="sub-nav appliance">
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">服飾包鞋媽媽</a></li>
+                                <li><a href="javascript:;">媽媽</a></li>
+                                <li><a href="javascript:;">孕婦衣著</a></li>
+                                <li><a href="javascript:;">媽媽包</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">服飾包鞋寶寶</a></li>
+                                <li><a href="javascript:;">寶寶裝</a></li>
+                                <li><a href="javascript:;">睡衣內著</a></li>
+                                <li><a href="javascript:;">配件</a></li>                    
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">服飾包鞋童裝</a></li>
+                                <li><a href="javascript:;">上衣</a></li>
+                                <li><a href="javascript:;">褲/裙子</a></li>
+                                <li><a href="javascript:;">連身</a></li>
+                                <li><a href="javascript:;">配件</a></li>
+                                <li><a href="javascript:;">泳衣</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">用品媽媽用品</a></li>
+                                <li><a href="javascript:;">寶寶玩具</a></li>
+                                <li><a href="javascript:;">幼童玩具</a></li>
+                                <li><a href="javascript:;">童書美勞</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">用品外出用品</a></li>
+                                <li><a href="javascript:;">揹巾/抱嬰袋</a></li>
+                                <li><a href="javascript:;">手推車</a></li>
+                                <li><a href="javascript:;">汽車安全座椅</a></li>
+                                <li><a href="javascript:;">其他外出用品</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">用品哺育用品</a></li>
+                                <li><a href="javascript:;">吸乳器/母乳袋</a></li>
+                                <li><a href="javascript:;">餐具</a></li>
+                                <li><a href="javascript:;">調理用品</a></li>
+                                <li><a href="javascript:;">其他哺育用品</a></li>
+                            </ul>
+                            <ul class="nav-promo">
+                                <li class="nav-promo-title">WiB 經典牛皮肩背包</li>
+                                <li class="nav-promo-des">人氣百萬出貨熱賣款</li>
+                                <li class="nav-promo-pic"><a href="javascript:;"><img src="img/temp/nav_promo01.jpg"></a></li>
+                            </ul>
+                        </div>               
+                    </li>
+                    <li>
+                        <a href="javascript:;">美食保健</a>
+                        <div class="sub-nav food">
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">彩妝臉部</a></li>
+                                <li><a href="javascript:;">粉底隔離</a></li>
+                                <li><a href="javascript:;">睫毛膏</a></li>
+                                <li><a href="javascript:;">眼影眼線</a></li>
+                                <li><a href="javascript:;">眉彩</a></li>
+                                <li><a href="javascript:;">唇膏唇蜜</a></li>
+                                <li><a href="javascript:;">遮瑕</a></li>
+                                <li><a href="javascript:;">腮紅</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">彩妝身體</a></li>
+                                <li><a href="javascript:;">彩妝用品</a></li>
+                                <li><a href="javascript:;">頭髮</a></li>
+                                <li><a href="javascript:;">造型品線</a></li>                    
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">保養臉部</a></li>
+                                <li><a href="javascript:;">美顏小物</a></li>
+                                <li><a href="javascript:;">化妝水</a></li>
+                                <li><a href="javascript:;">乳液/霜</a></li>
+                                <li><a href="javascript:;">精華液</a></li>
+                                <li><a href="javascript:;">面膜</a></li>
+                                <li><a href="javascript:;">眼部保養</a></li>
+                                <li><a href="javascript:;">卸妝清潔</a></li>
+                                <li><a href="javascript:;">去角質</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">保養身體</a></li>
+                                <li><a href="javascript:;">美顏小物</a></li>
+                                <li><a href="javascript:;">乳液/霜</a></li>
+                                <li><a href="javascript:;">手足保養</a></li>
+                                <li><a href="javascript:;">清潔沐浴</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">保養身體</a></li>
+                                <li><a href="javascript:;">美髮小物</a></li>
+                                <li><a href="javascript:;">保養</a></li>
+                                <li><a href="javascript:;">清潔</a></li>
+                            </ul>
+                            <ul class="nav-promo">
+                                <li class="nav-promo-title">WiB 經典牛皮肩背包</li>
+                                <li class="nav-promo-des">人氣百萬出貨熱賣款</li>
+                                <li class="nav-promo-pic"><a href="javascript:;"><img src="img/temp/nav_promo01.jpg"></a></li>
+                            </ul>
+                        </div>            
+                    </li>
+                    <li>
+                        <a href="javascript:;">偶像週邊</a>
+                        <div class="sub-nav idol">
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">服飾女裝</a></li>
+                                <li><a href="javascript:;">上衣</a></li>
+                                <li><a href="javascript:;">外套/罩衫</a></li>
+                                <li><a href="javascript:;">洋裝</a></li>
+                                <li><a href="javascript:;">褲子/裙子</a></li>
+                                <li><a href="javascript:;">套裝</a></li>
+                                <li><a href="javascript:;">泳衣</a></li>
+                                <li><a href="javascript:;">內睡衣</a></li>
+                                <li><a href="javascript:;">配件</a></li>
+                                <li><a href="javascript:;">飾品</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">服飾男裝</a></li>
+                                <li><a href="javascript:;">上衣</a></li>
+                                <li><a href="javascript:;">外套</a></li>
+                                <li><a href="javascript:;">褲子</a></li>
+                                <li><a href="javascript:;">西裝</a></li>
+                                <li><a href="javascript:;">泳褲</a></li>
+                                <li><a href="javascript:;">內睡衣</a></li>
+                                <li><a href="javascript:;">配件</a></li>
+                                <li><a href="javascript:;">飾品</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">包鞋女包</a></li>
+                                <li><a href="javascript:;">流行包</a></li>
+                                <li><a href="javascript:;">品牌包</a></li>
+                                <li><a href="javascript:;">精品包</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">包鞋女鞋</a></li>
+                                <li><a href="javascript:;">平底</a></li>
+                                <li><a href="javascript:;">運動鞋</a></li>
+                                <li><a href="javascript:;">涼鞋</a></li>
+                                <li><a href="javascript:;">跟鞋</a></li>
+                                <li><a href="javascript:;">靴子</a></li>
+                                <li><a href="javascript:;">雨鞋</a></li>
+                                <li><a href="javascript:;">拖鞋</a></li>
+                            </ul>
+                            <ul>
+                                <li class="sub-nav-title"><a href="javascript:;">包鞋男包</a></li>
+                                <li><a href="javascript:;">肩/斜背包</a></li>
+                                <li><a href="javascript:;">後背包</a></li>
+                                <li><a href="javascript:;">皮夾</a></li>
+                                <li><a href="javascript:;">電腦/公事包</a></li>
+                                <li class="sub-nav-title"><a href="javascript:;">包鞋男鞋</a></li>
+                                <li><a href="javascript:;">皮鞋</a></li>
+                                <li><a href="javascript:;">休閒鞋</a></li>
+                                <li><a href="javascript:;">運動鞋</a></li>
+                                <li><a href="javascript:;">涼/拖鞋</a></li>
+                            </ul>
+                            <ul class="nav-promo">
+                                <li class="nav-promo-title">WiB 經典牛皮肩背包</li>
+                                <li class="nav-promo-des">人氣百萬出貨熱賣款</li>
+                                <li class="nav-promo-pic"><a href="javascript:;"><img src="img/temp/nav_promo01.jpg"></a></li>
+                            </ul>
+                        </div>                        
+                    </li>
+                </ul>
+                <ul class="nav-feature">
+                    <li><a href="javascript:;">現貨在台</a></li>
+                    <li><a href="javascript:;">即時連線</a></li>
+                </ul>   
+            </div>     
+        </div><!--End nav-->
+        <div class="wrapper">
+            <!--麵包屑-->
+            <div class="breadcrumbs">
+            	<ul>
+                	<li><a href="javascript:;">首頁</a></li>
+                	<li><a href="javascript:;">服飾包鞋</a></li>
+                	<li><a href="javascript:;">都買都賣小屋</a></li>
+                	<li><a href="javascript:;">上衣</a></li>
+                </ul>
+            </div><!--麵包屑 End-->
+            <!--賣家封面-->
+            <div class="cover">
+                <p class="bubble-text">如果WORLDiBUY沒有你想買的海外商品，你可以詢問賣家幫你代購</p>
+                <i class="bt-close" title="我明白了，關閉此提醒"></i>
+                <div class="store-follow">
+                    <a class="btn-subscribe" href="javascript:;"><span></span><font></font></a>
+                    <a class="btn-purchase fancybox" href="#purchase-form"><span></span>幫我代購</a>
+                </div>
+            	<img src="img/temp/cover01.jpg">
+                <div class="seller-info">
+                	<div class="approve-block">
+                    	<div class="apr-phone tooltip" title="已通過手機認證"></div>
+                    </div>
+                	<a class="head-pic" href="javascript:;">
+                    	<img src="img/temp/head_pic01.jpg">
+                    </a>
+                	<div class="s-name-section">
+                    	<span class="s-name"><a href="javascript:;">千里之外都買都賣小屋</a></span>
+                        <em>代購國家：<b>美國</b><b>日本</b><b>韓國</b></em>
+                    </div>
+                    <ul class="rating-section">
+                    	<li>
+                        	<b>追蹤人數</b>
+                            <a href="javacript:;">1076</a>
+                        </li>
+                    	<li>
+                        	<b>成交筆數</b>
+                            <a href="javacript:;">162</a>
+                        </li>
+                    	<li>
+                        	<b>接單率</b>
+                            <a href="javacript:;">98.76%</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--賣家封面 End-->
+            <!--賣家商品區-->
+            <ul class="tab-intro">
+                <li><a href="javascript:;">商品介紹</a></li>
+                <li><a href="javascript:;">問與答</a><span>8</span></li>
+                <li><a href="javascript:;">商品評論</a><span>24</span></li>
+            </ul>
+            <div class="goods-content">
+                <!--商品展示區-->
+                <div class="flexslider goodsSlider">
+                    <ul class="slides">
+                        <li data-thumb="img/temp/main_content_pic01.jpg">
+                            <a href="javascript:;"><img src="img/temp/main_content_pic01.jpg" /></a>
+                        </li>
+                        <li data-thumb="img/temp/main_content_pic02.jpg">
+                            <a href="javascript:;"><img src="img/temp/main_content_pic02.jpg" /></a>
+                        </li>
+                        <li data-thumb="img/temp/main_content_pic03.jpg">
+                            <a href="javascript:;"><img src="img/temp/main_content_pic03.jpg" /></a>
+                        </li>
+                        <li data-thumb="img/temp/main_content_pic04.jpg">
+                            <a href="javascript:;"><img src="img/temp/main_content_pic04.jpg" /></a>
+                        </li>
+                        <li data-thumb="img/temp/main_content_pic05.jpg">
+                            <a href="javascript:;"><img src="img/temp/main_content_pic05.jpg" /></a>
+                        </li>
+                        <li data-thumb="img/temp/main_content_pic06.jpg">
+                            <a href="javascript:;"><img src="img/temp/main_content_pic06.jpg" /></a>
+                        </li>
+                        <li data-thumb="img/temp/main_content_pic07.jpg">
+                            <a href="javascript:;"><img src="img/temp/main_content_pic07.jpg" /></a>
+                        </li>
+                    </ul>
+                </div><!--商品展示區-->
+                <!--商品資訊-->
+                <div class="goodsInfo">
+                	<form class="buylist-form">
+                        <div class="goods-name">
+                            <h2>JESUS CHRIST 黑白條紋荷葉邊無袖上衣</h2> 
+                        </div>
+                        <div class="gi-column grayUnderline">
+                            <div class="gi-title">賣場編號：</div>
+                            <div class="store-number gi-content">123456789</div>
+                            <div class="gi-fav"><span></span>128</div>                              
+                        </div>
+                        <div class="gi-column">
+                            <div class="gi-title">商品價格：</div>
+                            <div class="store-price gi-content">NT$<b>580</b></div>
+                        </div>
+                        <div class="gi-column">
+                            <div class="gi-title">品牌國家：</div>
+                            <div class="store-country gi-content">美國</div>
+                        </div>
+                        <div class="gi-column grayUnderline">
+                            <div class="gi-title">寄送天數：</div>
+                            <div class="store-date gi-content">空運<b>8-12</b>天</div>
+                        </div>
+                        <div class="gi-column">
+                            <div class="gi-title">商品規格：</div>
+                            <div class="store-spec gi-content">
+                                <select>
+                                    <option>---請選擇---</option>
+                                    <option>白色 S</option>
+                                    <option>白色 M</option>
+                                    <option>白色 L</option>
+                                </select>
+                                <a href="javascript:;">尺寸參考</a>
+                            </div>
+                        </div>
+                        <div class="gi-column">
+                            <div class="gi-title">數&nbsp;量：</div>
+                            <div class="store-quantity gi-content">
+                                <select>
+                                    <option> 1 </option>
+                                    <option> 2 </option>
+                                    <option> 3 </option>
+                                    <option> 4 </option>
+                                    <option> 5 </option>
+                                    <option> 6 </option>
+                                    <option> 7 </option>
+                                    <option> 8 </option>
+                                    <option> 9 </option>
+                                    <option> 10 </option>
+                                </select>                
+                            </div>
+                        </div>
+                        <div class="gi-column">
+                            <div class="gi-title">取貨方式：</div>
+                            <div class="store-delivery gi-content">
+                                <select>
+                                    <option>宅配</option>
+                                </select>                
+                            </div>
+                        </div>
+                        <div class="gi-column">
+                            <div class="gi-title">分享商品：</div>
+                            <div class="store-share gi-content">
+                                <span class="share-fb">facebook</span>
+                                <span class="share-twi">twitter</span>
+                                <span class="share-pin">pinterest</span>
+                                <span class="share-gp">google plus</span>
+                                <!--<span class="share-wb">weibo</span>
+                                <span class="share-pl">plurk</span>-->
+                                <span class="share-mail">mail</span>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="btn-area">
+                    	<a class="btn-cart-b fancybox" href="#cart-msg">加入購物車</a>
+                    	<a class="btn-fav-b fancybox" href="#fav-msg">加入收藏</a>
+                    </div>
+                </div><!--商品資訊 End-->
+            </div><!--賣家商品區 End-->
+            <!--商品介紹區-->
+            <div class="goods-intro">
+            	<h3>商品介紹</h3>
+                <div class="intro-content">
+                	<p>黑白條紋荷葉邊袖上衣，清新海洋條紋，甜美荷葉袖邊，讓女孩簡單穿著展現率性自然又不失可愛的感覺！讓妳輕鬆成為國民女神！全場焦點都在妳身上！ 讓女孩們帶著裸膚性感。</p>
+                    <h4>關於商品</h4>
+                    <div class="goods-pic">
+                    	<img src="img/temp/intro_pic01.jpg">
+                    </div>
+                    <h4>商品規格</h4>  
+                    <ul>
+                    	<li>商品材質 / 95% 棉 5% 彈性纖維</li>
+                    	<li>商品彈性 / 彈性佳</li>
+                    	<li>素材產地 / 台灣</li>
+                    	<li>加工產地 / 台灣</li>
+                    	<li>洗滌方式 / 不可烘乾 / 不可使用漂白成分之洗衣品</li>
+                    </ul>          
+                    <h4>注意事項</h4>  
+                    <ul>
+                    	<li>1. 自產品新品購買日起算，七日內非人為因素損壞，可換新貨(需保持商品.包裝完整)。</li>
+                    	<li>2. 七日後提供保固本體一年，連接線及其他附件兩個月，保固期間內提供免費之保固服務。對於已更換過的產品，其保固期限延續原產品之剩餘保固期。</li>
+                    	<li>3. 請務必保留網路平台購買明細(購買證明或發票)，缺件將會無法維修，並請詳閱保證卡之保固說明。</li>
+                    </ul>          
+                </div>
+            </div><!--End 商品介紹區-->
+            <!--商品問與答-->
+            <div id="goods-qa" class="goods-qa">
+                <h3>問與答</h3>
+                <div class="gc-section">
+                    <div class="comment-list">
+                        <div class="user-pic">
+                            <img src="img/temp/focus_store01.jpg">
+                        </div>
+                        <div class="user-info">
+                            <a href="javascirpt:;">高音姐</a>
+                            <i>2015年10月01日</i>
+                            <i>12:53:48</i>
+                            <p>你好，我想要綠色*2，還有檸檬糖*2都有現貨嗎？</p>
+                        </div>
+                    </div>
+                    <div class="comment-answer">
+                        <div class="store-reply">回覆</div>
+                        <div class="user-info">
+                            <a href="javascirpt:;">都買都賣小舖</a>
+                            <i>2015年10月02日</i>
+                            <i>18:20:35</i>
+                            <p>您好：有現貨，再麻煩您提出代單，我跟您報價一下，謝謝您！</p>
+                        </div>
+                    </div>
+                    <div class="comment-list">
+                        <div class="user-pic">
+                            <img src="img/temp/focus_store03.jpg">
+                        </div>
+                        <div class="user-info">
+                            <a href="javascirpt:;">火星人</a>
+                            <i>2015年10月01日</i>
+                            <i>07:30:42</i>
+                            <p>新專輯 Deeper Memories 已推出！謝謝各位支持！也歡迎來參加我的世界巡迴演唱會新專輯 Deeper Memories 已推出！謝謝各位支持！也歡迎來參加我的世界巡迴演唱會新專輯 Deeper Memories 已推出！謝謝各位支持！也歡迎來參加我的世界巡迴演唱會新專輯 Deeper Memories 已推出！謝謝各位支持！也歡迎來參加我的世界巡迴演唱會新專輯 Deeper Memories 已推出！謝謝各位支持！也歡迎來參加我的世界巡迴演唱會新專輯 Deeper Memories 已推出！謝謝各位支持！也歡迎來參加我的世界巡迴演唱會新專輯 Deeper Memories 已推出！謝謝各位支持！也歡迎來參加我的世界巡迴演唱會</p>
+                        </div>
+                    </div>
+                    <div class="comment-answer">
+                        <div class="store-reply">回覆</div>
+                        <div class="user-info">
+                            <a href="javascirpt:;">都買都賣小舖</a>
+                            <i>2015年10月02日</i>
+                            <i>18:18:59</i>
+                            <p>請問你有什麼事嗎？</p>
+                        </div>
+                    </div>
+                    <div class="comment-list">
+                        <div class="user-pic">
+                            <img src="img/temp/focus_store02.jpg">
+                        </div>
+                        <div class="user-info">
+                            <a href="javascirpt:;">假掰珍艾買</a>
+                            <i>2015年09月18日</i>
+                            <i>11:23:09</i>
+                            <p>這款商品尺不合可以退換貨嗎？</p>
+                        </div>
+                    </div>
+                    <a class="more-comment" href="javascript:;"><span></span>檢視更多問與答<b>(8)</b></a>
+                    <div class="msg-box">
+                        <from>
+                            <textarea placeholder="請先登入才能提出問題留言哦！"></textarea>
+                            <input class="btn-gray" type="button" value="提出問題">
+                        </from>
+                    </div>
+                </div>
+            </div>
+            <!--End 商品問與答-->
+            <!--商品評論區-->
+            <div class="goods-comment">
+            	<h3>商品評論</h3>    
+            	<ul class="gc-tab">
+                	<li class="active">
+                    	<a href="javascript:;">所有評價<b>(24)</b></a>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">勸你BUY<b>(17)</b></a>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">還可以<b>(6)</b></a>
+                    </li>
+                	<li>
+                    	<a href="javascript:;">踩到雷<b>(1)</b></a>
+                    </li>
+                </ul>
+                <div class="gc-section">
+                	<div class="comment-list">
+                        <div class="user-pic">
+                            <span class="rank-great">勸你BUY</span>
+                            <img src="img/temp/comment_pic01.jpg">
+                        </div>
+                        <div class="user-info">
+                        	<a href="javascirpt:;">阿心亞</a>
+                            <i>2014年7月21日</i>
+                            <i>07:43:43</i>
+                            <p>推薦這家店的商品！好穿便宜又好看！</p>
+                            <button class="btn-hot" title="看完評價，好心動">16 人</button>
+                        </div>
+                        <div class="user-example">
+                        	<a class="fancybox comment-ex01" rel="group01" href="img/temp/example01.jpg"><img src="img/temp/example01.jpg"></a>
+                        	<a class="fancybox comment-ex01" rel="group01" href="img/temp/example02.jpg"><img src="img/temp/example02.jpg"></a>
+                        </div>
+                    </div>
+                	<div class="comment-list">
+                        <div class="user-pic">
+                            <span class="rank-great">勸你BUY</span>
+                            <img src="img/temp/comment_pic02.jpg">
+                        </div>
+                        <div class="user-info">
+                        	<a href="javascirpt:;">Anne Hathaway</a>
+                            <i>2014年7月18日</i> 
+                            <i>16:11:48</i>  
+                            <p>這件真的很漂釀~又很百搭！穿上後朋友都說我變正了，也釣到更多凱子囉~今年奧斯卡就穿這件了！</p>
+                            <button class="btn-hot" title="看完評價，好心動">128 人</button>
+                        </div>
+                        <div class="user-example">
+                        	<a class="fancybox comment-ex01" rel="group02" href="img/temp/example01.jpg"><img src="img/temp/example01.jpg"></a>
+                        	<a class="fancybox comment-ex01" rel="group02" href="img/temp/example02.jpg"><img src="img/temp/example02.jpg"></a>
+                        	<a class="fancybox comment-ex01" rel="group02" href="img/temp/example03.jpg"><img src="img/temp/example03.jpg"></a>
+                        </div>
+                    </div>
+                	<div class="comment-list">
+                        <div class="user-pic">
+                            <span class="rank-notbad">還可以</span>
+                            <img src="img/temp/comment_pic03.jpg">
+                        </div>
+                        <div class="user-info">
+                        	<a href="javascirpt:;">黑暗騎士</a>
+                            <i>2014年7月17日</i>
+                            <i>07:33:52</i>
+                            <p>貓女是我的!!!!!!!!!!!!!!!!!</p>
+                        </div>
+                    </div>
+                	<div class="comment-list">
+                        <div class="user-pic">
+                            <span class="rank-suck">踩到雷</span>
+                            <img src="img/temp/comment_pic04.jpg">
+                        </div>
+                        <div class="user-info">
+                        	<a href="javascirpt:;">大元</a>
+                            <i>2014年6月8日</i>
+                            <i>18:18:59</i>
+                            <p>在我開始押韻之前，我從節拍裡偷閒，撇開了輕鬆的旋律和舒服的聲線。我先聲明一點，不用艱深的字眼，文字一樣源源不絕彷彿天生活字典。這是我目標，我想要走的路，為了，押韻能打開想像力的窗戶：可以談天說地，像一群朋友睡在通舖，可以單刀直入，無拘束。用最通俗的講法表達豐富的想法，所有痛苦和快樂都讓你像親身經歷，我收服人心的方法so cool，用旋律節拍征服，聽到這裡你－就這樣被我征服！it's old school，但，人是念舊的動物，看！我是這樣烹煮我的soul food旋律大鼓和小鼓，and I hit the rhyme too。</p>
+                        </div>
+                    </div>
+                	<div class="comment-list">
+                        <div class="user-pic">
+                            <span class="rank-great">勸你BUY</span>
+                            <img src="img/temp/comment_pic05.jpg">
+                        </div>
+                        <div class="user-info">
+                        	<a href="javascirpt:;">Emily</a>
+                            <i>2014年6月1日</i>
+                            <i>13:15:18</i>
+                            <p>質料普通，穿起來還算舒適，賣家態度良好，處理商品速快。</p>
+                            <button class="btn-hot" title="看完評價，好心動">0 人</button>
+                        </div>
+                        <div class="user-example">  
+                        	<a class="fancybox comment-ex01" href="img/temp/example01.jpg"><img src="img/temp/example01.jpg"></a>
+                        </div>
+                    </div>
+                </div>
+                <a class="more-comment" href="javascript:;"><span></span>檢視更多評價<b>(19)</b></a>
+            </div><!--商品評論區 End-->
+        </div>
+        <!--footer-->
+        <div class="footer">
+        	<div class="wrapper">
+            	<div class="ft-left">
+                    <ul>
+                        <li><a href="ft_guide.html">新手上路</a></li>
+                        <li><a href="ft_problem.html">常見問題</a></li>
+                        <li><a href="ft_contact.html">連絡我們</a></li>
+                        <li><a href="ft_terms.html">服務條款</a></li>
+                        <li><a href="ft_privacy.html">隱私權聲明</a></li>
+                        <li><a href="ft_copyright.html">著作權聲明</a></li>
+                        <li><a href="ft_wanted.html">人才招募</a></li>
+                    </ul>
+                    <span>Copyright &copy; <a href="index.html">WORLDiBUY</a>.com All Rights Reserved.</span>
+                </div>
+                <div class="ft-right">
+                	<ul>
+                    	<li class="aboutUs"><a href="other_about.html">認識WiB</a></li>
+                    	<li class="buyReason"><a href="other_buy.html">勸BUY理由</a></li>
+                        <li class="sellerCollect"><a href="other_steps.html">賣家大募集</a></li>
+                        <li class="wibBlogger"><a href="http://www.worldibuy.com/wiblogger.html" target="_blank">WiBlogger</a></li>
+                    	<li class="fbFans"><a href="javascript:;">粉絲專頁</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!--footer End-->
+        <!--聯絡店家
+        <div class="contact-store online">
+        	<p>聯絡店家</p>
+            <span></span>
+        </div>
+        <div class="msg-close"></div>
+        <div class="live-msg">
+        	<section>
+                <div class="title-name"><a class="blue-link" href="javascript:;">美國原裝冬季超不暖冷死人電暖爐</a></div>
+        		<div class="bubbles-left"><img src="img/temp/member_pic.jpg">冬季超不暖冷死人電暖爐的到貨時間？有辦法再調25台嗎？<span>12/16 15:33</span></div>
+        		<div class="bubbles-right"><img src="img/temp/test02.jpg">貨倉目前還有5台現貨，您需要的話再馬上幫您叫貨，大約3~5個工作天，有需要的話請下訂，感謝您的詢問<span>12/16 20:41</span></div>
+                <div class="bubbles-left"><img src="img/temp/member_pic.jpg">有機會追加到40台嗎？急需要，而且要2個<span>12/17 08:33</span>工作天內</div>
+        		<div class="bubbles-right"><img src="img/temp/test02.jpg">我盡量幫您調看看，2個工作天內我盡量，看能不能湊到40台<span>12/17 11:09</span></div>        
+        		<div class="bubbles-left"><img src="img/temp/member_pic.jpg">那先不用好了，謝謝<span>12/17 23:51</span></div>
+        		<div class="bubbles-right"><img src="img/temp/test02.jpg">增肖仔，你問爽我回答心酸的喔，不買就不買在那邊浪費我時間<span>12/18 00:41</span></div>            
+            </section>
+            <div class="text-msg">
+            	<textarea></textarea>
+                <button class="btn-gray">附加檔案</button>
+                <input type="file">        
+            </div>
+        </div>
+        <!--End 聯絡店家-->
+        <!--代購單-->
+        <div id="purchase-form" class="purchase-form popup-section">
+            <h2>
+                <span></span>
+                <b>千里之外都買都賣小屋</b>代購單
+            </h2>
+            <p>本店的商品都可以直接放入購物車購買，如果本店沒有你想買的海外商品，你可以使用代購單，讓我們幫你代購。</p>
+            <div class="pf-content">
+                <div class="pf-box">
+                    <em>商品 1<b>刪除</b></em>
+                    <div class="pf-group">
+                        <label>商品名稱</label>
+                        <input type="text">
+                    </div>
+                    <div class="pf-group">
+                        <label>參考網址</label>
+                        <input type="text">
+                    </div>
+                    <div class="pf-group pf-s">
+                        <label>購買數量</label>
+                        <input type="text">
+                    </div>
+                    <div class="pf-group">
+                        <label>規格說明</label>
+                        <textarea></textarea>
+                    </div>
+                    <div class="pf-group pf-upload">
+                        <label>參考圖片</label>
+                        <input type="text" class="pf-upload-name" disabled="disabled">
+                        <button class="btn-gray">上傳圖片，僅限一張圖片</button>
+                        <input type="file" class="pf-upload-btn">
+                    </div>
+                </div>
+                <div class="pf-box pf-del">
+                    <em>商品 2<b>刪除</b></em>
+                    <div class="pf-group">
+                        <label>商品名稱</label>
+                        <input type="text">
+                    </div>
+                    <div class="pf-group">
+                        <label>參考網址</label>
+                        <input type="text">
+                    </div>
+                    <div class="pf-group pf-s">
+                        <label>購買數量</label>
+                        <input type="text">
+                    </div>
+                    <div class="pf-group">
+                        <label>規格說明</label>
+                        <textarea></textarea>
+                    </div>
+                    <div class="pf-group pf-upload">
+                        <label>參考圖片</label>
+                        <input type="text" class="pf-upload-name" disabled="disabled">
+                        <button class="btn-gray">上傳圖片，僅限一張圖片</button>
+                        <input type="file" class="pf-upload-btn">
+                    </div>
+                </div>
+                <div class="btn-area">
+                    <button class="btn-add-items"><span></span>再增加一組商品</button>
+                </div>
+                <div class="pf-shipping">
+                    <div class="pf-group">
+                        <label>寄送方式</label>
+                        <select>
+                            <option>宅配運送</option>
+                            <option>超商取貨</option>
+                        </select>
+                    </div>
+                    <div class="pf-group">
+                        <label>其他說明</label>
+                        <textarea></textarea>
+                    </div>
+                </div>
+                <div class="btn-area">
+                    <button class="btn-pink"><span></span>確認送出</button>
+                    <b>送出後可至會員中心客服記錄中，我的代購單查詢賣家回覆狀況</b>
+                </div>
+            </div>
+        </div><!--End 代購單-->
+        <!--fav msg-->
+        <div id="fav-msg" class="fav-msg popup-section">
+            <b>ETUDE HOUSE x PONY PLAY 101系列粉底遮瑕棒</b>
+            <p>加入收藏成功！</p>
+            <div class="btn-area">
+                <button class="btn-pink">確定</button>
+            </div>
+        </div>
+        <!--End fav msg--> 
+        <!--cart msg-->
+        <div id="cart-msg" class="cart-msg popup-section">
+            <p>加入購物車成功！</p>
+            <div class="cart-pop">
+                <img src="img/temp/goods_live03.jpg">
+                <div>
+                    <b>ETUDE HOUSE x PONY PLAY 101系列粉底遮瑕棒</b>
+                    <a href="buy_step01.html" class="btn-pink">立即前往結帳</a>
+                    <a href="javascript:;" class="btn-lg">繼續購物</a>
+                </div>
+            </div>
+        </div>
+        <!--End cart msg-->        
+    </body>
+</html>

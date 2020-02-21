@@ -1,0 +1,141 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/*resets*/
+html { font-size: 12px; }
+h1, h2, h3, h4, h5, h6, p, a, button, table, div, ul, li, textarea, input { font-family: 'Open Sans', '微軟正黑體', Arial, Helvetica, sans-serif, 'STHeiti Light', '儷黑 Pro', 'LiHei Pro', 'Microsoft Yahei', 'Microsoft JhengHei', '新細明體'; }
+a { text-decoration: none; outline: none; /* for Firefox Google Chrome  */  behavior:expression(this.onFocus=this.blur()); /* for IE */}
+input[type=submit],input[type=reset],input[type=button],input[type=text],input[type=password],textarea{-webkit-appearance:none;}
+iframe[name=google_conversion_frame]{ display: none;}
+:focus {outline: none;}
+/*end resets*/
+
+/*main content*/
+body{overflow-x: hidden; background: #f5f5f5;}
+.color-bar{background: #27a3e1; height: 210px; position: relative; z-index: -1; background: -webkit-linear-gradient(right, #27a3e1 , #06d9ff); background: -o-gradient(left, #27a3e1 , #06d9ff); background: -moz-gradient(left, #27a3e1 , #06d9ff); background: linear-gradient(to left, #27a3e1 , #06d9ff);}
+.cb-top{-webkit-transform: rotate(-4deg); transform: rotate(-4deg); width: 0; opacity: 0; margin-left: -5%; margin-top: -5%;}
+.cb-bottom{-webkit-transform: rotate(-4deg); transform: rotate(-4deg); width: 0; right: 0; float: right; opacity: 0; margin-right: -5%; margin-top: 50px; background: -webkit-linear-gradient(left, #27a3e1 , #06d9ff); background: -o-gradient(right, #27a3e1 , #06d9ff); background: -moz-gradient(right, #27a3e1 , #06d9ff); background: linear-gradient(to right, #27a3e1 , #06d9ff);}
+.cb-top.motion{-webkit-animation: cbMotion .8s forwards; animation: cbMotion .8s forwards;}
+.cb-bottom.motion{-webkit-animation: cbMotion .8s .5s forwards; animation: cbMotion .8s .5s forwards;}
+@-webkit-keyframes cbMotion {
+	100% {width: 110%; opacity: 1;}
+}
+@keyframes cbMotion {
+  	100% {width: 110%; opacity: 1;}
+}
+.wrap{width: 980px; margin: -75px auto 0;}
+.wrap:after{content: ''; display: block; height: 0; clear: both; visibility: hidden;}
+.content-left{width: 350px; float: left;}
+.pc-slider{width: 350px; height: 735px; background: url(../img/phone.png) no-repeat;}
+.content-right{width: 580px; margin-left: 50px; float: left;}
+.logo{-webkit-transform: rotate(-4deg); transform: rotate(-4deg); margin: -40px 0 0 0;}
+.logo .logo-apple{width: 62px; height: auto; -webkit-animation: logoApple .7s infinite linear alternate; animation: logoApple .7s infinite linear alternate;}
+.logo .logo-text{width: 176px; height: auto; margin-left: 12px;}
+.logo a:hover .logo-apple{-webkit-animation-play-state: paused; animation-play-state: paused;}
+.download{margin-top: 65px;}
+.download div[class^="dl-"]{display: inline-block;}
+.download .dl-appstore{margin-right: 80px;}
+.download div[class^="dl-"] > a > img{width: 180px; height: auto; margin-bottom: 5px; -webkit-transition: all ease .3s; transition: all ease .3s;}
+.download div[class^="dl-"] > a:hover > img{opacity: .75; -webkit-transform: translateY(-5px); transform: translateY(-5px);}
+.download .qrcode{width: 175px; height: auto; display: block;}
+.feature{margin-top: 20px;}
+.feature h1{font-size: 40px; position: relative; color: #27a3e1; font-weight: bold; border-bottom: 1px solid #fff; padding-bottom: 10px; margin-bottom: 10px;}
+.feature h1:after{content: ''; width: 100%; height: 1px; background: #e2e2e2; display: block; position: absolute; left: 0; bottom: 0;}
+.feature h1 span{font-weight: normal; font-size: 28px;}
+.feature ul:after{content: ''; width: 100%; height: 0; clear: both; display: block;}
+.feature ul li{font-size: 17px; color: #444; line-height: 34px; float: left; width: 50%; box-sizing: border-box;}
+.feature ul li:nth-child(even){padding-left: 60px;}
+.feature ul li i{width: 8px; height: 13px; display: inline-block; background: url(../img/arrow.png) no-repeat; background-size: 8px auto; margin-right: 10px;}
+.app-thumbs{margin: 30px auto 0; width: 700px;}
+.app-thumbs ul li{display: inline-block; margin-right: 25px;}
+.app-thumbs ul li:last-child{margin-right: 0;}
+.app-thumbs ul li img{width: 90px; height: 90px;}
+.pc-slider .swiper-container{padding-top: 100px;}
+.pc-slider .swiper-container, .pc-slider .swiper-container img{width: 300px; height: 525px;} 
+.mobile-slider{display: none;}
+
+footer{height: 210px; overflow: hidden; position: relative; clear: both;}
+footer .color-bar{position: absolute; bottom: -40%;}
+footer .copyright{color: #fff; font-size: 15px; width: 980px; margin: 145px auto 0; text-align: center;}
+
+.loading{position: fixed; width: 100%; height: 100%; background: #27a3e1; z-index: 90; left: 0; top: 0;}
+.ld-logo{position: absolute; width: 256px; height: 78px; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+.ldl-left{width: 62px; height: auto; -webkit-animation: logoApple .6s infinite linear alternate; animation: logoApple .6s infinite linear alternate;}
+.ldl-right{width: 176px; height: auto; margin-left: 12px; -webkit-animation: logoText .6s infinite linear alternate; animation: logoText .6s infinite linear alternate;}
+@-webkit-keyframes logoApple {
+  	0% {-webkit-transform: rotate(12deg); transform: rotate(12deg);}
+  	100% {-webkit-transform: rotate(12deg); transform: rotate(-12deg);}
+}
+@keyframes logoApple {
+  	0% {-webkit-transform: rotate(12deg); transform: rotate(12deg);}
+  	100% {-webkit-transform: rotate(12deg); transform: rotate(-12deg);}
+}
+
+@-webkit-keyframes logoText {
+  	0% {opacity: .3;}
+  	100% {opacity: 1;}
+}
+@keyframes logoText {
+  	0% {opacity: .3;}
+  	100% {opacity: 1;}
+}
+
+.notice{padding: 15px; color: #35aae4; box-sizing: border-box; margin: 0 auto; background: rgba(255,255,255,.85); border-radius: 5px; margin-top: 15px; font-size: 15px; line-height: 24px;}
+
+/*mobile*/
+@media screen and (max-width: 980px) {
+  .wrap{width: 100%; padding: 0 4%; box-sizing: border-box; margin-top: -95px;}
+  .content-left{display: none;}
+  .mobile-slider{display: block;}
+  .content-right{float: none; width: 100%; margin-left: 0;}
+  .color-bar{height: 150px; width: 110%;}
+  .mobile-slider .swiper-container { width: 100%; height: 100%;}
+  .mobile-slider .swiper-slide img{width: 100%; height: auto;}
+  .download .dl-appstore{margin-right: 4%;}
+  .download .qrcode{display: none;}
+  .download div[class^="dl-"]{width: 48%; display: block; float: left;}
+  .download div[class^="dl-"] > a > img{width: 100%}
+  footer{height: 200px;}
+  footer .copyright{width: 100%; margin-top: 86px;}
+  footer .copyright span{display: block;}
+  footer .color-bar{bottom: 5%; height: 140px;}
+  .feature ul li{float: none; width: 100%;}
+  .feature ul li:nth-child(even){padding-left: 0px;}
+  .app-thumbs{width: 100%; overflow: hidden; box-sizing: border-box; padding: 0 2%;}
+
+@media screen and (max-width: 480px) {
+  .color-bar{height: 100px;}
+  .download{margin-top: 50px;}
+  .logo{margin-top: 18px;}
+  .logo .logo-apple{width: 48px;}
+  .logo .logo-text{width: 146px;}
+  .app-thumbs ul li{float: left; display: block; width: 30%; margin-right: 4.5%; margin-bottom: 4%;}
+  .app-thumbs ul li:nth-child(3n){margin-right: 0;}
+  .app-thumbs ul li img{width: 100%; height: auto;}
+  footer{height: 120px;}
+  footer .copyright{margin-top: 55px;}
+  footer .color-bar{bottom: -20%; height: 120px;}
+  .feature ul li{line-height: 28px; margin-bottom: 18px;}
+}
+
+@media screen and (max-width: 375px) {
+  .feature h1{font-size: 36px;}
+  .feature h1 span{font-size: 24px;}
+  .feature ul li{font-size: 16px;}
+}
+
+@media screen and (max-width: 360px) {
+  .feature h1{font-size: 36px;}
+  .feature h1 span{font-size: 24px;}
+  .feature ul li{font-size: 16px;}
+}
+
+@media screen and (max-width: 320px) {
+  .feature h1{font-size: 32px;}
+  .feature h1 span{font-size: 20px;}
+  footer .copyright{margin-top: 48px;}
+}

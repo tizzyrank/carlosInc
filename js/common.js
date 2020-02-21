@@ -66,102 +66,107 @@ $(function () {
     };
     navSwitch();
 
-    // web protfolio list
+    // web portfolio list
     function webProtfoli() {
         let webData = [
             {
                 imgUrl: 'img/web_010.jpg',
-                webUrl: 'test_url',
+                webUrl: 'temp/web/hotel/index.html',
+                mobileUrl: 'temp/mobile/hotel/index.html',
                 name: '綠舞觀光飯店',
                 category: 'site-page'
             },
             {
                 imgUrl: 'img/web_023.jpg',
-                webUrl: 'test_url',
+                webUrl: 'temp/web/annasui/index.html',
                 name: 'Anna Sui 香水',
                 category: 'landing-page'
             },
             {
-                imgUrl: 'img/web_027.jpg',
-                webUrl: 'test_url',
-                name: '星際異攻隊2 前導頁',
-                category: 'games'
-            },
-            {
                 imgUrl: 'img/web_01.jpg',
-                webUrl: 'test_url',
+                webUrl: 'temp/web/wib/index.html',
+                mobileUrl: 'temp/mobile/wib/index.html',
                 name: 'World I Buy 購物商城',
                 category: 'site-page'
             },
             {
-                imgUrl: 'img/web_016.jpg',
-                webUrl: 'test_url',
-                name: 'CHIC GIRL 女鞋',
-                category: 'site-page'
-            },
-            {
-                imgUrl: 'img/web_017.jpg',
-                webUrl: 'test_url',
-                name: 'FARLALA 衣著',
-                category: 'site-page'
-            },
-            {
-                imgUrl: 'img/web_021.jpg',
-                webUrl: 'test_url',
-                name: 'PB plus 運動加',
-                category: 'landing-page'
-            },
-            {
-                imgUrl: 'img/web_032.jpg',
-                webUrl: 'test_url',
-                name: 'MI6 指紋互動',
-                category: 'games'
-            },
-            {
-                imgUrl: 'img/web_028.jpg',
-                webUrl: 'test_url',
-                name: 'Tiffany 鑽戒盒',
-                category: 'games'
-            },
-            {
-                imgUrl: 'img/web_025.jpg',
-                webUrl: 'test_url',
-                name: 'Line貼圖大賞',
-                category: 'landing-page'
-            },
-            {
                 imgUrl: 'img/web_022.jpg',
-                webUrl: 'test_url',
+                webUrl: 'temp/web/wjs/index.html',
                 name: '萬金石馬拉松',
                 category: 'landing-page'
             },
             {
-                imgUrl: 'img/web_035.jpg',
-                webUrl: 'test_url',
-                name: '刮刮卡互動',
+                imgUrl: 'img/web_027.jpg',
+                webUrl: 'temp/web/gogt/index.html',
+                name: '星際異攻隊2 前導頁',
+                category: 'games'
+            },
+            {
+                imgUrl: 'img/web_017.jpg',
+                webUrl: 'temp/web/farlala/index.html',
+                name: 'FARLALA 衣著',
+                category: 'site-page'
+            },
+            {
+                imgUrl: 'img/web_016.jpg',
+                webUrl: 'temp/web/chic/index.html',
+                name: 'CHIC GIRL 女鞋',
+                category: 'site-page'
+            },
+            {
+                imgUrl: 'img/web_025.jpg',
+                webUrl: 'temp/web/line/index.html',
+                name: 'Line貼圖大賞',
+                category: 'landing-page'
+            },
+            {
+                imgUrl: 'img/web_032.jpg',
+                webUrl: 'temp/web/mip6/index.html',
+                mobileUrl: 'temp/mobile/mip6/index.html',
+                name: 'MI6 指紋互動',
                 category: 'games'
             },
             {
                 imgUrl: 'img/web_019.jpg',
-                webUrl: 'test_url',
+                webUrl: 'temp/web/mother/index.html',
                 name: '撩媽攻略',
                 category: 'landing-page'
             },
             {
-                imgUrl: 'img/web_029.jpg',
-                webUrl: 'test_url',
-                name: 'LoganGo 轉盤',
+                imgUrl: 'img/web_021.jpg',
+                webUrl: 'temp/web/pb/index.html',
+                name: 'PB plus 運動加',
+                category: 'landing-page'
+            },
+            {
+                imgUrl: 'img/web_035.jpg',
+                webUrl: 'temp/web/scratchcard/index.html',
+                mobileUrl: 'temp/mobile/scratchcard/index.html',
+                name: '刮刮卡互動',
                 category: 'games'
             },
             {
                 imgUrl: 'img/web_026.jpg',
-                webUrl: 'test_url',
+                webUrl: 'temp/web/member_fav/index.html',
                 name: '壹會員 獨享超好康',
                 category: 'landing-page'
             },
             {
+                imgUrl: 'img/web_024.jpg',
+                webUrl: 'temp/web/apple_promo/index.html',
+                name: '蘋果日報APP宣傳',
+                category: 'landing-page'
+            },
+            {
+                imgUrl: 'img/web_028.jpg',
+                webUrl: 'temp/web/tiffiany/index.html',
+                mobileUrl: 'temp/mobile/tiffiany/index.html',
+                name: 'Tiffany 鑽戒盒',
+                category: 'games'
+            },
+            {
                 imgUrl: 'img/web_020.jpg',
-                webUrl: 'test_url',
+                webUrl: 'temp/web/muji/index.html',
                 name: '無印良品 新生活',
                 category: 'event'
             },
@@ -172,22 +177,16 @@ $(function () {
                 category: 'games'
             },
             {
-                imgUrl: 'img/web_024.jpg',
-                webUrl: 'test_url',
-                name: '蘋果日報APP宣傳',
-                category: 'landing-page'
-            },
-            {
                 imgUrl: 'img/web_030.jpg',
                 webUrl: 'test_url',
                 name: '神鬼奇航問答',
                 category: 'games'
             },
             {
-                imgUrl: 'img/web_018.jpg',
+                imgUrl: 'img/web_029.jpg',
                 webUrl: 'test_url',
-                name: 'GMI 電子',
-                category: 'site-page'
+                name: 'LoganGo 轉盤',
+                category: 'games'
             },
             {
                 imgUrl: 'img/web_02.jpg',
@@ -200,6 +199,12 @@ $(function () {
                 webUrl: 'test_url',
                 name: 'WiB 開幕預告網頁',
                 category: 'landing-page'
+            },
+            {
+                imgUrl: 'img/web_018.jpg',
+                webUrl: 'test_url',
+                name: 'GMI 電子',
+                category: 'site-page'
             },
             {
                 imgUrl: 'img/web_04.jpg',
@@ -284,9 +289,17 @@ $(function () {
         let webContent = '';
 
         webData.forEach(function (item) {
+            let links = item.webUrl;
+            if($(window).width() <= 1200){
+                if(item.mobileUrl !== undefined){
+                    links = item.mobileUrl;
+                }else{
+                    links = item.webUrl;
+                };
+            };
             webContent +=
                 `<figure class="pw-col ${item.category}">
-                <a href="${item.webUrl}" target="_blank">
+                <a href="${links}" target="_blank">
                     <div class="web-pic">
                         <img src=${item.imgUrl}>
                     </div>
