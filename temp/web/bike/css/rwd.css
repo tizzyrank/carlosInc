@@ -1,0 +1,21 @@
+/*****max width<=955px*****/
+@media screen and (max-width: 955px) {
+.header .nav a{ padding:8px;}
+}
+/*****max width<=480px*****/
+@media screen and (max-width: 480px) {
+.header .logo{ text-align:center; margin:0; width:100%;}
+.header .nav ul{ padding-top:10px;}	
+.header .nav { float:none; width:100%; clear:both;}
+.header .nav li{ display:block; text-align:center; margin-top:6px;}
+.header .fbLink{ float:none; margin:0 auto;}
+.title{ width:480px; font-size:1.3em;}
+.title:before{ border:none;}
+.view:first-child{ margin:0 0 0 110px;}
+.view{ float:none; margin:20px 0 0 110px;}
+.insSection{ text-align:center; width:480px;}
+.memberSection .member:first-child{ margin:0 0 0 120px;}
+.memberSection .member{ float:none; margin:20px 0 0 120px;}
+.videoSection .videoBox{ float:none; width:420px; height:270px; margin:2% 0 0 1.1%;}
+.footer{ height:20px; padding-top:20px;}
+}

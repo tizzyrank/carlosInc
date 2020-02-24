@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+		<meta name="Author" content="台灣蘋果日報">
+		<meta name="Copyright" content="台灣蘋果日報">
+		<meta property="og:type" content="website">
+		<title>大黃蜂</title>
+		<link rel="icon" href="http://img.appledaily.com.tw/appledaily/pinsite/64x64.ico" type="image/png">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			 $("#spanSubmitInfo").hide();
+			 var submitted = false;
+
+			 function onSubmitEventHandler(){
+		        $("#spanSubmitInfo").show();
+		        $("#btnSubmit").hide();
+
+		        if(checkFormData())
+		        {
+		            submitted=true;
+
+		            return true;
+		        }
+		        else
+		        {
+		            $("#spanSubmitInfo").hide();
+		            $("#btnSubmit").show();
+
+		            submitted=false;
+
+		            return false;
+		        }
+		    }
+
+		    function checkFormData(){
+		        var hasError = false;
+
+		        if($("#entry_948357728").val() == "")
+		        {
+		            alert("請填寫姓名");
+		            hasError = true;
+		        }
+		        else if($("#entry_1974593567").val() == "")
+		        {
+		            alert("請填寫手機號碼");
+		            hasError = true;
+		        }
+		        else if(!$.isNumeric( $("#entry_1974593567").val()))
+		        {
+		            alert("電話請填寫數字");
+		            hasError = true;
+		        }                                  
+
+		        return !hasError;
+		    }
+
+		    function successForm(){
+				$('.data-form').hide();
+				$('.msgok').fadeIn(300);
+			};
+		</script>
+	</head>
+	<body>
+		<main class="wrap">
+			<section class="page01">
+				<div class="logo">
+					<img src="img/logo.png">
+				</div>
+				<div class="date-title">
+					<img src="img/text01.png">
+				</div>
+				<div class="sub-title">
+					<img src="img/sub_title01.png">
+				</div>
+				<div class="enter-btn">
+					<figure>
+						<img src="img/button01.png">
+					</figure>
+					<div class="btn-shadow"></div>
+				</div>
+			</section>
+
+			<section class="page02">
+				<div class="mask"></div>
+				<div class="ins">
+					<img src="img/sub_title03.png">
+				</div>
+				<div class="enter-btn">
+					<figure>
+						<img src="img/button02.png">
+					</figure>
+					<div class="btn-shadow"></div>
+				</div>
+			</section>
+
+			<section class="page03">
+				<div class="game-bar">
+					<div class="head-pic">
+						<img src="img/head.jpg">
+					</div>
+					<div class="game-status">
+						<div class="game-logo">
+							<img src="img/logo.png">
+						</div>
+						<div class="game-score">
+							<div class="game-time">
+								<em>剩餘時間</em>
+								<b>60</b>
+							</div>
+							<div class="game-answer">
+								<em>找到解答</em>
+								<b>0</b>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="game-wrap">
+					<h5>點選圖2選擇差異處</h5>
+					<div class="game-section gs-01">
+						<img src="img/game_bg01.jpg">
+						<div class="wrong-place wp01"></div>
+						<div class="wrong-place wp02"></div>
+						<div class="wrong-place wp03"></div>
+						<div class="wrong-place wp04"></div>
+						<div class="wrong-place wp05"></div>
+						<div class="wrong-place wp06"></div>
+						<div class="wrong-place wp07"></div>
+						<div class="wrong-place wp08"></div>
+						<div class="wrong-place wp09"></div>
+						<div class="wrong-place wp010"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page-success">
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {successForm();}"></iframe>
+        		<form class="data-form" action="https://docs.google.com/forms/d/15Ip174HoTZianYlTKZYjTQtlF0-EyQxzS1ekL8zFLCA/formResponse" method="POST" target="hidden_iframe" onsubmit="return onSubmitEventHandler();">
+					<main class="content">
+						<h2>
+							<!-- <img src="img/logo.jpg"> -->
+						</h2>
+						<section class="share">
+							<h3>《大黃蜂冒險完成》</h3>
+							<p class="congrats">成為《 大黃蜂 》的超級鐵粉！留下個人資料，完成搶票資格</p>
+							<div class="data-col">
+								<input class="it-format" type="text" name="entry.71364734" value="" id="entry_948357728" placeholder="請填寫姓名">
+							</div>
+							<div class="data-col">
+								<input class="it-format" type="text" name="entry.523578097" value="" id="entry_1974593567" placeholder="請填寫手機號碼">
+							</div>
+							<p class="notice">
+								<b>個人資訊僅限本活動聯繫得獎者使用</b>，當您按下“確認登錄”鍵即表示同意蘋果日報使用您的基本資訊 (本站設有資安維護系統)
+							</p>
+							<input type="submit" value="確認登錄搶票去" class="btn-gradient btn-confirm" id="btnSubmit">
+						</section>
+					</main>
+				</form>
+				<main class="content msgok">
+					<section class="share">
+						<h3>《大黃蜂冒險完成》</h3>
+						<p class="congrats">恭喜您！已完成搶票資格！</p>
+						<a class="btn-gradient" href="http://ticket.appledaily.com.tw/bumblebee_reward.php" target="_blank">得獎名單</a>
+					</section>
+				</main>
+			</section>
+
+			<section class="page-fail">
+				<main class="content">
+						<h2>
+							<!-- <img src="img/logo.jpg"> -->
+						</h2>
+						<section class="share">
+							<h3>《大黃蜂冒險失敗》</h3>
+							<p class="congrats">沒關係！揉揉眼睛、動動手指，我們再試一次！</p>
+							<button class="btn-gradient btn-challenge">重新挑戰</button>
+							<button class="btn-gradient btn-answer">觀看答案</button>
+							<figure class="answer-pic">
+								<img src="img/answer01.jpg">
+							</figure>
+						</section>
+					</main>
+			</section>
+		</main>
+	</body>
+</html>

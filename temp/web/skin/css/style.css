@@ -1,0 +1,78 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; background:#f4f4f4;}
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/*resets*/
+html { font-size: 12px; }
+h1, h2, h3, h4, h5, h6, p, a, button, table, div, ul, li, textarea { font-family: '微軟正黑體', Arial, Helvetica, sans-serif, 'STHeiti Light', '儷黑 Pro', 'LiHei Pro', 'Microsoft Yahei', 'Microsoft JhengHei', '新細明體'; }
+a { text-decoration: none; outline: none; /* for Firefox Google Chrome  */  behavior:expression(this.onFocus=this.blur()); /* for IE */}
+:focus { outline: none; }
+/*end resets*/
+
+/*common*/
+body{ background: url(../img/bg.png) repeat-x #e7d3e4;}
+.nav{ background: #fff; height: 50px;}
+.nav .wrapper{ padding: 0 10px; width: 930px;}
+.logo{ width: 200px; height: 34px; text-indent: -9999px; background: url(../img/logo.png) no-repeat; float: left; margin-top: 7px;}
+.logo a{ display: block; width: inherit; height: inherit;}
+.nav ul{ float: right; margin-top: 22px;}
+.nav ul li{ display: inline-block;}
+.nav li a{ color: #444; font-size: 15px; margin-left: 15px; font-weight: bold; position: relative; -webkit-transition:all ease .4s; -moz-transition:all ease .4s; transition:all ease .4s;}
+.nav li a:hover{ color: #E60044;}
+.nav li a:before{ content: ''; width: 100%; height: 1px; position: absolute; left: 0; top: 0; -webkit-transform:translateY(0px); -moz-transform:translateY(0px); transform:translateY(0px); -webkit-transition:all ease .4s; -moz-transition:all ease .4s; transition:all ease .4s; background:#E60044; opacity: 0; filter:alpha(opacity=0);}
+.nav li a:hover:before{ opacity: 1; filter:alpha(opacity=100); height: 3px; transform:translateY(-9px);}
+.wrapper{ width: 950px; margin: 0 auto; position: relative;}
+.main-content .wrapper{ background: #fff; padding: 0 45px; width: 860px; height: 5300px}
+.title{ height: 748px; position: relative;}
+.title-pic01{ width: 760px; height: 765px; background: url(../img/main_title01.png) no-repeat; position: absolute; right: -257px; top: 0px;}
+.title-pic02{ width: 629px; height: 756px; background: url(../img/main_title02.png) no-repeat; position: absolute; left: -58px; top: 22px; z-index: 99;}
+.title-pic03{ width: 380px; height: 440px; background: url(../img/main_title03.png) no-repeat; position: absolute; left: -35px; top: 88px; overflow: hidden;}
+.light{ width: 735px; height: 690px; background: url(../img/main_title04.png) no-repeat; position: absolute; left: -550px; top: -170px; -webkit-animation: motion01 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite; animation: motion01 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;}
+@-webkit-keyframes motion01{
+	0%{ left:-550px; opacity: 1;}
+	100%{ left:120px; opacity: 0.6;}
+}
+@-moz-keyframes motion01{
+	0%{ left:-550px;}
+	100%{ left:120px;}
+}
+@-ms-keyframes motion01{
+	0%{ left:-550px;}
+	100%{ left:120px;}
+}
+keyframes motion01{
+	0%{ left:-550px;}
+	100%{ left:120px;}
+}
+.item-big{ position: relative; clear: both; margin-bottom: 30px;}
+.item-big a{ width: 115px; height: 33px; background: #000; display: block; color: #fff; position: absolute; left: 620px; bottom: 30px; font-size: 15px; font-weight: bold; text-align: center; line-height: 33px; -webkit-transition:all ease 0.4s; -moz-transition:all ease 0.4s; transition:all ease 0.4s;}
+.item-big a:after, .item-left a:after, .item-right a:after{ content: ''; display: inline-block; width: 6px; height: 10px; background: url(../img/arrow.gif) no-repeat; margin-left: 7px;  -webkit-transition:all ease 0.4s; -moz-transition:all ease 0.4s; transition:all ease 0.4s;}
+.item-big a:hover{ background: #ef0060; width: 150px;}
+.item-left a:hover, .item-right a:hover{ background: #ef0060; width: 135px;}
+.item-big a:hover:after, .item-left a:hover:after, .item-right a:hover:after{ background: url(../img/arrow2.gif);}
+.item-left{ float: left; position: relative; margin-bottom: 30px;}
+.item-right{ float: right; position: relative;}
+.item-left a, .item-right a{ width: 115px; height: 33px; background: #000; display: block; color: #fff; position: absolute; left: 235px; bottom: 30px; font-size: 15px; font-weight: bold; text-align: center; line-height: 33px; -webkit-transition:all ease 0.4s; -moz-transition:all ease 0.4s; transition:all ease 0.4s;}
+.item-big.fix a{ left: 670px;}
+.fix2 a{ left: 280px;}
+.coms01{ position: absolute; right: -92px; top: 800px; background: url(../img/cosmetic01.png) no-repeat; width: 124px; height: 150px;}
+.coms02{ position: absolute; left: -140px; top: 1080px; background: url(../img/cosmetic02.png) no-repeat; width: 183px; height: 176px;}
+.coms03{ position: absolute; right: -93px; top: 1390px; background: url(../img/cosmetic03.png) no-repeat; width: 93px; height: 322px;}
+.coms04{ position: absolute; left: -100px; top: 1840px; background: url(../img/cosmetic04.png) no-repeat; width: 147px; height: 156px;}
+.coms05{ position: absolute; right: -77px; top: 2220px; background: url(../img/cosmetic05.png) no-repeat; width: 115px; height: 156px;}
+.coms06{ position: absolute; left: -123px; top: 2650px; background: url(../img/cosmetic06.png) no-repeat; width: 123px; height: 345px;}
+.coms07{ position: absolute; right: -136px; top: 3450px; background: url(../img/cosmetic07.png) no-repeat; width: 174px; height: 165px;}
+.coms08{ position: absolute; left: -127px; top: 4120px; background: url(../img/cosmetic08.png) no-repeat; width: 173px; height: 159px;}
+.coms09{ position: absolute; right: -110px; top: 4755px; background: url(../img/cosmetic09.png) no-repeat; width: 157px; height: 190px;}
+
+.footer{ height:140px; background:#202020; clear:both;}
+.footer .wrapper{ text-align:center;}
+.footer .wrapper img{ margin-top:35px;}
+
+@media screen and (min-width: 200px) and (max-width: 1050px) {
+.nav, .main-title, .section01, .section02, .section03, .footer{ width:1050px;}
+}

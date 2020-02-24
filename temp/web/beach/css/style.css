@@ -1,0 +1,197 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; background: #fff;}
+ol, ul { list-style: none;}
+blockquote, q { quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/*resets*/
+html { font-size: 12px; }
+h1, h2, h3, h4, h5, h6, p, a, button, table, div, ul, li, textarea { font-family: '微軟正黑體', Arial, Helvetica, sans-serif, 'STHeiti Light', '儷黑 Pro', 'LiHei Pro', 'Microsoft Yahei', 'Microsoft JhengHei', '新細明體'; }
+a { text-decoration: none; outline: none; /* for Firefox Google Chrome  */  behavior:expression(this.onFocus=this.blur()); /* for IE */}
+:focus { outline: none; }
+/*end resets*/
+
+/*common*/
+.nav{ background: #fff; height: 80px; width: 100%; z-index: 990;}
+.nav .wrapper{ width: 980px;}
+.logo{ width: 200px; height: 34px; text-indent: -9999px; background: url(http://www.worldibuy.com/event/img/logo.png) no-repeat; float: left; margin: 20px 0 0 25px;}
+.logo a{ display: block; width: inherit; height: inherit;}
+.nav ul{ float: right; margin: 36px 25px 0 0;}
+.nav ul li{ display: inline-block;}
+.nav li a{ color: #444; font-size: 15px; margin-left: 15px; font-weight: bold; position: relative; -webkit-transition:all ease .4s; -moz-transition:all ease .4s; transition:all ease .4s;}
+.nav li a:hover{ color: #E60044;}
+.nav li a:before{ content: ''; width: 100%; height: 1px; position: absolute; left: 0; top: 0; -webkit-transform:translateY(0px); -moz-transform:translateY(0px); transform:translateY(0px); -webkit-transition:all ease .4s; -moz-transition:all ease .4s; transition:all ease .4s; background:#E60044; opacity: 0; filter:alpha(opacity=0);}
+.nav li a:hover:before{ opacity: 1; filter:alpha(opacity=100); height: 3px; transform:translateY(-9px);}
+.wrapper{ width: 1200px; height: inherit; margin: 0 auto; position: relative;}
+iframe[name=google_conversion_frame]{ display: none;}
+
+body{ overflow-x: hidden;}
+.section01{ width: 100%; height: 1118px; background: url(../img/section01.jpg) no-repeat top center;}
+h1{ width: 509px; height: 386px; background: url(../img/title.png); text-indent: -9999px; position: absolute; left: 148px; top: 80px;}
+h1.animated{ -webkit-animation-duration: 2.3s; animation-duration: 2.3s;}
+.se01-pic01{ width: 516px; height: 730px; background: url(../img/se01_pic01.png); position: absolute; right: 0px; top: 20px;}
+.se01-pic02{ width: 355px; height: 845px; background: url(../img/se01_pic02.png); position: absolute; right: -180px; top: 35px; opacity: 0; filter:alpha(opacity=0);}
+.se01-pic01 a, .se01-pic02 a, .se03-pic01 a, .se03-pic02 a, .se04-pic01 a, .se04-pic02 a, .se04-pic03 a, .se05-pic01 a, .se05-pic02 a, .se05-pic03 a, .se05-pic04 a, .se05-pic05 a{ display: block; width: inherit; height: inherit;}
+.section02{ width: 100%; height: 1081px; background: url(../img/section02.jpg) no-repeat top center;}
+.se02-pic01 a{ position: absolute; width: 588px; height: 720px; display: block; left: -49px; top: 40px;}
+.se02-pic02 .fade01{ position: absolute; right: 290px; top: 99px;}
+.se02-pic02 .fade02{ position: absolute; right: 370px; top: 86px; opacity: 0; filter:alpha(opacity=0);}
+.fade01{ -webkit-animation:fadeMotion 6s infinite linear; animation:fadeMotion 6s infinite linear;}
+.fade02{ -webkit-animation:fadeMotion2 6s infinite linear; animation:fadeMotion2 6s infinite linear;}
+.section03{ width: 100%; height: 1070px; background: url(../img/section03.jpg) no-repeat top center;}
+.se03-pic01{ position: absolute; left: 43px; top: 63px; width: 485px; height: 685px;}
+.se03-pic02{ position: absolute; right: 26px; top: 33px; width: 588px; height: 678px;}
+.section04{ width: 100%; height: 1069px; background: url(../img/section04.jpg) no-repeat top center;}
+.section04 .wrapper{ height: 1068px; background: url(../img/section04_wrap.jpg) no-repeat top center;}
+.se04-pic01{ position: absolute; left: 60px; top: 56px; width: 560px; height: 645px;}
+.se04-pic02{ position: absolute; right: -20px; top: 182px; width: 436px; height: 567px; background: url(../img/se04_pic02.png) no-repeat; -webkit-animation:girl 1.3s infinite linear alternate; animation:girl 1.3s infinite linear alternate;}
+.se04-pic03{ position: absolute; right: 80px; top: 40px; width: 488px; height: 80px; background: url(../img/se04_pic03.png) no-repeat;}
+.section05{ width: 100%; height: 755px; background: url(../img/section05.jpg) no-repeat top center;}
+.se05-pic01{ position: absolute; left: 150px; top: 94px; width: 438px; height: 388px;}
+.se05-pic02{ position: absolute; right: 140px; top: 52px; width: 390px; height: 374px;}
+.se05-pic03{ position: absolute; left: 40px; top: 497px; width: 430px; height: 230px;}
+.se05-pic04{ position: absolute; left: 498px; top: 518px; width: 540px; height: 190px;}
+.se05-pic05{ position: absolute; right: -37px; top: 380px; width: 195px; height: 345px;}
+#scrollUp{ background-image: url(../img/scrolltotop.png); bottom:20px; right:20px; width:48px; height:48px; text-indent:-9999px;}
+
+/*animation*/
+.animated { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both;}
+.animated.infinite { -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;}
+.animated.jello{ -webkit-animation-name:jello; animation-name:jello; -webkit-transform-origin: center; transform-origin: center}
+
+@-webkit-keyframes jello {
+  15% {
+    -webkit-transform: none;
+            transform: none
+  }
+
+  22.2% {
+    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+            transform: skewX(-12.5deg) skewY(-12.5deg)
+  }
+  28.3% {
+    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+            transform: skewX(6.25deg) skewY(6.25deg)
+  }
+  34.4% {
+    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+            transform: skewX(-3.125deg) skewY(-3.125deg)
+  }
+  40.5% {
+    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+            transform: skewX(1.5625deg) skewY(1.5625deg)
+  }
+  46.6% {
+    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+            transform: skewX(-0.78125deg) skewY(-0.78125deg)
+  }
+  52.7% {
+    -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+            transform: skewX(0.390625deg) skewY(0.390625deg)
+  }
+  58.8% {
+    -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+            transform: skewX(-0.1953125deg) skewY(-0.1953125deg)
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none
+  }
+}
+@keyframes jello {
+  15% {
+    -webkit-transform: none;
+            transform: none
+  }
+
+  22.2% {
+    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+            transform: skewX(-12.5deg) skewY(-12.5deg)
+  }
+  28.3% {
+    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+            transform: skewX(6.25deg) skewY(6.25deg)
+  }
+  34.4% {
+    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+            transform: skewX(-3.125deg) skewY(-3.125deg)
+  }
+  40.5% {
+    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+            transform: skewX(1.5625deg) skewY(1.5625deg)
+  }
+  46.6% {
+    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+            transform: skewX(-0.78125deg) skewY(-0.78125deg)
+  }
+  52.7% {
+    -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+            transform: skewX(0.390625deg) skewY(0.390625deg)
+  }
+  58.8% {
+    -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+            transform: skewX(-0.1953125deg) skewY(-0.1953125deg)
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none
+  }
+}
+
+@-webkit-keyframes fadeMotion{
+  0%{ opacity: 1;}
+  40%{ opacity: 1;}
+  50%{ opacity: 0;}
+  90%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
+@keyframes fadeMotion{
+  0%{ opacity: 1;}
+  40%{ opacity: 1;}
+  50%{ opacity: 0;}
+  90%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
+@-webkit-keyframes fadeMotion2{
+  0%{ opacity: 0;}
+  40%{ opacity: 0;}
+  50%{ opacity: 1;}
+  90%{ opacity: 1;}
+  100%{ opacity: 0;}
+}
+@keyframes fadeMotion2{
+  0%{ opacity: 0;}
+  40%{ opacity: 0;}
+  50%{ opacity: 1;}
+  90%{ opacity: 1;}
+  100%{ opacity: 0;}
+}
+@-webkit-keyframes girl{
+  0%{ right: -20px;}
+  100%{ right: -10px;}
+}
+@keyframes girl{
+  0%{ right: -20px;}
+  100%{ right: -10px;}
+}
+
+.footer{ height:140px; background:#111; clear:both;}
+.footer .wrapper{ text-align:center;}
+.footer .wrapper img{ margin-top:35px;}
+
+@media screen and (min-width: 200px) and (max-width: 1200px) {
+.nav, .footer, .wrapper, .section01, .section02, .section03, .section04, .section05{ width:1200px;}
+.se01-pic02{ display: none;}
+.se04-pic02{  -webkit-animation:none; animation:none; right: 0px;}
+.se05-pic04{ right: 0px;}
+}

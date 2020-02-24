@@ -1,0 +1,142 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/*resets*/
+html { font-size: 12px; }
+h1, h2, h3, h4, h5, h6, p, a, button, table, div, ul, li, textarea, input, footer { font-family: 'Open Sans', '微軟正黑體', Arial, Helvetica, sans-serif, 'STHeiti Light', '儷黑 Pro', 'LiHei Pro', 'Microsoft Yahei', 'Microsoft JhengHei', '新細明體'; }
+a { text-decoration: none; outline: none; /* for Firefox Google Chrome  */  behavior:expression(this.onFocus=this.blur()); /* for IE */}
+input[type=submit], input[type=reset], input[type=button], input[type=text], input[type=password], textarea, select{-webkit-appearance:none;}
+iframe[name=google_conversion_frame]{ display: none;}
+:focus {outline: none;}
+/*end resets*/
+
+/*style*/
+.full-size{position: fixed; left: 0; top: 0;}
+.orange-house{width: 100vw; height: 100vh; overflow: hidden; position: relative;}
+.overlay-bg > img{width: 100%; height: auto;}
+.overlay-bg .oil-drit{position: absolute; left: 0; top: 0; mix-blend-mode: multiply; z-index: 20;}
+.pan{position: absolute; left: -75px; top: 250px;}
+.pan-dirt, .pan-clean{position: absolute; left: 0; top: 0;}
+.pan-dirt{z-index: 5;}
+.pan-clean{z-index: 3;}
+.pan img{width: 430px; height: auto; display: block;}
+.pan-clean{display: block;}
+.title-bar{position: absolute; left: 0; top: 0; width: 100%; height: auto; z-index: 99; opacity: 0; display: none;}
+.hand{position: absolute; right: -30px; top: 240px; width: 70%; height: auto; z-index: 99; opacity: 0; display: none;}
+.logo{position: absolute; left: 5px; top: 580px; width: 45%; height: auto; z-index: 99; opacity: 0; display: none;}
+.title-start{position: absolute; left: 20px; top: 165px; width: 85%; height: auto; z-index: 30;}
+.title-btn{position: absolute; right: 20px; top: 340px; width: 48%; height: auto; z-index: 999; -webkit-animation: flash .4s linear infinite alternate; animation: flash .4s linear infinite alternate;}
+.bottle-col{position: absolute; right: -110px; top: 300px; display: none; z-index: 90;}
+.bottle{width: 75%; height: auto; position: relative; z-index: 5;}
+.bottle-pull{width: 10%; height: auto; position: absolute; z-index: 10; left: 30px; top: 41px; -webkit-transform: rotate(15deg); transform: rotate(15deg); -webkit-transform-origin: top center; transform-origin: top center;}
+.bottle-shot{width: 70%; height: auto; position: absolute; left: -168px; top: 8px; opacity: 0;}
+.bottle-col.animated{-webkit-animation-delay: .5s; animation-delay: .5s;}
+.bottle-pull.pulled{-webkit-animation: pulled .4s 1s forwards; animation: pulled .4s 1s forwards;}
+.bottle-shot.animated{/*-webkit-animation-delay: 1.2s; animation-delay: 1.2s; -webkit-animation-duration: .25s; animation-duration: .25s*/-webkit-animation: fadeInRight .3s 1.2s forwards; animation: fadeInRight .3s 1.2s forwards;}
+.bubble{position: absolute; left: 0; top: -100px; z-index: 30; opacity: 0; display: none;}
+.bubble img{width: 100%;}
+.bubble.bubbleIn{-webkit-animation: bubbleIn 3.5 1.5s forwards; animation: bubbleIn 3.5s 1.5s forwards;}
+.fade-dirt{-webkit-animation: fadeDirt .3s 3.6s forwards; animation: fadeDirt .3s 3.6s forwards;}
+.title-bar.fadeInDown{-webkit-animation: fadeInDown .6s 4s forwards; animation: fadeInDown .6s 4s forwards;}
+.hand.fadeInRight{-webkit-animation: fadeInRight .6s 4.3s forwards; animation: fadeInRight .6s 4.3s forwards;}
+.logo.finalZoomIn{-webkit-animation: finalZoomIn .5s 4.6s forwards; animation: finalZoomIn .5s 4.6s forwards;}
+.click-track{position: absolute; z-index: 990; display: block; width: 100%; height: 85vh; left: 0; bottom: 0;}
+
+@-webkit-keyframes flash {
+  0% {opacity: 1;}
+  100% {opacity: .45;}
+}
+
+@keyframes flash {
+  0% {opacity: 1;}
+  100% {opacity: .45;}
+}
+
+@-webkit-keyframes pulled {
+  100% {-webkit-transform: rotate(-5deg); transform: rotate(-5deg);}
+}
+
+@keyframes pulled {
+  100% {-webkit-transform: rotate(-5deg); transform: rotate(-5deg);}
+}
+
+@-webkit-keyframes bubbleIn {
+  50% {opacity: 1;}
+  100% {opacity: 0; top: 0;}
+}
+
+@keyframes bubbleIn {
+  50% {opacity: 1;}
+  100% {opacity: 0; top: 0;}
+}
+
+@-webkit-keyframes fadeDirt {
+  100% {opacity: 0;}
+}
+
+@keyframes fadeDirt {
+  100% {opacity: 0;}
+}
+
+@-webkit-keyframes finalZoomIn {
+  0% {transform: scale(3); opacity: 0;}
+  100% {transform: scale(1); opacity: 1;}
+}
+
+@keyframes finalZoomIn {
+  0% {transform: scale(3); opacity: 0;}
+  100% {transform: scale(1); opacity: 1;}
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes zoomOut {
+  100% {transform: scale(3); opacity: 0;}
+}
+
+@keyframes zoomOut {
+  100% {transform: scale(3); opacity: 0;}
+}
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+	.logo{top: 530px; width: 48%; left: 15px;}
+	.pan{top: 240px;}
+	.pan img{width: 382px;}
+	.hand{top: 240px; width: 68%;}
+	.title-start{top: 160px;}
+	.title-btn{top: 315px;}
+	.bottle{width: 70%;}
+	.bottle-pull{width: 8%; left: 31px; top: 39px;}
+	.bottle-shot{width: 67%; left: -160px; top: 6px;}
+	.bottle-col{right: -140px; top: 270px;}
+}
+
+@media screen and (max-width: 360px) {
+	.logo{top: 515px;}
+	.title-start{top: 160px;}
+	.title-btn{top: 295px; width: 45%;}
+	.pan img{width: 370px;}
+}
+
+@media screen and (max-width: 320px) {
+	.pan{top: 210px;}
+	.hand{top: 215px;}
+	.logo{top: 455px;}
+	.title-start{top: 145px;}
+	.title-btn{top: 265px; width: 42%;}
+	.bottle{width: 60%;}
+	.bottle-pull{width: 6.5%; left: 26px; top: 34px;}
+	.bottle-shot{width: 60%; left: -142px; top: 5px;}
+	.bottle-col{right: -170px; top: 230px;}
+	.pan img{width: 335px;}
+}

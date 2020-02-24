@@ -1,0 +1,1531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=edge"/>
+<meta name="copyright" content="Copyright (c) 2014 by Wmall 華義購物商城-時尚玩家的尋寶站">
+<meta name="keywords" content="華義,購物,Wmall,美食,玩樂,電競,3C,流行">
+<meta name="description" content="Wmall 華義購物商城-時尚玩家的尋寶站">
+<title>Wmall 華義購物商城-時尚玩家的尋寶站</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+<script src="js/bjqs-1.3.min.js"></script>
+<script>
+$(function(){
+	/*商品服務分類*/
+	var navOdd = $('.content-cutover .nav li:odd')
+		navEven = $('.content-cutover .nav li:even')
+		nav = $('.content-cutover .nav li');
+		navOdd.css('background-color','#a8c908');
+		navEven.css('background-color','#b5d909');
+	nav.mouseenter(function(){
+		nav.removeClass('active');
+		$(this).addClass('active');
+		$('.slide-content .wmall-section').stop().hide();
+		$('.wmall-section').eq($(this).index()).stop().show();
+	});
+	/*小輪播*/
+	$('.ad-small').each(function(){
+		var $block = $(this),
+			$slides = $('ul', $block),
+			_width = $block.width(),
+			$li = $('li', $slides),
+			_animateSpeed = 300;
+	
+		var _str = '';
+		for(var i=0, j=$li.length;i<j;i++){
+			_str += '<li class="playerControl_' + (i+1) + '"></li>';
+		}
+		$('<ul class="playerControl"></ul>').html(_str).appendTo($slides.parent()).find('li').mouseover(function(){
+			var $this = $(this);
+			$this.addClass('current').siblings('.current').removeClass('current');
+			$slides.stop().animate({
+				left: _width * $this.index() * -1
+			}, _animateSpeed);
+	
+			return false;
+		}).eq(0).mouseover();	
+	});
+	
+	/*大輪播*/
+	for( var _bn=0;_bn<=nav.length;_bn++){
+	$('.number'+_bn).bjqs({
+		height      : 478,
+		width       : 524,
+		animtype 	: 'slide',
+		automatic 	: true,
+		showcontrols : false,
+	});}
+	
+	/*tab廣告分類*/
+	$('.title-area ul li a').bind("click",function(){
+		$(this).parent().siblings().find('a').removeClass('active');
+		$(this).addClass('active');
+		$(this).parents('.title-area').siblings('.ad-list').hide();
+		$(this).parents('.title-area').siblings('.ad-list').eq($(this).parent().index()).show();
+	});
+	
+	/*左側彈出區塊類*/	
+	$('.afCancel').click(function(){
+		$('.af-bar').animate({'left':'-50px'});
+		$('.af-show').animate({'left':'0px'});
+	});
+	$('.af-show').click(function(){
+		$('.af-bar').animate({'left':'0px'});
+		$('.af-show').animate({'left':'-50px'});
+	});
+});
+</script>
+<!--[if IE 8]>
+<style>.search-btn{vertical-align:-9px;}</style>
+<![endif]-->
+</head>
+
+<body> 
+<div class="header">
+	<div class="container">
+		<div class="loginArea">
+			<p>歡迎來Wmall!!</p>
+			<a href="javascript:;">登錄帳號</a> / 
+			<a href="javascript:;">輕鬆註冊</a>
+		</div>
+		<div class="accountArea">
+			<ul>
+				<li class="hn-account">
+					-<a href="javascript:;">我的帳號</a>-
+					<ul>
+						<li class="hn-sub-title">會員帳號</li>
+						<li><a href="javascript:;">修改會員資料</a></li>
+						<li><a href="javascript:;">會員購物問與答</a></li>
+						<li><a href="javascript:;">查詢電子發票</a></li>
+						<li><a href="javascript:;">查詢折價卷</a></li>
+						<li><a href="javascript:;">查詢紅利金</a></li>
+						<li><a href="javascript:;">客服中心</a></li>
+						<li class="about-wmall"><a href="javascript:;">關於Wmall</a></li>
+					</ul>
+				</li>
+				<li class="hn-cart">-<a href="javascript:;">購物車<b>99</b>件</a>-</li>
+				<li class="hn-favorite">-<a href="javascript:;">收藏車</a>-</li>
+				<li class="hn-service">
+					-<a href="javascript:;">客服中心</a>-
+					<ul>
+						<li class="hn-sub-title">客服中心</li>
+						<li><a href="javascript:;">修改會員資料</a></li>
+						<li><a href="javascript:;">會員購物問與答</a></li>
+						<li><a href="javascript:;">查詢電子發票</a></li>
+						<li><a href="javascript:;">查詢折價卷</a></li>
+						<li><a href="javascript:;">查詢紅利金</a></li>
+						<li><a href="javascript:;">客服中心</a></li>
+						<li class="about-wmall"><a href="javascript:;">關於Wmall</a></li>
+					</ul>					
+				</li>
+				<li class="hn-category">
+					<a href="javascript:;">全商品分類</a>
+					<ul class="sub-category">
+						<li>
+							<h2>服飾</h2>
+							<p>
+								<a href="javascript:;">女裝</a>
+								<a href="javascript:;">男裝</a>
+								<a href="javascript:;">內衣</a>
+								<a href="javascript:;">外套</a>
+								<a href="javascript:;">佩件</a>
+								<a href="javascript:;">女裝女裝</a>
+								<a href="javascript:;">男裝男裝</a>
+							</p>
+						</li>					
+						<li>
+							<h2>服飾</h2>
+							<p>
+								<a href="javascript:;">女裝</a>
+								<a href="javascript:;">男裝</a>
+								<a href="javascript:;">內衣</a>
+								<a href="javascript:;">外套</a>
+								<a href="javascript:;">佩件</a>
+								<a href="javascript:;">女裝女裝</a>
+								<a href="javascript:;">男裝男裝</a>
+							</p>
+						</li>					
+						<li>
+							<h2>服飾</h2>
+							<p>
+								<a href="javascript:;">女裝</a>
+								<a href="javascript:;">男裝</a>
+								<a href="javascript:;">內衣</a>
+								<a href="javascript:;">外套</a>
+								<a href="javascript:;">佩件</a>
+								<a href="javascript:;">女裝女裝</a>
+								<a href="javascript:;">男裝男裝</a>
+							</p>
+						</li>					
+						<li>
+							<h2>服飾</h2>
+							<p>
+								<a href="javascript:;">女裝</a>
+								<a href="javascript:;">男裝</a>
+								<a href="javascript:;">內衣</a>
+								<a href="javascript:;">外套</a>
+								<a href="javascript:;">佩件</a>
+								<a href="javascript:;">女裝女裝</a>
+								<a href="javascript:;">男裝男裝</a>
+							</p>
+						</li>					
+						<li>
+							<h2>服飾</h2>
+							<p>
+								<a href="javascript:;">女裝</a>
+								<a href="javascript:;">男裝</a>
+								<a href="javascript:;">內衣</a>
+								<a href="javascript:;">外套</a>
+								<a href="javascript:;">佩件</a>
+								<a href="javascript:;">女裝女裝</a>
+								<a href="javascript:;">男裝男裝</a>
+							</p>
+						</li>					
+						<li>
+							<h2>服飾</h2>
+							<p>
+								<a href="javascript:;">女裝</a>
+								<a href="javascript:;">男裝</a>
+								<a href="javascript:;">內衣</a>
+								<a href="javascript:;">外套</a>
+								<a href="javascript:;">佩件</a>
+								<a href="javascript:;">女裝女裝</a>
+								<a href="javascript:;">男裝男裝</a>
+							</p>
+						</li>					
+						<li>
+							<h2>服飾</h2>
+							<p>
+								<a href="javascript:;">女裝</a>
+								<a href="javascript:;">男裝</a>
+								<a href="javascript:;">內衣</a>
+								<a href="javascript:;">外套</a>
+								<a href="javascript:;">佩件</a>
+								<a href="javascript:;">女裝女裝</a>
+								<a href="javascript:;">男裝男裝</a>
+							</p>
+						</li>					
+						<li>
+							<h2>服飾</h2>
+							<p>
+								<a href="javascript:;">女裝</a>
+								<a href="javascript:;">男裝</a>
+								<a href="javascript:;">內衣</a>
+								<a href="javascript:;">外套</a>
+								<a href="javascript:;">佩件</a>
+								<a href="javascript:;">女裝女裝</a>
+								<a href="javascript:;">男裝男裝</a>
+							</p>
+						</li>					
+						<li>
+							<h2>服飾</h2>
+							<p>
+								<a href="javascript:;">女裝</a>
+								<a href="javascript:;">男裝</a>
+								<a href="javascript:;">內衣</a>
+								<a href="javascript:;">外套</a>
+								<a href="javascript:;">佩件</a>
+								<a href="javascript:;">女裝女裝</a>
+								<a href="javascript:;">男裝男裝</a>
+							</p>
+						</li>					
+						<li>
+							<h2>服飾</h2>
+							<p>
+								<a href="javascript:;">女裝</a>
+								<a href="javascript:;">男裝</a>
+								<a href="javascript:;">內衣</a>
+								<a href="javascript:;">外套</a>
+								<a href="javascript:;">佩件</a>
+								<a href="javascript:;">女裝女裝</a>
+								<a href="javascript:;">男裝男裝</a>
+							</p>
+						</li>					
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrapper container">
+	<div class="wmall">
+		<h1 class="logo"><a title="Wmall 華義購物商城" href="javascript:;"></a></h1>
+		<div class="search">
+			<input type="text" placeholder="搜尋商品">
+			<input type="button" class="search-btn" value="搜尋">
+			<div class="hot-search">
+				<h2>熱門搜尋：</h2>
+				<a href="javascript:;">夏季特賣會</a> / 
+				<a href="javascript:;">SPIDER SPORTS</a>/ 
+				<a href="javascript:;">五星牛肉大賞</a> / 
+				<a href="javascript:;">2014春裝新款</a> / 
+				<a href="javascript:;">夏季特賣會</a> / 
+				<a href="javascript:;">PlayStaion 4</a>
+			</div>
+		</div>
+		<div class="ad-200x82"><a href="javascript:;"><img src="temp/ad_200x82.jpg" /></a></div>		
+	</div>
+	<div class="title-bar">
+		<ul>
+			<li class="main-title">商品服務分類</li>
+			<li><a href="javascript:;">限時大團購</a></li>
+			<li><a href="javascript:;">服飾OUTLET</a></li>
+			<li><a href="javascript:;">3C抽抽樂</a></li>
+			<li><a href="javascript:;">組合優惠區</a></li>
+			<li><a href="javascript:;">每日折價</a></li>
+			<li><a href="javascript:;">會員特賣</a></li>
+		</ul>	
+	</div>
+	<div class="content">
+		<div class="content-cutover">
+			<ul class="nav">
+				<li class="active">精選推薦商品</li>
+				<li>美食零嘴</li>
+				<li>流行服飾/美妝</li>
+				<li>男裝/鞋包</li>
+				<li>3C/電腦周邊</li>
+				<li>手機/平板/配件</li>
+				<li>動漫宅物</li>
+				<li>運動/車用</li>
+				<li>生活用品</li>
+				<li>優惠/團購</li>
+			</ul>
+			<div class="slide-content">
+				<div class="wmall-section" style="display:block;">
+					<div class="sub-nav">
+						<ul>
+							<li>
+								<a href="javascript:;">男裝</a>
+								<a href="javascript:;">手錶</a>
+							</li>
+							<li>
+								<a href="javascript:;">女裝</a>
+								<a href="javascript:;">鞋包</a>
+							</li>
+							<li>
+								<a href="javascript:;">美妝</a>
+								<a href="javascript:;">居家</a>
+							</li>
+							<li>
+								<a href="javascript:;">手機</a>
+								<a href="javascript:;">手機配件</a>
+							</li>
+							<li>
+								<a href="javascript:;">相機</a>
+								<a href="javascript:;">3C平板</a>
+							</li>
+							<li>
+								<a href="javascript:;">動漫</a>
+								<a href="javascript:;">圖書文具</a>
+							</li>
+							<li>
+								<a href="javascript:;">運動用品</a>
+								<a href="javascript:;">生活用品</a>
+							</li>
+							<li>
+								<a href="javascript:;">團購</a>
+								<a href="javascript:;">941情趣</a>
+							</li>
+							<li>
+								<a href="javascript:;">熟食</a>
+								<a href="javascript:;">食乾零食</a>
+							</li>
+						</ul>
+						<div class="ad-small">
+							<ul>
+								<li><a href="#"><img src="temp/slide_s01.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s02.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s03.jpg"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="inner-box">
+						<div class="bn-slider number1">
+							<ul class="bjqs">
+								<li><a href="javascript:;"><img src="temp/bn_slide01.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide02.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide03.jpg"></a></li>
+							</ul>
+						</div>
+						<div class="ad-verticalx2">
+							<a href="javascirpt:;"><img src="temp/ad174x239_01.jpg"></a>
+							<a href="javascirpt:;"><img src="temp/ad174x239_02.jpg"></a>
+						</div>
+					</div>
+				</div>
+				<div class="wmall-section">
+					<div class="sub-nav">
+						<ul>
+							<li>
+								<a href="javascript:;">生鮮</a>
+								<a href="javascript:;">肉類</a>
+							</li>
+							<li>
+								<a href="javascript:;">熟食</a>
+								<a href="javascript:;">泡麵</a>
+							</li>
+							<li>
+								<a href="javascript:;">巧克力</a>
+								<a href="javascript:;">蛋糕甜點</a>
+							</li>
+							<li>
+								<a href="javascript:;">特產</a>
+								<a href="javascript:;">地方小吃</a>
+							</li>
+							<li>
+								<a href="javascript:;">調理包</a>
+								<a href="javascript:;">調味醬</a>
+							</li>
+							<li>
+								<a href="javascript:;">飲料</a>
+								<a href="javascript:;">食材</a>
+							</li>
+							<li>
+								<a href="javascript:;">零食果乾</a>
+								<a href="javascript:;">季節水果</a>
+							</li>
+							<li>
+								<a href="javascript:;">沖泡飲品</a>
+								<a href="javascript:;">健康食品</a>
+							</li>
+							<li>
+								<a href="javascript:;">酒類</a>
+								<a href="javascript:;">進口美食</a>
+							</li>
+						</ul>
+						<div class="ad-small">
+							<ul>
+								<li><a href="#"><img src="temp/slide_s04.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s05.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s06.jpg"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="inner-box">
+						<div class="bn-slider number2">
+							<ul class="bjqs">
+								<li><a href="javascript:;"><img src="temp/bn_slide04.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide05.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide06.jpg"></a></li>
+							</ul>
+						</div>
+						<div class="ad-verticalx2">
+							<a href="javascirpt:;"><img src="temp/ad174x239_03.jpg"></a>
+							<a href="javascirpt:;"><img src="temp/ad174x239_04.jpg"></a>
+						</div>
+					</div>
+				</div>
+				<div class="wmall-section">
+					<div class="sub-nav">
+						<ul>
+							<li>
+								<a href="javascript:;">T恤</a>
+								<a href="javascript:;">POLO杉</a>
+							</li>
+							<li>
+								<a href="javascript:;">裙子</a>
+								<a href="javascript:;">短褲</a>
+							</li>
+							<li>
+								<a href="javascript:;">外套</a>
+								<a href="javascript:;">針織杉</a>
+							</li>
+							<li>
+								<a href="javascript:;">襯杉</a>
+								<a href="javascript:;">罩杉</a>
+							</li>
+							<li>
+								<a href="javascript:;">洋裝</a>
+								<a href="javascript:;">背心</a>
+							</li>
+							<li>
+								<a href="javascript:;">褲子</a>
+								<a href="javascript:;">內搭褲</a>
+							</li>
+							<li>
+								<a href="javascript:;">圍巾</a>
+								<a href="javascript:;">首飾</a>
+							</li>
+							<li>
+								<a href="javascript:;">手錶</a>
+								<a href="javascript:;">眼鏡</a>
+							</li>
+							<li>
+								<a href="javascript:;">香水</a>
+								<a href="javascript:;">彩妝</a>
+							</li>
+							<li>
+								<a href="javascript:;">美甲</a>
+								<a href="javascript:;">保養品</a>
+							</li>
+						</ul>
+						<div class="ad-small">
+							<ul>
+								<li><a href="#"><img src="temp/slide_s_w01.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_w02.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_w03.jpg"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="inner-box">
+						<div class="bn-slider number3">
+							<ul class="bjqs">
+								<li><a href="javascript:;"><img src="temp/bn_slide_w01.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_w02.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_w03.jpg"></a></li>
+							</ul>
+						</div>
+						<div class="ad-verticalx2">
+							<a href="javascirpt:;"><img src="temp/ad174x239_w01.jpg"></a>
+							<a href="javascirpt:;"><img src="temp/ad174x239_w02.jpg"></a>
+						</div>
+					</div>
+				</div>
+				<div class="wmall-section">
+					<div class="sub-nav">
+						<ul>
+							<li>
+								<a href="javascript:;">T恤</a>
+								<a href="javascript:;">POLO杉</a>
+							</li>
+							<li>
+								<a href="javascript:;">短褲</a>
+								<a href="javascript:;">長褲</a>
+							</li>
+							<li>
+								<a href="javascript:;">襯杉</a>
+								<a href="javascript:;">外套</a>
+							</li>
+							<li>
+								<a href="javascript:;">帽T</a>
+								<a href="javascript:;">針織杉</a>
+							</li>
+							<li>
+								<a href="javascript:;">帽子</a>
+								<a href="javascript:;">背心</a>
+							</li>
+							<li>
+								<a href="javascript:;">手錶</a>
+								<a href="javascript:;">眼鏡</a>
+							</li>
+							<li>
+								<a href="javascript:;">圍巾</a>
+								<a href="javascript:;">首飾</a>
+							</li>
+							<li>
+								<a href="javascript:;">包包</a>
+								<a href="javascript:;">手鍊</a>
+							</li>
+							<li>
+								<a href="javascript:;">皮鞋</a>
+								<a href="javascript:;">運動鞋</a>
+							</li>
+							<li>
+								<a href="javascript:;">香水</a>
+								<a href="javascript:;">西裝</a>
+							</li>
+						</ul>
+						<div class="ad-small">
+							<ul>
+								<li><a href="#"><img src="temp/slide_s_m01.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_m02.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_m03.jpg"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="inner-box">
+						<div class="bn-slider number4">
+							<ul class="bjqs">
+								<li><a href="javascript:;"><img src="temp/bn_slide_m01.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_m02.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_m03.jpg"></a></li>
+							</ul>
+						</div>
+						<div class="ad-verticalx2">
+							<a href="javascirpt:;"><img src="temp/ad174x239_m01.jpg"></a>
+							<a href="javascirpt:;"><img src="temp/ad174x239_m02.jpg"></a>
+						</div>
+					</div>
+				</div>
+				<div class="wmall-section">
+					<div class="sub-nav">
+						<ul>
+							<li>
+								<a href="javascript:;">鍵盤</a>
+								<a href="javascript:;">滑鼠</a>
+							</li>
+							<li>
+								<a href="javascript:;">顯示卡</a>
+								<a href="javascript:;">滑鼠墊</a>
+							</li>
+							<li>
+								<a href="javascript:;">喇叭</a>
+								<a href="javascript:;">隨身碟</a>
+							</li>
+							<li>
+								<a href="javascript:;">路由器</a>
+								<a href="javascript:;">集線器</a>
+							</li>
+							<li>
+								<a href="javascript:;">網路設備</a>
+								<a href="javascript:;">電腦機殼</a>
+							</li>							
+							<li>
+								<a href="javascript:;">數位相機</a>
+								<a href="javascript:;">單眼相機</a>
+							</li>
+							<li>
+								<a href="javascript:;">耳機</a>
+								<a href="javascript:;">耳機架</a>
+							</li>
+							<li>
+								<a href="javascript:;">遊戲主機</a>
+								<a href="javascript:;">主機配備</a>
+							</li>
+							<li>
+								<a href="javascript:;">天線</a>
+								<a href="javascript:;">DVD/BD</a>
+							</li>
+						</ul>
+						<div class="ad-small">
+							<ul>
+								<li><a href="#"><img src="temp/slide_s_3c_01.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_3c_02.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_3c_03.jpg"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="inner-box">
+						<div class="bn-slider number5">
+							<ul class="bjqs">
+								<li><a href="javascript:;"><img src="temp/bn_slide_3c_01.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_3c_02.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_3c_03.jpg"></a></li>
+							</ul>
+						</div>
+						<div class="ad-verticalx2">
+							<a href="javascirpt:;"><img src="temp/ad174x239_3c_01.jpg"></a>
+							<a href="javascirpt:;"><img src="temp/ad174x239_3c_02.jpg"></a>
+						</div>
+					</div>
+				</div>
+				<div class="wmall-section">
+					<div class="sub-nav">
+						<ul>
+							<li>
+								<a href="javascript:;">智慧手機</a>
+								<a href="javascript:;">手機座</a>
+							</li>
+							<li>
+								<a href="javascript:;">傳統手機</a>
+								<a href="javascript:;">擦拭布</a>
+							</li>
+							<li>
+								<a href="javascript:;">行動電源</a>
+								<a href="javascript:;">手機項圈</a>
+							</li>
+							<li>
+								<a href="javascript:;">手機殼</a>
+								<a href="javascript:;">手機套</a>
+							</li>
+							<li>
+								<a href="javascript:;">耳機塞</a>
+								<a href="javascript:;">手機吊飾</a>
+							</li>
+							<li>
+								<a href="javascript:;">平板電腦</a>
+								<a href="javascript:;">保護殼</a>
+							</li>
+							<li>
+								<a href="javascript:;">保護套</a>
+								<a href="javascript:;">清潔組</a>
+							</li>
+						</ul>
+						<div class="ad-small">
+							<ul>
+								<li><a href="#"><img src="temp/slide_s_ph_01.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_ph_02.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_ph_03.jpg"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="inner-box">
+						<div class="bn-slider number6">
+							<ul class="bjqs">
+								<li><a href="javascript:;"><img src="temp/bn_slide_ph_01.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_ph_02.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_ph_03.jpg"></a></li>
+							</ul>
+						</div>
+						<div class="ad-verticalx2">
+							<a href="javascirpt:;"><img src="temp/ad174x239_ph_01.jpg"></a>
+							<a href="javascirpt:;"><img src="temp/ad174x239_ph_02.jpg"></a>
+						</div>
+					</div>
+				</div>
+				<div class="wmall-section">
+					<div class="sub-nav">
+						<ul>
+							<li>
+								<a href="javascript:;">動漫週邊</a>
+								<a href="javascript:;">公仔模型</a>
+							</li>
+							<li>
+								<a href="javascript:;">玩偶</a>
+								<a href="javascript:;">抱枕</a>
+							</li>
+							<li>
+								<a href="javascript:;">漫畫</a>
+								<a href="javascript:;">資料夾</a>
+							</li>
+							<li>
+								<a href="javascript:;">貼紙</a>
+								<a href="javascript:;">錢包</a>
+							</li>
+							<li>
+								<a href="javascript:;">吊飾</a>
+								<a href="javascript:;">鑰匙圈</a>
+							</li>
+							<li>
+								<a href="javascript:;">拼圖</a>
+								<a href="javascript:;">包包</a>
+							</li>
+							<li>
+								<a href="javascript:;">桌墊</a>
+								<a href="javascript:;">胸章</a>
+							</li>
+							<li>
+								<a href="javascript:;">掛畫</a>
+								<a href="javascript:;">手提袋</a>
+							</li>
+							<li>
+								<a href="javascript:;">卡片套</a>
+								<a href="javascript:;">馬克杯</a>
+							</li>
+						</ul>
+						<div class="ad-small">
+							<ul>
+								<li><a href="#"><img src="temp/slide_s_cm_01.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_cm_02.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_cm_03.jpg"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="inner-box">
+						<div class="bn-slider number7">
+							<ul class="bjqs">
+								<li><a href="javascript:;"><img src="temp/bn_slide_cm_01.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_cm_02.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_cm_03.jpg"></a></li>
+							</ul>
+						</div>
+						<div class="ad-verticalx2">
+							<a href="javascirpt:;"><img src="temp/ad174x239_cm_01.jpg"></a>
+							<a href="javascirpt:;"><img src="temp/ad174x239_cm_02.jpg"></a>
+						</div>
+					</div>
+				</div>
+				<div class="wmall-section">
+					<div class="sub-nav">
+						<ul>
+							<li>
+								<a href="javascript:;">球衣</a>
+								<a href="javascript:;">球褲</a>
+							</li>
+							<li>
+								<a href="javascript:;">運動鞋</a>
+								<a href="javascript:;">慢跑鞋</a>
+							</li>
+							<li>
+								<a href="javascript:;">背心</a>
+								<a href="javascript:;">護身用品</a>
+							</li>
+							<li>
+								<a href="javascript:;">登山車</a>
+								<a href="javascript:;">公路車</a>
+							</li>
+							<li>
+								<a href="javascript:;">單速車</a>
+								<a href="javascript:;">折疊車</a>
+							</li>
+							<li>
+								<a href="javascript:;">車燈</a>
+								<a href="javascript:;">把手</a>
+							</li>
+							<li>
+								<a href="javascript:;">踏墊</a>
+								<a href="javascript:;">煞車用品</a>
+							</li>
+							<li>
+								<a href="javascript:;">飲料架</a>
+								<a href="javascript:;">測速器</a>
+							</li>
+							<li>
+								<a href="javascript:;">運動包</a>
+								<a href="javascript:;">腰掛包</a>
+							</li>
+						</ul>
+						<div class="ad-small">
+							<ul>
+								<li><a href="#"><img src="temp/slide_s_sp01.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_sp02.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_sp03.jpg"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="inner-box">
+						<div class="bn-slider number8">
+							<ul class="bjqs">
+								<li><a href="javascript:;"><img src="temp/bn_slide_sp01.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_sp02.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_sp03.jpg"></a></li>
+							</ul>
+						</div>
+						<div class="ad-verticalx2">
+							<a href="javascirpt:;"><img src="temp/ad174x239_sp01.jpg"></a>
+							<a href="javascirpt:;"><img src="temp/ad174x239_sp02.jpg"></a>
+						</div>
+					</div>
+				</div>
+				<div class="wmall-section">
+					<div class="sub-nav">
+						<ul>
+							<li>
+								<a href="javascript:;">文具</a>
+								<a href="javascript:;">存錢筒</a>
+							</li>
+							<li>
+								<a href="javascript:;">證件夾</a>
+								<a href="javascript:;">收納包</a>
+							</li>
+							<li>
+								<a href="javascript:;">餐具</a>
+								<a href="javascript:;">杯子</a>
+							</li>
+							<li>
+								<a href="javascript:;">洗髮乳</a>
+								<a href="javascript:;">沐浴乳</a>
+							</li>
+							<li>
+								<a href="javascript:;">防蚊液</a>
+								<a href="javascript:;">清潔用品</a>
+							</li>
+							<li>
+								<a href="javascript:;">創意小物</a>
+								<a href="javascript:;">玩樂用品</a>
+							</li>
+							<li>
+								<a href="javascript:;">家飾壁貼</a>
+								<a href="javascript:;">寵物用品</a>
+							</li>
+							<li>
+								<a href="javascript:;">餐廚用品</a>
+								<a href="javascript:;">美顏美體</a>
+							</li>
+							<li>
+								<a href="javascript:;">衣架</a>
+								<a href="javascript:;">椅子</a>
+							</li>
+							<li>
+								<a href="javascript:;">電熱毯</a>
+								<a href="javascript:;">其他</a>
+							</li>
+						</ul>
+						<div class="ad-small">
+							<ul>
+								<li><a href="#"><img src="temp/slide_s_dy01.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_dy02.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_dy03.jpg"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="inner-box">
+						<div class="bn-slider number9">
+							<ul class="bjqs">
+								<li><a href="javascript:;"><img src="temp/bn_slide_dy01.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_dy02.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_dy03.jpg"></a></li>
+							</ul>
+						</div>
+						<div class="ad-verticalx2">
+							<a href="javascirpt:;"><img src="temp/ad174x239_dy01.jpg"></a>
+							<a href="javascirpt:;"><img src="temp/ad174x239_dy02.jpg"></a>
+						</div>
+					</div>
+				</div>
+				<div class="wmall-section">
+					<div class="sub-nav">
+						<ul>
+							<li>
+								<a href="javascript:;">零食餅乾</a>
+								<a href="javascript:;">調理包</a>
+							</li>
+							<li>
+								<a href="javascript:;">巧克力</a>
+								<a href="javascript:;">飲料</a>
+							</li>
+							<li>
+								<a href="javascript:;">調味料</a>
+								<a href="javascript:;">果乾</a>
+							</li>
+							<li>
+								<a href="javascript:;">沖泡飲品</a>
+								<a href="javascript:;">健康食品</a>
+							</li>
+							<li>
+								<a href="javascript:;">季節水果</a>
+								<a href="javascript:;">熟食</a>
+							</li>
+							<li>
+								<a href="javascript:;">泡麵</a>
+								<a href="javascript:;">調味醬</a>
+							</li>
+							<li>
+								<a href="javascript:;">生鮮</a>
+								<a href="javascript:;">肉類</a>
+							</li>
+							<li>
+								<a href="javascript:;">熟食</a>
+								<a href="javascript:;">熟食</a>
+							</li>
+							<li>
+								<a href="javascript:;">蛋糕</a>
+								<a href="javascript:;">蛋糕</a>
+							</li>
+						</ul>
+						<div class="ad-small">
+							<ul>
+								<li><a href="#"><img src="temp/slide_s_t01.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_t02.jpg"></a></li>
+								<li><a href="#"><img src="temp/slide_s_t03.jpg"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="inner-box">
+						<div class="bn-slider number10">
+							<ul class="bjqs">
+								<li><a href="javascript:;"><img src="temp/bn_slide_t01.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_t02.jpg"></a></li>
+								<li><a href="javascript:;"><img src="temp/bn_slide_t03.jpg"></a></li>
+							</ul>
+						</div>
+						<div class="ad-verticalx2">
+							<a href="javascirpt:;"><img src="temp/ad174x239_t01.jpg"></a>
+							<a href="javascirpt:;"><img src="temp/ad174x239_t02.jpg"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="member-info">
+			<ul>
+				<li><a href="javascript:;">會員專區</a></li>
+				<li><a href="javascript:;">會員登入</a></li>
+				<li><a href="javascript:;">FACEBOOK</a></li>
+				<li><a href="javascript:;">FUN8D</a></li>
+			</ul>
+			<a href="javascript:;"><img src="temp/ad_145x155_01.jpg" /></a>
+			<a href="javascript:;"><img src="temp/ad_145x155_01.jpg" /></a>
+		</div>
+	</div>
+	<div class="recommend">
+		<div class="section">
+			<h2 class="color-pink">HOT!情人節活動推薦</h2>
+			<div class="border-box">
+				<div class="item-big"><a href="javascript:;"><img src="temp/pic01.jpg"></a></div>
+				<div class="item-2x">
+					<div>
+						<h3>優雅情人必備款</h3>
+						<p>商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述。 </p>
+						<a href="javascript:;"><img src="temp/pic02.jpg"></a>
+					</div>
+					<div>
+						<h3>優雅情人必備款</h3>
+						<p>商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述。 </p>
+						<a href="javascript:;"><img src="temp/pic03.jpg"></a>
+					</div>
+				</div>
+				<ul class="item-3x">
+					<li>
+						<a href="javascript:;"><img src="temp/pic04.jpg"></a>
+						<h4>超值推薦組合</h4>
+						<b>99,999</b>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic05.jpg"></a>
+						<h4>超值推薦組合</h4>
+						<b>99,999</b>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic06.jpg"></a>
+						<h4>超值推薦組合</h4>
+						<b>99,999</b>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="section">
+			<h2 class="color-green">換季春裝活動推薦</h2>
+			<div class="border-box">
+				<div class="item-big"><a href="javascript:;"><img src="temp/pic01.jpg"></a></div>
+				<div class="item-2x">
+					<div>
+						<h3>優雅情人必備款</h3>
+						<p>商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述。 </p>
+						<a href="javascript:;"><img src="temp/pic02.jpg"></a>
+					</div>
+					<div>
+						<h3>優雅情人必備款</h3>
+						<p>商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述 商品敘述。 </p>
+						<a href="javascript:;"><img src="temp/pic03.jpg"></a>
+					</div>
+				</div>
+				<ul class="item-3x">
+					<li>
+						<a href="javascript:;"><img src="temp/pic04.jpg"></a>
+						<h4>超值推薦組合</h4>
+						<b>99,999</b>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic05.jpg"></a>
+						<h4>超值推薦組合</h4>
+						<b>99,999</b>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic06.jpg"></a>
+						<h4>超值推薦組合</h4>
+						<b>99,999</b>
+					</li>
+				</ul>
+			</div>
+		</div>		
+	</div>
+	<div class="ad-column">
+		<div class="vertical-bn">
+			<a href="javascript:;"><img src="temp/pic08.jpg"></a>
+		</div>
+		<ul>
+			<li>
+				<a href="javascirpt:;"><img src="temp/pic07.jpg"></a>
+				<div>
+					<h3>CROWN奶油鬆餅</h3>
+					<p>席捲韓國熱銷商品NO1.奶油鬆餅，酥脆口感，多層次的濃郁香氣，保證對味!!下午茶點心的最佳選擇。</p>
+					<span class="original-price">原價：<b>75</b>元</span>
+					<span class="sp-price">限時搶購價<b>59</b>元</span>
+				</div>
+			</li>
+			<li>
+				<a href="javascirpt:;"><img src="temp/pic07_2.jpg"></a>
+				<div>
+					<h3>天使乳酪蛋糕捲</h3>
+					<p>生活中的小確幸，來自食材真實的呈現。蛋糕體細膩並保有彈性的絕技，內餡特調乳酪，絕佳搭配，非嚐不可。</p>
+					<span class="original-price">原價：<b>180</b>元</span>
+					<span class="sp-price">限時搶購價<b>320</b>元</span>
+				</div>
+			</li>
+			<li>
+				<a href="javascirpt:;"><img src="temp/pic07_4.jpg"></a>
+				<div>
+					<h3>JJ蛋糕烘焙-原味乳酪</h3>
+					<p>濃厚的乳酪蛋糕,入口即化讓人吃了還想再吃純乳酪製作的重乳酪蛋糕超划算！</p>
+					<span class="original-price">原價：<b>599</b>元</span>
+					<span class="sp-price">限時搶購價<b>469</b>元</span>
+				</div>
+			</li>
+			<li>
+				<a href="javascirpt:;"><img src="temp/pic07_3.jpg"></a>
+				<div>
+					<h3>浪漫巴黎茶點禮盒*3盒</h3>
+					<p>精選大顆飽滿的夏威夷豆，手工低溫烘烤，堅果香味超濃郁。送禮自用兩相宜！</p>
+					<span class="original-price">原價：<b>699</b>元</span>
+					<span class="sp-price">限時搶購價<b>880</b>元</span>
+				</div>
+			</li>			
+		</ul>
+	</div>
+	<div class="ad-horizontal">
+		<a href="javascript:;"><img src="temp/pic09.jpg"></a>
+		<a href="javascript:;"><img src="temp/pic010.jpg"></a>
+	</div>
+	<div class="tab-block">
+		<div class="title-area orange">
+			<h2>服飾</h2>
+			<ul>
+				<li><a class="active" href="javascript:;">精選</a></li>
+				<li><a href="javascript:;">男裝</a></li>
+				<li><a href="javascript:;">女裝</a></li>
+				<li><a href="javascript:;">童裝</a></li>
+				<li><a href="javascript:;">配件</a></li>
+			</ul>
+			<span><a href="javascript:;">SPIDER SPORTS 兩件198元 熱血迎春下殺五折優惠</a></span>
+		</div>
+		<div class="choice ad-list" style="display:block;">
+			<div class="big-vertical"><img src="temp/pic011.jpg"></div>
+			<div class="ad-section">
+				<div class="img-w500"><a href="javascript:;"><img src="temp/pic013.jpg"></a></div>
+				<ul class="img-w213">
+					<li><a href="javascript:;"><img src="temp/pic012.jpg"></a></li>
+					<li><a href="javascript:;"><img src="temp/pic012.jpg"></a></li>
+					<li><a href="javascript:;"><img src="temp/pic012.jpg"></a></li>
+					<li><a href="javascript:;"><img src="temp/pic012.jpg"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="ad-list">
+			<div class="big-vertical"><img src="temp/pic011.jpg"></div>
+			<div class="ad-section">
+				<div class="img-w360">
+					<a href="javascript:;"><img src="temp/pic014_2.jpg"></a>
+					<h3>男裝服飾超值首選</h3>
+					<b>399</b>
+				</div>
+				<ul class="img-w122">
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_3.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_2.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_4.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_5.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_6.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_7.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_8.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_9.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="ad-list">
+			<div class="big-vertical"><img src="temp/pic011_2.jpg"></div>
+			<div class="ad-section">
+				<div class="img-w360">
+					<a href="javascript:;"><img src="temp/pic014_3.jpg"></a>
+					<h3>女裝服飾超值首選</h3>
+					<b>399</b>
+				</div>
+				<ul class="img-w122">
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_010.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_011.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_012.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_013.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_014.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_015.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_016.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_017.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="ad-list">
+			<div class="big-vertical"><img src="temp/pic011.jpg"></div>
+			<div class="ad-section">
+				<div class="img-w360">
+					<a href="javascript:;"><img src="temp/pic014_2.jpg"></a>
+					<h3>男裝服飾超值首選</h3>
+					<b>399</b>
+				</div>
+				<ul class="img-w122">
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_3.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_2.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_4.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_5.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_6.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_7.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_8.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_9.jpg"></a>
+						<h3>男裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="ad-list">
+			<div class="big-vertical"><img src="temp/pic011_2.jpg"></div>
+			<div class="ad-section">
+				<div class="img-w360">
+					<a href="javascript:;"><img src="temp/pic014_3.jpg"></a>
+					<h3>女裝服飾超值首選</h3>
+					<b>399</b>
+				</div>
+				<ul class="img-w122">
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_010.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_011.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_012.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_013.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_014.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_015.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_016.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_017.jpg"></a>
+						<h3>女裝服飾超值首選</h3>
+						<b>399</b>						
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="tab-block">
+		<div class="title-area pink">
+			<h2>美食</h2>
+			<ul>
+				<li><a href="javascript:;">精選</a></li>
+				<li><a class="active" href="javascript:;">蛋糕甜點</a></li>
+				<li><a href="javascript:;">人氣餅乾</a></li>
+				<li><a href="javascript:;">生鮮肉品</a></li>
+			</ul>
+			<span><a href="javascript:;">大白毛甜甜屋人氣團購 烤肉超值組合599元起</a></span>
+		</div>
+		<div class="choice ad-list">
+			<div class="big-vertical"><img src="temp/pic011_3.jpg"></div>
+			<div class="ad-section">
+				<div class="img-w500"><a href="javascript:;"><img src="temp/pic013.jpg"></a></div>
+				<ul class="img-w213">
+					<li><a href="javascript:;"><img src="temp/pic012.jpg"></a></li>
+					<li><a href="javascript:;"><img src="temp/pic012.jpg"></a></li>
+					<li><a href="javascript:;"><img src="temp/pic012.jpg"></a></li>
+					<li><a href="javascript:;"><img src="temp/pic012.jpg"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="ad-list" style="display:block;">
+			<div class="big-vertical"><img src="temp/pic011_3.jpg"></div>
+			<div class="ad-section">
+				<div class="img-w360">
+					<a href="javascript:;"><img src="temp/pic014.jpg"></a>
+					<h3>甜點超值首選</h3>
+					<b>699</b>
+				</div>
+				<ul class="img-w122">
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des01.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des02.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des03.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des04.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des05.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des06.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des07.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des08.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="ad-list">
+			<div class="big-vertical"><img src="temp/pic011_3.jpg"></div>
+			<div class="ad-section">
+				<div class="img-w360">
+					<a href="javascript:;"><img src="temp/pic014.jpg"></a>
+					<h3>甜點超值首選</h3>
+					<b>699</b>
+				</div>
+				<ul class="img-w122">
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des01.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des02.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des03.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des04.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des05.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des06.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des07.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des08.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="ad-list">
+			<div class="big-vertical"><img src="temp/pic011_3.jpg"></div>
+			<div class="ad-section">
+				<div class="img-w360">
+					<a href="javascript:;"><img src="temp/pic014.jpg"></a>
+					<h3>甜點超值首選</h3>
+					<b>699</b>
+				</div>
+				<ul class="img-w122">
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des01.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des02.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des03.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des04.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des05.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des06.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des07.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+					<li>
+						<a href="javascript:;"><img src="temp/pic015_des08.jpg"></a>
+						<h3>甜點超值首選</h3>
+						<b>699</b>						
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="ft-container">
+		<div class="trust">
+			<img src="img/globaltrust_seal.gif">
+			<img src="img/gd_seal.gif">
+		</div>	
+		<div class="footer-Nav">
+			<ul>
+				<li><h3>購物指南</h3></li>
+				<li><a href="javascript:;">免費註冊</a></li>
+				<li><a href="javascript:;">新手上路</a></li>
+				<li><a href="javascript:;">會員中心</a></li>
+				<li><a href="javascript:;">連絡客服</a></li>
+			</ul>
+			<ul>
+				<li><h3>購物問題</h3></li>
+				<li><a href="javascript:;">購物常見問題</a></li>
+				<li><a href="javascript:;">會員常見問題</a></li>
+				<li><a href="javascript:;">配貨取送問題</a></li>
+				<li><a href="javascript:;">發票常見問題</a></li>
+				<li><a href="javascript:;">退款及退貨問題</a></li>
+			</ul>
+			<ul>
+				<li><h3>支付相關</h3></li>
+				<li><a href="javascript:;">比特幣結帳流程</a></li>
+				<li><a href="javascript:;">比特幣即時匯率查詢</a></li>
+				<li><a href="javascript:;">紅利點數查詢</a></li>
+				<li><a href="javascript:;">折價卷查詢</a></li>
+				<li><a href="javascript:;">福利金查詢</a></li>
+			</ul>
+			<ul>
+				<li><h3>相關連結</h3></li>
+				<li><a href="javascript:;">Wayi娛樂網</a></li>
+				<li><a href="javascript:;">FUN8D</a></li>
+				<li><a href="javascript:;">蜘蛛爆報</a></li>
+				<li><a href="javascript:;">SPIDER SPORTS</a></li>
+				<li><a href="javascript:;">esL台灣電競聯盟</a></li>
+			</ul>
+			<ul>
+				<li><h3>企業相關</h3></li>
+				<li><a href="javascript:;">免費註冊</a></li>
+				<li><a href="javascript:;">新手上路</a></li>
+				<li><a href="javascript:;">會員中心</a></li>
+				<li><a href="javascript:;">連絡客服</a></li>
+			</ul>
+		</div>
+		<div class="qr-code"><img src='img/wmall_qrcode.png'></div>
+		<p>華義國際娛樂數位股份有限公司 電話:02-55590070 地址:台北市內湖區堤頂大道二段407巷22號4樓<br>© 2014 Wayi International Digital Entertainment Co., Ltd. All Rights Reserved</p>
+	</div>
+</div>
+<div class="af-bar">
+	<ul>
+		<li class="afAccount">
+			<a href="javascript:;">帳戶</a>
+		</li>
+		<li class="afRecord">
+			<a href="javascript:;">紀錄</a>
+		</li>
+		<li class="afList">
+			<a href="javascript:;">清單</a>
+		</li>
+	</ul>
+	<div class="afCancel"></div>
+</div>
+<div class="af-show"></div>
+</body>
+</html>

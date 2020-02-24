@@ -1,0 +1,166 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/*resets*/
+html { font-size: 12px; }
+h1, h2, h3, h4, h5, h6, p, a, button, table, div, ul, li, textarea, input, footer { font-family: 'Open Sans', '微軟正黑體', Arial, Helvetica, sans-serif, 'STHeiti Light', '儷黑 Pro', 'LiHei Pro', 'Microsoft Yahei', 'Microsoft JhengHei', '新細明體'; }
+a { text-decoration: none; outline: none; /* for Firefox Google Chrome  */  behavior:expression(this.onFocus=this.blur()); /* for IE */}
+input[type=submit], input[type=reset], input[type=button], input[type=text], input[type=password], textarea, select{-webkit-appearance:none;}
+iframe[name=google_conversion_frame]{ display: none;}
+:focus {outline: none;}
+/*end resets*/
+
+/*style*/
+body{background: #000;}
+.wrap{overflow-x: hidden;}
+.page01{background: url(../img/bg01.jpg) no-repeat center top; background-size: 100% auto; height: 100vh; position: relative;}
+.logo{position: absolute;}
+.page01 .logo{left: 0%; top: 34%; width: 100%; text-align: center;}
+.page01 .logo img{width: 70%;}
+.sub-title{position: absolute; width: 100%; left: 0%; top: 56%; text-align: center;}
+.sub-title img:nth-child(1){width: 70%;}
+.sub-title img:nth-child(2){/*width: 60%; margin: 1.5% 0 0 23%;*/}
+.date-title{position: absolute; text-align: center; top: 47%;}
+.date-title img{width: 86%;}
+.enter-btn{position: absolute; top: 73%; left: 0%; z-index: 5;}
+.enter-btn figure{width: 70%; padding: 3% 4% 2%; background: #f7bd15; transform: skewX(-10deg); margin: 0 auto;}
+.enter-btn figure:after{content: ''; display: block; animation: btnFlash .5s linear alternate infinite; z-index: -1; position: absolute; left: 2%; top: 12%; border:1px solid #f7bd15; width: 100%; height: 100%;}
+.enter-btn figure img{width: 100%; transform: skewX(10deg);}
+
+.page02{background: url(../img/bg01.jpg) no-repeat center top; display: none; background-size: 100% auto; height: 100vh; position: relative;}
+.mask{background: rgba(0,0,0,.55); width: 100vw; height: 100vh; position: absolute; left: 0; top: 0; z-index: 1;}
+.ins{position: absolute; left: 0; top: 42%; z-index: 5; text-align: center;}
+.ins img{width: 88%;}
+
+.page03{width: 100vw; height: 100vh; background: #fff; display: none;}
+.game-bar{background: #000; display: -webkit-flex; display: flex;}
+.head-pic{flex: 1; padding: 3% 2% 2% 3%;}
+.head-pic img{border-radius: 50%; border:3px solid #fff; width: 100%;}
+.game-status{flex: 2; padding: 3% 3% 2% 2%;}
+.game-logo{text-align: right;}
+.game-logo img{width: 93%;}
+.game-score{color: #fff; display: -webkit-flex; display: flex; text-align: center; margin-top: -3%;}
+.game-score div em{font-size: 2em;}
+.game-score div b{display: block; font-size: 3em; margin-top: -5%;}
+.game-time{flex: 1;}
+.game-time b{color: #ffb600;}
+.game-answer{flex: 1;}
+.game-wrap h5{text-align: center; font-size: 2em; margin: 3% 0;}
+.game-section{position: relative;}
+.game-section img{width: 100%; height: auto;}
+.wrong-place{position: absolute; width: 30px; height: 30px; border-radius: 50%; box-sizing: border-box;}
+.gs-01 .wp01{left: 12.5%; top: 72%;}
+.gs-01 .wp02{left: 47.5%; top: 53.8%;}
+.gs-01 .wp03{left: 66.5%; top: 54%;}
+.gs-01 .wp04{left: 90%; top: 76.8%;}
+.gs-01 .wp05{left: 85.3%; top: 78.8%;}
+.gs-01 .wp06{left: 42.5%; top: 76.5%;}
+.gs-01 .wp07{left: 18.3%; top: 65%;}
+.gs-01 .wp08{left: 17%; top: 77%;}
+.gs-01 .wp09{left: 75%; top: 65%;}
+.gs-01 .wp010{left: 61%; top: 59%;}
+
+.gs-02 .wp01{left: 20%; top: 70%;}
+.gs-02 .wp02{left: 30%; top: 53%;}
+.gs-02 .wp03{left: 39.5%; top: 54%;}
+.gs-02 .wp04{left: 73.5%; top: 71.8%;}
+.gs-02 .wp05{left: 71%; top: 84.4%;}
+.gs-02 .wp06{left: 37%; top: 85%;}
+.gs-02 .wp07{left: 15.5%; top: 61.5%;}
+.gs-02 .wp08{left: 29%; top: 66.2%;}
+.gs-02 .wp09{left: 47%; top: 69.5%;}
+.gs-02 .wp010{left: 58%; top: 62%;}
+.wrong-place.active{border: 3px solid #00bc08; background: rgba(0,0,0,.35);}
+.game-wrap.shake{animation: shake .8s;}
+
+.page-success{background: url(../img/bg02.jpg) no-repeat center top; display: none; padding-top: 40%; background-size: 100% auto; position: relative;}
+main.content{width: 90%; margin: 0 auto;}
+main.content h2{background: #000; border-radius: 10px 10px 0 0; padding: 1.8% 0; text-align: center;}
+main.content h2 img{width: 35%;}
+main.content section{background: rgba(0,0,0,.75); border-radius: 0px 0px 10px 10px; box-sizing: border-box; padding: 3% 8% 5%;}
+main.content h3{color: #fff; text-align: center; margin-bottom: 2%; letter-spacing: 2px; font-size: 28px;}
+main.content .congrats{color: #fff; text-align: center; font-size: 18px;}
+.content .it-format{background: rgba(255,255,255,.35); border-radius: 0; box-sizing: border-box; margin: 4% 0; display: block; width: 100%; border: none; border-bottom: 2px solid transparent; color: #fff; font-size: 20px; text-shadow: 0 0 8px rgba(0,0,0,.35); padding: 3% 0% 3% 6%; -webkit-transition: all ease .4s; transition: all ease .4s;}
+.content .it-format::-webkit-input-placeholder{color: #fff;}
+.content .it-format[type='text']:focus{border-bottom-color: #ffc004; background: rgba(255,255,255,.42);}
+.content p.notice{color: #fff; font-size: 16px; line-height: 24px; margin-bottom: 4%;}
+.content p.notice b{color: #FFC107;}
+.btn-gradient{width: 75%; letter-spacing: 4px; display: block; text-align: center; margin: 0 auto; color: #000; cursor: pointer; font-size: 20px; border-radius: 5px; font-weight: bold; padding: 2%; background: #FF9800; background: -webkit-linear-gradient(#FF9800, #FFEB3B); background: -o-linear-gradient(#FF9800, #FFEB3B); background: -moz-linear-gradient(#FF9800, #FFEB3B); background: linear-gradient(#FF9800, #FFEB3B); border: 1px solid #FF9800; box-shadow: 0 0 0 1px #FFEB3B inset; -webkit-transition: all ease .4s; transition: all ease .4s;}
+
+.page-fail{background: url(../img/bg02.jpg) no-repeat center top; padding-top: 40%; display: none; background-size: 100% auto; position: relative; min-height: 100vh; box-sizing: border-box;}
+.page-fail button[class^='btn-']{margin-top: 7%;}
+.answer-pic{margin-top: 8%; text-align: center; display: none;}
+.answer-pic img{width: 90%; border-radius: 50%;}
+
+.msgok{display: none;}
+.msgok .btn-gradient{margin: 8% auto 2%;}
+main.content.msgok{height: 65vh;}
+
+/*animation*/
+@-webkit-keyframes btnFlash{
+	0%, 50%, 100% {
+      opacity: 1;
+   }
+   25%, 75% {
+      opacity: 0;
+   }
+}
+@keyframes btnFlash{
+	0%{background: transparent;}
+	100%{background: #f7bd15;}
+}
+
+@-webkit-keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+
+/*mobile*/
+@media screen and (max-width: 375px) {
+	main.content h3{font-size: 26px; letter-spacing: 1.5px;}
+	main.content .congrats{font-size: 17px;}
+	.content .it-format{font-size: 18px;}
+	.content p.notice{font-size: 15px;}
+}
+
+@media screen and (max-width: 360px) {
+	main.content h3{font-size: 24px; letter-spacing: 1.2px;}
+	main.content .congrats{font-size: 16px;}
+	.content p.notice{font-size: 14px;}
+	.btn-gradient{font-size: 18px;}
+  .game-score div em{font-size: 1.6em;}
+}

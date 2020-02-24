@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://www.worldibuy.com/icon.ico" rel="SHORTCUT ICON">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=edge"/>
+<meta name="copyright" content="Copyright (c) by world i buy 都買都賣">
+<meta name="keywords" content="都買都賣,wib,world i buy,代你buy遍千里之外,代購,購物,航運,shopping,品牌館">
+<meta name="description" content="worldibuy 都買都賣-代你buy遍千里之外">
+<meta property="og:image" content="http://www.worldibuy.com/img/fb_thumb.jpg" />
+<meta itemprop="image" content="http://www.worldibuy.com/img/fb_thumb.jpg" />
+<title>WORLDiBUY 都買都賣 | 代你BUY遍千里之外</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="js/jquery.parallax-1.1.3.js"></script>
+<script src="js/ScrollToPlugin.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/smooth_scroll.js"></script>
+<script src="js/jquery.reveal.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script>
+	$(function(){
+		$(window).load(function(){
+			$('#loading').fadeOut()
+			$('.bg-first').parallax("50%", 0.3);
+			$('.bg-second').parallax("50%", 0.3);
+			$('.ballon01').parallax("50%", 0.3);
+			$('.ballon02').parallax("50%", 0.6);
+			$('.bg-first h1').animate({'opacity':'1','left':'0'},1500,'easeInOutQuart');
+			$('.bg-first h2').delay(500).animate({'opacity':'1','top':'432'},2000,'easeInOutQuart');
+			$('.main-text01').delay(1600).animate({'opacity':'1','top':'475'},1500,'easeInOutQuart');
+			$('.main-text02').delay(2100).animate({'opacity':'1','right':'30'},2000,'easeInOutQuart');
+		});
+	});
+	
+	/*google ga
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	ga('create', 'UA-54980919-1', 'auto');
+	ga('send', 'pageview');*/	
+</script>
+</head>
+
+<body>
+<!--loading-->
+<div id="loading"></div>
+
+<!--popup area-->
+<div class="popup reveal-modal" id="p-partner">
+	<h5>加入 WiBlogger</h5>
+    <div class="popContent">
+        <a class="close-reveal-modal">&#215;</a>
+    	<img src="img/popup_step.png">
+        <h6>>>申請成為 WiBlogger，每個月都有挑不完的商品！</h6>
+        <span class="subTitle">只要有部落格或FB粉絲團，並填寫以下資料，就能搶先一步獲得免費購遍全球新奇商品的機會。</span>
+        <form>
+     		<table cellpadding="0" cellspacing="0" border="0">
+            	<tr>
+                	<th>部落格位址</th>
+                    <td><input type="text"></td>
+                    <th>粉絲團位址</th>
+                    <td><input type="text"></td>
+                </tr>
+            	<tr>
+                	<th>部落格名稱</th>
+                    <td><input type="text"></td>
+                    <th>粉絲團名稱</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                	<th>部落格分類</th>
+                    <td>
+                    	<select>
+                        	<option>---請選擇分類---</option>
+                        	<option>彩妝保養</option>
+                        	<option>服飾包鞋</option>
+                        	<option>媽咪寶貝</option>
+                        	<option>居家生活</option>
+                        	<option>動漫文玩</option>
+                        	<option>運動休閒</option>
+                        	<option>3C 家電</option>
+                        	<option>美食保健</option>
+                        	<option>偶像明星</option>
+                        </select>
+                    </td>                
+                	<th>粉絲團分類</th>
+                    <td>
+                    	<select>
+                        	<option>---請選擇分類---</option>
+                        	<option>彩妝保養</option>
+                        	<option>服飾包鞋</option>
+                        	<option>媽咪寶貝</option>
+                        	<option>居家生活</option>
+                        	<option>動漫文玩</option>
+                        	<option>運動休閒</option>
+                        	<option>3C 家電</option>
+                        	<option>美食保健</option>
+                        	<option>偶像明星</option>
+                        </select>
+                    </td>                
+                </tr>
+            </table>
+     		<table cellpadding="0" cellspacing="0" border="0">
+            	<tr>
+                	<th>姓名</th>
+                    <td><input type="text"></td>
+                </tr>
+            	<tr>
+                	<th>電子郵件</th>
+                    <td><input type="text"></td>
+                </tr>
+            	<tr>
+                	<th>聯絡電話</th>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+            <div class="p-btnArea">
+            	<input class="popup-submit" type="submit" value="送出資料">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="popup reveal-modal" id="p-teacher">
+	<h5>徵求課程講師</h5>
+    <div class="popContent">
+        <a class="close-reveal-modal">&#215;</a>
+        <h6>>>我們徵求電子商務相關應用高手（網路開店、網路行銷、圖片美化等），以及國外採購批貨達人。</h6>
+        <span class="subTitle">只要擁有以上相關技能，並填寫以下資料，將有機會成為 WiB 都買都賣特約講師，獲得更多收入。</span>
+        <form>
+     		<table cellpadding="0" cellspacing="0" border="0">
+            	<tr>
+                	<th>姓名</th>
+                    <td><input type="text"></td>
+                    <th>講師專長</th>
+                    <td><input type="text"></td>
+                </tr>
+            	<tr>
+                	<th>聯絡電話</th>
+                    <td><input type="text"></td>
+                    <th>課程名稱</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                	<th style="vertical-align:middle;">個人簡介</th>
+                    <td colspan="3"><textarea></textarea></td>
+                </tr>
+            </table>
+            <div class="p-btnArea">
+            	<input class="popup-submit" type="submit" value="送出資料">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="popup reveal-modal" id="p-jobs">
+	<h5>加入 WiB 團隊</h5>
+    <div class="popContent">
+        <a class="close-reveal-modal">&#215;</a>
+		<ul>
+        	<li><a href="http://www.104.com.tw/jobbank/custjob/index.php?r=job&j=443a42272b383e6730583b643c64361d0403a4325252525203d323e6381j52&jobsource=" target="_blank">&#10140; 網頁美編設計師</a></li>
+        	<li><a href="http://www.104.com.tw/jobbank/custjob/index.php?r=job&j=473d452a2e3b416a335b3e673f6739208433d4628282828234035452250j55&jobsource=" target="_blank">&#10140; 客服營運主管</a></li>
+        	<li><a href="http://www.104.com.tw/jobbank/custjob/index.php?r=job&j=4a40482d313e446d365e416a426a3c2314640492b2b2b2b2643485a2220j97&jobsource=" target="_blank">&#10140; 活動企劃與社群營運分析師</a></li>
+        	<li><a href="http://www.104.com.tw/jobbank/custjob/index.php?r=job&j=443a42272b383e6730583b643c64361d0403a4325252525203d42366381j52&jobsource=" target="_blank">&#10140; 儲備主管</a></li>
+        	<li><a href="http://www.104.com.tw/jobbank/custjob/index.php?r=job&j=483e462b2f3c426b345c3f6840683a219443e47292929292441464a2240j56&jobsource=" target="_blank">&#10140; 程式設計師</a></li>
+        	<li><a href="http://www.104.com.tw/jobbank/custjob/index.php?r=job&j=4a40482d313e446d365e416a426a3c2314640492b2b2b2b2643385e2220j97&jobsource=" target="_blank">&#10140; 電話行銷人員</a></li>
+        	<li><a href="http://www.104.com.tw/jobbank/custjob/index.php?r=job&j=473d452a2e3b416a335b3e673f6739208433d4628282828234035532250j55&jobsource=" target="_blank">&#10140; 客服專員</a></li>
+        </ul>
+    </div>
+</div>
+<div class="popup reveal-modal" id="p-subscribe">
+	<h5>訂閱WORLDiBUY</h5>
+    <div class="popContent">
+        <a class="close-reveal-modal">&#215;</a>
+        <h6>>>訂閱開站優先通知</h6>
+        <span class="subTitle">您所提供的電子郵件地址僅做為開站通知使用，都買都賣會妥善<br>保存您提供的資料，不會將這些資料提供予第三人或挪為他用。</span>
+        <form>
+     		<table cellpadding="0" cellspacing="0" border="0">
+            	<tr>
+                	<th>電子郵件</th>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+            <div class="p-btnArea">
+            	<input class="popup-submit" type="submit" value="送出資料">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="popup reveal-modal" id="p-seller">
+	<h5>WiB適合什麼樣的賣家</h5>
+    <div class="popContent">
+        <a class="close-reveal-modal">&#215;</a>
+    	<img src="img/popup_step2.png">
+        <h6>>>如果您符合以上條件，歡迎留下您的資料，將由專人與您進一步連絡！</h6>
+        <form>
+     		<table cellpadding="0" cellspacing="0" border="0">
+            	<tr>
+                	<th>姓名</th>
+                    <td><input type="text"></td>
+                </tr>
+            	<tr>
+                	<th>電子郵件</th>
+                    <td><input type="text"></td>
+                </tr>
+            	<tr>
+                	<th>聯絡電話</th>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+            <div class="p-btnArea">
+            	<input class="popup-submit" type="submit" value="送出資料">
+            </div>
+        </form>
+    </div>
+</div>
+<!--popup area End-->
+
+<div class="bg-first">
+	<div class="wrapper">
+    	<h1>WORLDiBUY</h1>
+        <h2>都買都賣 全球購物商城</h2>
+        <div class="main-text01"></div>
+        <div class="main-text02"></div>
+    </div>
+</div>
+<div class="info">
+	<div class="wrapper">
+    	<h3>關於 WORLDiBUY 都買都賣</h3>
+        <p>WORLDiBUY 都買都賣是一個國際購物網站，擁有高品質、好設計、超新奇的各式海外商品，致力於讓每個人都可以花費最小的力氣，快速買到來自世界各地的好東西。WORLDiBUY 團隊成立於 2014 年的春天，團隊的每個人都是資深購物狂，身懷月底吃土絕技，深信好東西無國界，以嚴謹的態度、狂野的心，打造我們自己都深深愛上的國際購物商城。誠摯邀請各位合拍的小伙伴，一同經歷前所未有神速、簡潔優雅安心的海外購物體驗。
+        </p>
+        <ul>
+        	<li class="icon01">
+            	<b>免殺免喊一口價</b>
+                <p>買國際商品要分三次付費好麻煩？ WiB 都買都賣的交易付款只要一個步驟，省下來的時間可以逛更多商品</p>
+            </li>
+        	<li class="icon02">
+            	<b>實名認證最安心</b>
+                <p>每一個在 WiB 都買都賣販賣商品的店家，都會經過審核，更有身份認證機制，交易安全好放心</p>
+            </li>
+        	<li class="icon03">
+            	<b>國際直飛免運費</b>
+                <p>海外購物不用再等一個月！ WiB 都買都賣班機直飛台灣速度快，貨物動向都清楚，還全球免運！</p>
+            </li>
+        	<li class="icon04">
+            	<b>保證正品否則賠</b>
+                <p>買名牌就怕買到假貨，WiB 都買都賣承諾，若消費者買到假貨，將獲得商品價格 125％的購物金</p>
+            </li>
+        	<li class="icon05">
+            	<b>不被剝削省更多</b>
+                <p>除去大盤→中盤→零售→消費者的過程，省下來的錢說不定可以多送自己一個包包</p>
+            </li>
+        	<li class="icon06">
+            	<b>代收代付防詐騙</b>
+                <p>大筆錢交給陌生人真不安？WiB 都買都賣有「買家同意才付款」機制，消費者權益擺第一</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="bg-second">
+	<div class="wrapper">
+        <div class="btn-area">
+            <a data-reveal-id="p-teacher" href="javascript:;">徵求講師</a>
+            <a data-reveal-id="p-partner" href="javascript:;">加入WiBlogger</a>
+            <a data-reveal-id="p-jobs" href="javascript:;">加入WiB團隊</a>
+        </div>
+        <h4>都買都賣 代你BUY遍千里之外</h4>
+        <div class="ballon01"></div>
+        <div class="ballon02"></div>
+    </div>
+</div>
+<div class="data">
+	<div class="wrapper">
+    	<h3>請您留下聯絡方式與我們聯繫</h3>
+        <div class="sub-left">
+            <a data-reveal-id="p-subscribe" class="btn-white" href="javascript:;">我想訂閱優先通知</a>
+        </div>
+        <div class="sub-right">
+            <a data-reveal-id="p-seller" class="btn-white" href="javascript:;">我想成為全球賣家</a>        
+        </div>
+    </div>
+</div>
+<div class="footer">
+	<div class="wrapper">
+    	<img src="img/footer.png">
+    </div>
+</div>
+</body>
+</html>
