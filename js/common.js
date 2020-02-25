@@ -329,10 +329,10 @@ $(function () {
     categoryFilter();
 
     function textIntro() {
-        let $introTop = $('.intro').offset().top;
         let $textOuter = $('.intro .wrap div');
 
         $(window).on('scroll', function () {
+            let $introTop = $('.intro').offset().top;
             let $winTop = $(this).scrollTop() + 400;
             if ($winTop > $introTop) {
                 for (let i = 0; i < $textOuter.length; i++) {
@@ -340,7 +340,7 @@ $(function () {
                         $textOuter.eq(i).addClass('active');
                     }, i * 600);
                 };
-            }else if($winTop < $introTop - 1200){
+            }else if($winTop < $introTop - 1000){
                 $textOuter.removeClass('active');
             };
         });
