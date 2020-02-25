@@ -4,12 +4,12 @@ $(function () {
         let $loadingScene = $('.loading');
         let $loadingWord = $('.loading-word');
         /* $(window).on('load', function () { */
-            $loadingScene.addClass('done');
-            $loadingWord.fadeOut(200);
-            setTimeout(function () {
-                $loadingScene.remove();
-            }, 1800);
-            $('.mp-front, .mp-back, .logo').addClass('point');
+        $loadingScene.addClass('done');
+        $loadingWord.fadeOut(200);
+        setTimeout(function () {
+            $loadingScene.remove();
+        }, 1800);
+        $('.mp-front, .mp-back, .logo').addClass('point');
         /* }); */
     };
     openAnimation();
@@ -19,7 +19,7 @@ $(function () {
         let $navItem = $('nav ul li a');
         let navColor = {
             all: {
-                color: '#383838'
+                color: '#020203'
             },
             games: {
                 color: '#446a5e'
@@ -31,7 +31,7 @@ $(function () {
                 color: '#6d4465'
             },
             landingPage: {
-                color: '#77504d'
+                color: '#684c4a'
             }
         };
 
@@ -294,10 +294,10 @@ $(function () {
 
         webData.forEach(function (item) {
             let links = item.webUrl;
-            if($(window).width() <= 1200){
-                if(item.mobileUrl !== undefined){
+            if ($(window).width() <= 1200) {
+                if (item.mobileUrl !== undefined) {
                     links = item.mobileUrl;
-                }else{
+                } else {
                     links = item.webUrl;
                 };
             };
@@ -327,4 +327,23 @@ $(function () {
         });
     };
     categoryFilter();
+
+    function textIntro() {
+        let $introTop = $('.intro').offset().top;
+        let $textOuter = $('.intro .wrap div');
+
+        $(window).on('scroll', function () {
+            let $winTop = $(this).scrollTop() + 400;
+            if ($winTop > $introTop) {
+                for (let i = 0; i < $textOuter.length; i++) {
+                    setTimeout(function () {
+                        $textOuter.eq(i).addClass('active');
+                    }, i * 600);
+                };
+            }else if($winTop < $introTop - 1200){
+                $textOuter.removeClass('active');
+            };
+        });
+    };
+    textIntro();
 });
