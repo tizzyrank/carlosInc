@@ -19,21 +19,18 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/bjqs-1.3.js"></script>
 		<script src="js/jquery.fancybox.js"></script>		
-		<script src="js/common.js"></script>		
+        <script src="js/common.js"></script>		
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39949103-6"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-39949103-6');
+        </script>
 	</head>
 	<body>	
-		<!--facebook sdk-->
-		<div id="fb-root"></div>
-		<script>
-			(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4";
-			fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script><!--End facebook sdk-->
-
 		<div id="wrapper">
 			<div id="header">
 				<h1 class="logo">

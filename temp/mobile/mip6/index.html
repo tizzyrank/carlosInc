@@ -1,87 +1,107 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-		<meta name="Author" content="台灣蘋果日報">
-		<meta name="Description" content="不可能的任務全面瓦解">
-		<meta name="Keywords" content="不可能的任務, 全面瓦解">
-		<meta name="Copyright" content="香港商壹傳媒, 台灣蘋果日報">
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="不可能的任務:全面瓦解">
-		<meta property="og:description" content="不可能的任務全面瓦解">
-		<title>不可能的任務:全面瓦解</title>
-		<link rel="icon" href="http://img.appledaily.com.tw/appledaily/pinsite/64x64.ico" type="image/png">
-		<link href="css/style.css" rel="stylesheet" type="text/css" />
-	</head>
-	<body>
-		<div class="mipA">
-			<div class="wrap">
-				<main>
-					<section class="text-col">
-						<img class="title01" src="img/title01.png">
-						<img class="title02" src="img/title02.png">
-						<img class="subTitle01" src="img/subtitle01.png">
-						<img class="subTitle02" src="img/subtitle02.png">
-					</section>
-					<div class="fingerPrint flash"></div>
-					<div class="bg-gray"></div>
-					<div class="bg-color"></div>
-					<div class="btn-star">長按指紋放開後答題去</div>
-				</main>
-			</div>
-		</div>
-		
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='http://tw.appledaily.com';}"></iframe>
-        <form class="data-form" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSe3_-eKmwVn5a7MdDGBWTErxu03KucfpENIThd_bOgqtIEBMA/formResponse" method="POST" target="hidden_iframe" onsubmit="return onSubmitEventHandler();">
-			<div class="mipB">
-				<div class="wrap qa-wrap qa01">
-					<main class="content">
-						<section>
-							<em>問題 <span>Day 1</span></em>
-							<h5>在《不可能的任務1》中，伊森韓特將從CIA總部偷出的情報員名單存在哪裡？</h5>
-							<ul class="ans">
-								<li><input type="radio" value="&#37679;" id="group_948357728_1" name="entry.1532236425"><label>A：光碟片</label></li>
-		                        <li><input type="radio" value="&#23565;&#19968;" id="group_948357728_2" name="entry.1532236425"><label>B：磁碟片</label></li>
-		                        <li><input type="radio" value="&#37679;" id="group_948357728_3" name="entry.1532236425"><label>C：隨身碟</label></li>
-							</ul>
-							<a class="btn-golden btn-answer" href="javascript:;">確認作答</a>
-						</section>
-					</main>
-				</div>
-			</div>
 
-			<div class="mipC">
-				<div class="wrap result-wrap">
-					<section class="title-col"></section>
-					<main class="content">
-						<h2>
-							<img src="img/logo_s.png">
-						</h2>
-						<section class="share">
-							<h3>《不可能的任務 完成》</h3>
-							<p class="congrats">成為《 不可能的任務 》的超級鐵粉！留下個人資料，完成搶票資格</p>
-							<div class="data-col">
-								<input class="it-format" type="text" name="entry.1366083736" value="" id="entry_737272527" placeholder="請填寫姓名">
-							</div>
-							<div class="data-col">
-								<input class="it-format" type="text" name="entry.1470411320" value="" id="entry_1974593567" placeholder="請填寫手機號碼">
-							</div>
-							<p class="ins">
-								<b>個人資訊僅限本活動聯繫得獎者使用</b>，當您按下“確認登錄”鍵即表示同意蘋果日報使用您的基本資訊 (本站設有資安維護系統)
-							</p>
-							<input type="submit" value="確認登錄搶票去" class="btn-golden btn-confirm" id="btnSubmit">
-							<center><span id="spanSubmitInfo">送出中，請稍候...</span></center>
-						</section>
-					</main>
-				</div>
-			</div>
-		</form><!-- End form data post -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta name="Author" content="台灣蘋果日報">
+    <meta name="Description" content="不可能的任務全面瓦解">
+    <meta name="Keywords" content="不可能的任務, 全面瓦解">
+    <meta name="Copyright" content="香港商壹傳媒, 台灣蘋果日報">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="不可能的任務:全面瓦解">
+    <meta property="og:description" content="不可能的任務全面瓦解">
+    <title>不可能的任務:全面瓦解</title>
+    <link rel="icon" href="http://img.appledaily.com.tw/appledaily/pinsite/64x64.ico" type="image/png">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39949103-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<!-- <script src="js/jquery-1.11.3.min.js"></script> -->
-		<script src="js/hammer.min.js"></script>
-		<script src="js/common.js"></script>
-	</body>
+        gtag('config', 'UA-39949103-6');
+    </script>
+</head>
+
+<body>
+    <div class="mipA">
+        <div class="wrap">
+            <main>
+                <section class="text-col">
+                    <img class="title01" src="img/title01.png">
+                    <img class="title02" src="img/title02.png">
+                    <img class="subTitle01" src="img/subtitle01.png">
+                    <img class="subTitle02" src="img/subtitle02.png">
+                </section>
+                <div class="fingerPrint flash"></div>
+                <div class="bg-gray"></div>
+                <div class="bg-color"></div>
+                <div class="btn-star">長按指紋放開後答題去</div>
+            </main>
+        </div>
+    </div>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+        onload="if(submitted) {window.location='http://tw.appledaily.com';}"></iframe>
+    <form class="data-form"
+        action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSe3_-eKmwVn5a7MdDGBWTErxu03KucfpENIThd_bOgqtIEBMA/formResponse"
+        method="POST" target="hidden_iframe" onsubmit="return onSubmitEventHandler();">
+        <div class="mipB">
+            <div class="wrap qa-wrap qa01">
+                <main class="content">
+                    <section>
+                        <em>問題 <span>Day 1</span></em>
+                        <h5>在《不可能的任務1》中，伊森韓特將從CIA總部偷出的情報員名單存在哪裡？</h5>
+                        <ul class="ans">
+                            <li><input type="radio" value="&#37679;" id="group_948357728_1"
+                                    name="entry.1532236425"><label>A：光碟片</label></li>
+                            <li><input type="radio" value="&#23565;&#19968;" id="group_948357728_2"
+                                    name="entry.1532236425"><label>B：磁碟片</label></li>
+                            <li><input type="radio" value="&#37679;" id="group_948357728_3"
+                                    name="entry.1532236425"><label>C：隨身碟</label></li>
+                        </ul>
+                        <a class="btn-golden btn-answer" href="javascript:;">確認作答</a>
+                    </section>
+                </main>
+            </div>
+        </div>
+
+        <div class="mipC">
+            <div class="wrap result-wrap">
+                <section class="title-col"></section>
+                <main class="content">
+                    <h2>
+                        <img src="img/logo_s.png">
+                    </h2>
+                    <section class="share">
+                        <h3>《不可能的任務 完成》</h3>
+                        <p class="congrats">成為《 不可能的任務 》的超級鐵粉！留下個人資料，完成搶票資格</p>
+                        <div class="data-col">
+                            <input class="it-format" type="text" name="entry.1366083736" value="" id="entry_737272527"
+                                placeholder="請填寫姓名">
+                        </div>
+                        <div class="data-col">
+                            <input class="it-format" type="text" name="entry.1470411320" value="" id="entry_1974593567"
+                                placeholder="請填寫手機號碼">
+                        </div>
+                        <p class="ins">
+                            <b>個人資訊僅限本活動聯繫得獎者使用</b>，當您按下“確認登錄”鍵即表示同意蘋果日報使用您的基本資訊 (本站設有資安維護系統)
+                        </p>
+                        <input type="submit" value="確認登錄搶票去" class="btn-golden btn-confirm" id="btnSubmit">
+                        <center><span id="spanSubmitInfo">送出中，請稍候...</span></center>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </form><!-- End form data post -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="js/jquery-1.11.3.min.js"></script> -->
+    <script src="js/hammer.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
 </html>
