@@ -71,6 +71,20 @@ $(function () {
         let webData = [
             {
                 imgUrl: 'img/web_010.jpg',
+                webUrl: 'temp/web/hillarys/index.html',
+                mobileUrl: 'temp/web/hillarys/index.html',
+                name: '喜樂利',
+                category: 'site-page'
+            },
+            {
+                imgUrl: 'img/web_010.jpg',
+                webUrl: 'temp/web/corbett/index.html',
+                mobileUrl: 'temp/mobile/corbett/index.html',
+                name: '環球科技',
+                category: 'site-page'
+            },
+            {
+                imgUrl: 'img/web_010.jpg',
                 webUrl: 'temp/web/hotel/index.html',
                 mobileUrl: 'temp/mobile/hotel/index.html',
                 name: '綠舞觀光飯店',
@@ -214,12 +228,12 @@ $(function () {
                 name: 'LoganGo 轉盤',
                 category: 'games'
             },
-            {
-                imgUrl: 'img/web_05.jpg',
-                webUrl: 'temp/web/wmall/index.html',
-                name: 'WMALL 時尚玩家購物站',
-                category: 'site-page'
-            },
+            // {
+            //     imgUrl: 'img/web_05.jpg',
+            //     webUrl: 'temp/web/wmall/index.html',
+            //     name: 'WMALL 時尚玩家購物站',
+            //     category: 'site-page'
+            // },
             {
                 imgUrl: 'img/web_033.jpg',
                 webUrl: 'temp/web/orange/index.html',
@@ -252,24 +266,24 @@ $(function () {
                 name: '元氣餅乾互動',
                 category: 'games'
             },
-            {
-                imgUrl: 'img/web_011.jpg',
-                webUrl: 'temp/web/bike/index.html',
-                name: 'BIKE LOYALTY 街車',
-                category: 'site-page'
-            },
-            {
-                imgUrl: 'img/web_06.jpg',
-                webUrl: 'javascript:;',
-                name: '中國信託 旅遊網',
-                category: 'site-page'
-            },
-            {
-                imgUrl: 'img/web_012.jpg',
-                webUrl: 'javascript:;',
-                name: 'Double Six 咖啡',
-                category: 'site-page'
-            },
+            // {
+            //     imgUrl: 'img/web_011.jpg',
+            //     webUrl: 'temp/web/bike/index.html',
+            //     name: 'BIKE LOYALTY 街車',
+            //     category: 'site-page'
+            // },
+            // {
+            //     imgUrl: 'img/web_06.jpg',
+            //     webUrl: 'javascript:;',
+            //     name: '中國信託 旅遊網',
+            //     category: 'site-page'
+            // },
+            // {
+            //     imgUrl: 'img/web_012.jpg',
+            //     webUrl: 'javascript:;',
+            //     name: 'Double Six 咖啡',
+            //     category: 'site-page'
+            // },
             {
                 imgUrl: 'img/web_013.jpg',
                 webUrl: 'temp/web/blackwhite/event.html',

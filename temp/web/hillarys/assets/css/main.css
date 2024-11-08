@@ -1,0 +1,20 @@
+.header-logo .logo a img {
+    width: 60%;
+}
+.single-service .content p {
+    font-size: 15px;
+}
+.service-col {
+    background: #fff;
+}
+.blockchain-col {
+    margin-top: 80px;
+}
+@media (max-width: 420px) {
+    .header-logo {
+        width: 75%;
+    }
+    .single-service {
+        text-align: center;
+    }
+  }
