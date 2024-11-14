@@ -79,7 +79,7 @@ $(function () {
             {
                 imgUrl: 'img/web_corbett.jpg',
                 webUrl: 'temp/web/corbett/index.html',
-                mobileUrl: 'temp/mobile/corbett/index.html',
+                mobileUrl: 'temp/web/corbett/index.html',
                 name: '環球科技',
                 category: 'site-page'
             },
