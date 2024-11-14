@@ -70,14 +70,14 @@ $(function () {
     function webProtfoli() {
         let webData = [
             {
-                imgUrl: 'img/web_010.jpg',
+                imgUrl: 'img/web_hillarys.jpg',
                 webUrl: 'temp/web/hillarys/index.html',
                 mobileUrl: 'temp/web/hillarys/index.html',
-                name: '喜樂利',
+                name: '喜樂利聯合企業',
                 category: 'site-page'
             },
             {
-                imgUrl: 'img/web_010.jpg',
+                imgUrl: 'img/web_corbett.jpg',
                 webUrl: 'temp/web/corbett/index.html',
                 mobileUrl: 'temp/mobile/corbett/index.html',
                 name: '環球科技',
