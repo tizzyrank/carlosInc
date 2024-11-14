@@ -34,7 +34,7 @@ $(function(){
 		    		$('.fingerPrint').addClass('flash')
 		    		$('.title01, .title02, .subTitle01, .subTitle02').removeClass('fadeOut');
 		    	};
-		    	if(event.deltaTime >= 1000){
+		    	if(event.deltaTime >= 400){
 		    		$('.mipA').hide();
 		    		$('.mipB').fadeIn(300);
 		    	}
